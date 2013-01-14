@@ -1,4 +1,7 @@
 Hyaku1::Application.routes.draw do
+  root :to => "histories#index"
+  resources :histories
+  resources :comments
   resources :users
 
 

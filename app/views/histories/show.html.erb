@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @history.user_id %>
+</p>
+
+<p>
+  <b>Song:</b>
+  <%= @history.song_id %>
+</p>
+
+<p>
+  <b>Times:</b>
+  <%= @history.times %>
+</p>
+
+<p>
+  <b>Result:</b>
+  <%= @history.result %>
+</p>
+
+
+<%= link_to 'Edit', edit_history_path(@history) %> |
+<%= link_to 'Back', histories_path %>

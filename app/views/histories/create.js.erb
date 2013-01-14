@@ -1,0 +1,9 @@
+//つぎの問題があれば表示
+var next_id = <%=@history.song_id + 1 %>;
+if($("#song_"+next_id).length){
+  $(".songs").hide();
+  $("#song_"+next_id).show();
+//なければ終了ページにリダイレクト
+}else{
+  window.location = "<%=url_for(:histories)%>";
+}
