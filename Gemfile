@@ -7,6 +7,7 @@ gem 'rails', '3.2.9'
 
 gem 'mysql2'
 gem 'execjs'
+gem 'hyakunin-issyu', '0.0.8'
 
 
 # Gems used only for assets and not required

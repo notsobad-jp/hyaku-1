@@ -25,13 +25,13 @@ class HistoriesController < ApplicationController
   # GET /histories/new.json
   def new
     @history = History.new
-    #last_song = History.where("user_id=", 1).order("created DESC").first
-    last_song = 2
+    last_song = History.where(:user_id => 1).order("created_at DESC").first
+    last_song_id = (last_song) ? last_song.song_id : 0
     today_begin = Time.now.beginning_of_day
     today_end = Time.now.end_of_day
     done_today = History.where(:user_id => 1).where(:created_at => today_begin..today_end).count
     songs_left = 3 - done_today
-    @songs = Song.order("id ASC").offset(last_song).limit(songs_left)
+    @songs = Song.order("id ASC").offset(last_song_id).limit(songs_left)
 
     #すでに３問やってたら終了ページにリダイレクト
     redirect_to histories_url and return if songs_left == 0
