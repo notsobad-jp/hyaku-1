@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Hyaku1</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Tutorial</title>
+      <%= stylesheet_link_tag    "application" %>
+      <%= javascript_include_tag "application" %>
+      <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<%= yield %>
+  <div id="nav">
+    <%= link_to 'Login with Twitter', auth_at_provider_path(:provider => :twitter) %> |
+    <%= link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook) %>
+  </div>
+  <div>
+    <p id="notice"><%= notice %></p>
+    <p id="alert"><%= alert %></p>
+  </div>
+  <%= yield %>
 
-</body>
+  </body>
 </html>

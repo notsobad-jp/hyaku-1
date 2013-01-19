@@ -10,7 +10,6 @@
     <th></th>
     <th></th>
   </tr>
-
 <% @histories.each do |history| %>
   <tr>
     <td><%= history.user_id %></td>
@@ -25,4 +24,5 @@
 
 <br />
 
-<%= link_to 'New History', new_history_path %>
+<p><%= link_to 'New History', new_history_path %></p>
+<p><%= link_to 'Users', users_path %></p>

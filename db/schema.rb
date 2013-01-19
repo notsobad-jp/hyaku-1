@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130115152828) do
+ActiveRecord::Schema.define(:version => 20130116114919) do
+
+  create_table "authentications", :force => true do |t|
+    t.integer  "user_id",    :null => false
+    t.string   "provider",   :null => false
+    t.string   "uid",        :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "comments", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -21,12 +29,12 @@ ActiveRecord::Schema.define(:version => 20130115152828) do
   create_table "histories", :force => true do |t|
     t.integer  "user_id"
     t.integer  "song_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
     t.integer  "res_1"
     t.integer  "res_3"
     t.integer  "res_7"
     t.integer  "res_final"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "songs", :force => true do |t|
@@ -36,18 +44,13 @@ ActiveRecord::Schema.define(:version => 20130115152828) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "tests", :force => true do |t|
-    t.string   "name"
-    t.text     "poem"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "users", :force => true do |t|
+    t.string   "username"
     t.string   "email"
-    t.string   "password"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "crypted_password"
+    t.string   "salt"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
 end

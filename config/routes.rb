@@ -1,8 +1,15 @@
 Hyaku1::Application.routes.draw do
   root :to => "histories#index"
+  resources :users
+  resources :user_sessions
   resources :histories
   resources :comments
-  resources :users
+
+  match "oauth/callback" => "oauths#callback"
+  match "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
+
+  match 'login' => 'user_sessions#new', :as => :login
+  match 'logout' => 'user_sessions#destroy', :as => :logout
 
 
   # The priority is based upon order of creation:

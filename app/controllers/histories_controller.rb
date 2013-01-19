@@ -1,4 +1,6 @@
 class HistoriesController < ApplicationController
+  skip_before_filter :require_login, :only => :index
+
   # GET /histories
   # GET /histories.json
   def index
@@ -45,6 +47,7 @@ class HistoriesController < ApplicationController
   # GET /histories/1/edit
   def edit
     @history = History.find(params[:id])
+
   end
 
   # POST /histories
