@@ -34,7 +34,6 @@ class HistoriesController < ApplicationController
     done_today = History.where(:user_id => 1).where(:created_at => today_begin..today_end).count
     songs_left = 3 - done_today
     @songs = Song.order("id ASC").offset(last_song_id).limit(songs_left)
-    p "hoge:" + last_song_id.to_s
 
     #すでに３問やってたら終了ページにリダイレクト
     redirect_to histories_url and return if songs_left == 0

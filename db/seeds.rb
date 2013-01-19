@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+yml = File.read("#{Rails.root}/db/seeds/songs.yml")
+songs = YAML.load(yml)
+
+songs.each do |s|
+  Song.create( :poet => s['poet'],  :poem => s['poem'] ,  :first_half => s['first_half'] ,  :second_half => s['second_half'] )
+end

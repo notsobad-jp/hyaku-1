@@ -36,10 +36,12 @@ ActiveRecord::Schema.define(:version => 20130119113911) do
   end
 
   create_table "songs", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
     t.string   "poet"
-    t.text     "poem"
+    t.string   "poem"
+    t.string   "first_half"
+    t.string   "second_half"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|
