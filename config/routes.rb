@@ -1,4 +1,9 @@
 Hyaku1::Application.routes.draw do
+
+  get "review/index"
+  get "review/try"
+  resources :review
+
   root :to => "histories#index"
   resources :users
   resources :user_sessions
