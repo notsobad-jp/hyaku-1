@@ -1,0 +1,11 @@
+//回答した問題の出題番号を取得
+var prev_id = $(".songs:visible").attr("id");
+var next_id = Number(prev_id.slice(-1))+1;
+if($("#target_"+next_id).length){
+  $(".songs").hide();
+  $("#target_"+next_id).show();
+//なければ終了ページにリダイレクト
+}else{
+  window.location = "<%=url_for("/exam/index")%>";
+}
+

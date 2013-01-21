@@ -1,5 +1,7 @@
 <h1>Listing histories</h1>
 
+<p><%= link_to 'Try New Songs', new_history_path %> | <%= link_to 'Review Old Songs', new_review_path %> | <%= link_to 'Try Exam', new_exam_path %></p>
+
 <table>
   <tr>
     <th>User</th>
@@ -21,8 +23,3 @@
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<p><%= link_to 'New History', new_history_path %></p>
-<p><%= link_to 'Users', users_path %></p>
