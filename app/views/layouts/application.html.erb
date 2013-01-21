@@ -9,8 +9,11 @@
   <body>
 
   <div id="nav">
-    <%= link_to 'Login with Twitter', auth_at_provider_path(:provider => :twitter) %> |
-    <%= link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook) %>
+    <% if current_user %>
+      <%= link_to 'Logout', logout_path %>
+    <% else %>
+      <%= link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook) %>
+    <% end %>
   </div>
   <div>
     <p id="notice"><%= notice %></p>
