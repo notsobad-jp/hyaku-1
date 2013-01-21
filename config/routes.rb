@@ -1,5 +1,11 @@
 Hyaku1::Application.routes.draw do
 
+  get "exam/index"
+
+  get "exam/new"
+
+  get "exam/create"
+
   get "review/index"
   get "review/try"
   resources :review
