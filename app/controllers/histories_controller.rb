@@ -1,5 +1,6 @@
 class HistoriesController < ApplicationController
   skip_before_filter :require_login, :only => :index
+  SONGS_PER_DAY = 3  #１日におぼえる歌の数
 
   # GET /histories
   # GET /histories.json
@@ -27,12 +28,12 @@ class HistoriesController < ApplicationController
   # GET /histories/new.json
   def new
     @history = History.new
-    last_song = History.where(:user_id => 1).order("created_at DESC").first
+
+    #次にやる問題を、最後にやった歌の次から1日3件で取得する
+    last_song = History.who(current_user).original.order("created_at DESC").first
     last_song_id = (last_song) ? last_song.song_id : 0
-    today_begin = Time.now.beginning_of_day
-    today_end = Time.now.end_of_day
-    done_today = History.where(:user_id => 1).where(:created_at => today_begin..today_end).count
-    songs_left = 3 - done_today
+    done_today = History.who(current_user).which_day(Date.today).original.count
+    songs_left = SONGS_PER_DAY - done_today
     @songs = Song.order("id ASC").offset(last_song_id).limit(songs_left)
 
     #すでに３問やってたら終了ページにリダイレクト
