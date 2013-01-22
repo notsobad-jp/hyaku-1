@@ -23,4 +23,13 @@ class ExamController < ApplicationController
       end
     end
   end
+
+  def score
+    @score = History.where(:exam_flg => 1).who(current_user).where(:result => 1).count
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @history }
+    end
+  end
 end

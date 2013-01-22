@@ -8,6 +8,7 @@ Hyaku1::Application.routes.draw do
   match "review/answer" => "review#answer", :as => :review_answer
   match "exam" => "exam#show", :as => :exam
   match "exam/answer" => "exam#answer", :as => :exam_answer
+  match "exam/score" => "exam#score", :as => :exam_score
 
   resources :users
   resources :user_sessions
