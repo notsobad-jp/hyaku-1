@@ -1,5 +1,9 @@
 class ExamController < ApplicationController
   def show
+    #過去のexam履歴を削除する
+    past_record = History.where(:exam_flg => 1).who(current_user)
+    past_record.destroy_all
+
     @history = History.new
     @all_songs = Song.find(:all, :order => 'RAND()')
 
