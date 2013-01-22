@@ -1,14 +1,5 @@
 class ReviewController < ApplicationController
-  def index
-    @review_targets = History.which_day(1.day.ago).includes(:song)
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @history }
-    end
-  end
-
-  def new
+  def show
     @history = History.new
 
     # 復習対象の問題を取得（1,3,7日前）
@@ -17,13 +8,16 @@ class ReviewController < ApplicationController
     end
     @review_targets = @review_targets_1 + @review_targets_3 + @review_targets_7
 
+    #復習対象がなかったらホーム画面にリダイレクト
+    redirect_to :root and return if @review_targets.blank?
+
     respond_to do |format|
-      format.html # try.html.erb
+      format.html
       format.json { render json: @history }
     end
   end
 
-  def create
+  def answer
     @history = History.new(params[:history])
 
     respond_to do |format|
@@ -32,7 +26,7 @@ class ReviewController < ApplicationController
         format.js
         format.json { render json: @history, status: :created, location: @history }
       else
-        format.html { render action: "new" }
+        format.html { render action: "show" }
         format.json { render json: @history.errors, status: :unprocessable_entity }
       end
     end

@@ -12,7 +12,7 @@
         <% color = (song.id == target.song_id) ? "red" : "black" %>
         <p style="color:<%=color%>"><%= song.poet %></p>
         <p><%= song.poem %></p>
-        <%= form_for(@history, :url => {:action => 'create'}, :remote => true) do |f| %>
+        <%= form_for(@history, :url => {:action => 'answer'}, :remote => true) do |f| %>
           <%= f.hidden_field :user_id, :value => current_user.id %>
           <%= f.hidden_field :song_id, :value => target.song.id %>
           <% result = (song.id == target.song.id) ? 1 : 0 %>

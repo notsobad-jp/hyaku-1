@@ -1,25 +1,16 @@
-<p id="notice"><%= notice %></p>
+<h1>New history</h1>
 
-<p>
-  <b>User:</b>
-  <%= @history.user_id %>
-</p>
+<% @songs.each_with_index do |song, i| %>
+  <div id="song_<%=song.id%>" class="songs" <%if(i!=0)%>style="display:none"<%end%>>
+    <p><%= song.poet %></p>
+    <p><%= song.poem %></p>
 
-<p>
-  <b>Song:</b>
-  <%= @history.song_id %>
-</p>
+    <%= form_for(@history, :url => :learn_save, :remote => true) do |f| %>
+      <%= f.hidden_field :user_id, :value => 1 %>
+      <%= f.hidden_field :song_id, :value => song.id %>
+      <%= submit_tag("Next") %>
+    <% end %>
+  </div>
+<% end %>
 
-<p>
-  <b>Times:</b>
-  <%= @history.times %>
-</p>
-
-<p>
-  <b>Result:</b>
-  <%= @history.result %>
-</p>
-
-
-<%= link_to 'Edit', edit_history_path(@history) %> |
 <%= link_to 'Back', histories_path %>
