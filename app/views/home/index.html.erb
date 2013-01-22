@@ -1,15 +1,33 @@
 <h1>Home#index</h1>
 
-<% @songs.each do |song| %>
-  <p>
-    <%=song.id %>
-    <%=song.poem %>
-    <% if song.histories.empty? %>
-      finished!
-    <% end %>
-  </p>
-<% end %>
+<h2>Learn</h2>
+<div>
+  <% @songs.each do |song| %>
+    <p>
+      <%=song.id %>
+      <%=song.poem %>
+      <% if song.histories.present? %>
+        finished!
+      <% end %>
+    </p>
+  <% end %>
+  <p><%=link_to 'Learn New Songs', :learn %></p>
+</div>
 
-<p><%=link_to 'Learn New Songs', :learn %></p>
-<p><%=link_to 'Review Songs', :review %></p>
+<h2>Review</h2>
+<div>
+  <% [1,3,7].each do |d| %>
+    <p>Learnt <%=d%> days ago.</p>
+    <% instance_variable_get("@review_targets_#{d}").each do |review| %>
+      <p>
+        <%=review.song_id %>
+        <%=review.song.poem %>
+      </p>
+    <% end %>
+  <% end %>
+  <p><%=link_to 'Review Songs', :review %></p>
+</div>
+
+<h2>Exam</h2>
+<p>You got <%=@score%>/100 last time.</p>
 <p><%=link_to 'Exam', :exam %></p>
