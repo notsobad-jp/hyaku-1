@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  skip_before_filter :require_login
 
   def index
     #Learn: 今日の歌を取得
