@@ -18,11 +18,11 @@
 <div>
   <% [1,3,7].each do |d| %>
     <p>Learnt <%=d%> days ago.</p>
-    <% instance_variable_get("@review_targets_#{d}").each do |review| %>
-      <p>
-        <%=review.song_id %>
-        <%=review.song.poem %>
-      </p>
+    <% targets = instance_variable_get("@review_targets_#{d}") %>
+    <% if targets %>
+      <% targets.each do |review| %>
+        <p><%=review.song_id %><%=review.song.poem %></p>
+      <% end %>
     <% end %>
   <% end %>
   <p><%=link_to 'Review Songs', :review %></p>

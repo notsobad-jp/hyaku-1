@@ -25,8 +25,8 @@ group :development, :test do
 end
 
 group :production do
-  gem 'therubyracer-heroku'
   gem "pg"
+  gem 'therubyracer-heroku'
 end
 
 gem 'jquery-rails'
