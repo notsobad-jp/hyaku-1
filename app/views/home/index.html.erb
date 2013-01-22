@@ -4,12 +4,11 @@
   <p>
     <%=song.id %>
     <%=song.poem %>
-    <% song.histories.each do |history| %>
-      <%=history.result %>
+    <% if song.histories.empty? %>
+      finished!
     <% end %>
   </p>
 <% end %>
-
 
 <p><%=link_to 'Learn New Songs', :learn %></p>
 <p><%=link_to 'Review Songs', :review %></p>
