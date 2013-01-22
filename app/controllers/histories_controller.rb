@@ -1,5 +1,4 @@
 class HistoriesController < ApplicationController
-  SONGS_PER_DAY = 3  #１日におぼえる歌の数
 
   def show
     @history = History.new

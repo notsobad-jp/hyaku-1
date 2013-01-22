@@ -1,5 +1,16 @@
 <h1>Home#index</h1>
 
+<% @songs.each do |song| %>
+  <p>
+    <%=song.id %>
+    <%=song.poem %>
+    <% song.histories.each do |history| %>
+      <%=history.result %>
+    <% end %>
+  </p>
+<% end %>
+
+
 <p><%=link_to 'Learn New Songs', :learn %></p>
 <p><%=link_to 'Review Songs', :review %></p>
 <p><%=link_to 'Exam', :exam %></p>

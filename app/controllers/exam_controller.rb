@@ -1,4 +1,5 @@
 class ExamController < ApplicationController
+
   def show
     #過去のexam履歴を削除する
     past_record = History.where(:exam_flg => 1).who(current_user)
