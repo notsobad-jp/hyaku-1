@@ -1,13 +1,22 @@
 Hyaku1::Application.routes.draw do
 
-  resources :review
-  resources :exam
+  root :to => "home#index"
 
-  root :to => "histories#index"
+  match "learn" => "histories#show", :as => :learn
+  match "learn/save" => "histories#save", :as => :learn_save
+
+  match "review" => "reviews#show", :as => :review
+  match "review/answer" => "reviews#answer", :as => :review_answer
+
+  match "exam" => "exams#show", :as => :exam
+  match "exam/answer" => "exams#answer", :as => :exam_answer
+
   resources :users
   resources :user_sessions
-  resources :histories
-  resources :comments
+  # resources :histories
+  # resources :comments
+  # resources :review
+  # resources :exam
 
   match "oauth/callback" => "oauths#callback"
   match "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
