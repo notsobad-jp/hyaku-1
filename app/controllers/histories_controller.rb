@@ -7,7 +7,7 @@ class HistoriesController < ApplicationController
     last_song = History.who(current_user).original.order("created_at DESC").first
     last_song_id = (last_song) ? last_song.song_id : 0
     done_today = History.who(current_user).which_day(Date.today).original.count
-    songs_left = SONGS_PER_DAY - done_today
+    songs_left = [(SONGS_PER_DAY - done_today), 0].max
     @songs = Song.order("id ASC").offset(last_song_id).limit(songs_left)
 
     #すでに３問やってたら終了ページにリダイレクト
