@@ -6,7 +6,8 @@ class ExamController < ApplicationController
     past_record.destroy_all
 
     @history = History.new
-    @all_songs = Song.find(:all, :order => 'RAND()')
+    # @all_songs = Song.find(:all, :order => 'RAND()')
+    @all_songs = Song.find(:all, :order => 'RANDOM()')
 
     respond_to do |format|
       format.html
