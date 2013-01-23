@@ -3,7 +3,7 @@
 
 <% @review_targets.each_with_index do |target, i| %>
   <div id="target_<%=i%>" class="songs" <%if(i!=0)%>style="display:none"<%end%>>
-    <% dummys = Song.where("id <> ?", target.song_id).find(:all, :order => 'RAND()', :limit => 4) %>
+    <% dummys = Song.where("id <> ?", target.song_id).rand(4) %>
     <% genuine = Song.where("id = ?", target.song_id) %>
     <% songs = (dummys + genuine).sort_by{rand} %>
 
