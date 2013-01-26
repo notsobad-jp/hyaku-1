@@ -96,7 +96,7 @@ header a, header a:visited {
 	background-image: url("/assets/menu_3.jpg");
 }
 
-#menu_1:hover, #menu_2:hover, #menu_3:hover {
+.menu:hover {
 	border: 5px solid #B54434;
 	cursor: pointer;
 }
@@ -134,6 +134,46 @@ header a, header a:visited {
 	right: -29%;
 }
 
+.menu_info {
+  position: absolute;
+  background: #000;
+  top: 62%;
+  display: none;
+}
+
+.menu_info div {
+	-webkit-transform: rotate(-45deg);
+  position: relative;
+  left: 12%;
+  top: 16%;
+}
+
+#menu_info_3 div {
+  left: 2%;
+  top: 40%;
+}
+
+.menu_info p {
+  color: #DDD;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+.menu_info em {
+  font-size: larger;
+  font-weight: bold;
+	color: #B54434;
+}
+
+#menu_info_1 {
+  left: 16%;
+}
+#menu_info_2 {
+  left: 48%;
+}
+#menu_info_3 {
+  left: 81%;
+}
 
 /*****************************************************************
 * SUB
