@@ -105,8 +105,14 @@ header a, header a:visited {
 	top: 4px;
 }
 
-.pic {
-  background-image: url("/assets/pic1.jpg")
+#pic_1 {
+  background-image: url("/assets/pic_1.jpg")
+}
+#pic_2 {
+  background-image: url("/assets/pic_2.jpg")
+}
+#pic_3 {
+  background-image: url("/assets/pic_3.jpg")
 }
 
 .upper {
