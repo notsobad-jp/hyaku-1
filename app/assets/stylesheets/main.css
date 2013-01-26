@@ -1,0 +1,184 @@
+/*****************************************************************
+* COMMON
+*****************************************************************/
+body {
+	font: 80%/19px Helvetica, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif !important;
+	letter-spacing: 0.1em!important;
+}
+.clear {
+	clear: both;
+}
+
+/*****************************************************************
+* HEADER
+*****************************************************************/
+header {
+	width: 100%;
+	background-image: url("/assets/menu_bg.png");
+	position: fixed;
+	z-index: 5;
+}
+header:after{
+  content:"";
+  display: block;
+  position: absolute;
+	background-image: url("/assets/origami.jpg");
+  top: 65px;
+  width: 100%;
+  height: 5px;
+  z-index: 2;
+	box-shadow: 0 1px 3px gray;
+}
+
+header img{
+	width: 80px;
+	margin: 10px 0 0 2%;
+}
+
+header p {
+	float: right;
+	margin: auto 2%;
+	line-height: 65px;
+}
+
+header a, header a:visited {
+	color: #EEE;
+	text-decoration: none;
+	margin: 0 5px;
+}
+
+
+/*****************************************************************
+* CONTAINER
+*****************************************************************/
+#container {
+	width: 100%;
+	position: relative;
+	top: 65px;
+}
+
+/*****************************************************************
+* MAIN
+*****************************************************************/
+#main {
+	background-image: url("/assets/body_bg.jpg");
+	width: 75%;
+	position: relative;
+	padding: 2.5% 0;
+	overflow: hidden;
+	box-shadow: 1px 0 3px #7D6C46;
+	float: left;
+}
+
+.wrapper {
+	position: relative;
+	width: 96%;
+	margin: auto;
+}
+
+.box {
+	float: left;
+	background-size: contain;
+	border: 5px solid #000;
+	margin: 4.35%;
+	width: 23.9%;
+	-webkit-transform: rotate(44deg);
+	box-sizing: border-box;
+}
+
+#menu_1 {
+	background-image: url("/assets/menu_1.jpg");
+}
+#menu_2 {
+	background-image: url("/assets/menu_2.jpg");
+}
+#menu_3 {
+	background-image: url("/assets/menu_3.jpg");
+}
+
+#menu_1:hover, #menu_2:hover, #menu_3:hover {
+	border: 5px solid #B54434;
+	cursor: pointer;
+}
+
+.second {
+	left: 1.1%;
+	top: 4px;
+}
+
+.pic {
+  background-image: url("/assets/pic1.jpg")
+}
+
+.upper {
+	position: absolute;
+	left: 0.7%;
+	top: -40.8%;
+}
+
+.lower {
+	position: absolute;
+	left: 4.2%;
+	bottom: -41.5%;
+}
+
+.left, .right {
+	position: absolute;
+	top: 9%;
+}
+
+.left {
+	left: -32.5%;
+}
+
+.right {
+	right: -30.2%;
+}
+
+
+/*****************************************************************
+* SUB
+*****************************************************************/
+#sub {
+	float: left;
+	width: 25%;
+	background-image: url("/assets/sub_bg.jpg");
+	height: 300px;
+	z-index: -1;
+}
+
+.amazon img {
+  width: 120px;
+}
+
+
+/*****************************************************************
+* FOOTER
+*****************************************************************/
+footer {
+	position: relative;
+	top: 65px;
+	width: 100%;
+	height: 80px;
+	background-image: url("/assets/menu_bg.png");
+}
+footer:before{
+  content:"";
+  display: block;
+  position: absolute;
+	background-image: url("/assets/origami.jpg");
+  top: -5px;
+  width: 100%;
+  height: 5px;
+  z-index: 2;
+	box-shadow: 0 1px 3px gray;
+}
+
+footer p {
+	line-height: 80px;
+	color: #DDD;
+	text-align: center;
+}
+footer a, footer a:visited {
+	color: #EEE;
+}

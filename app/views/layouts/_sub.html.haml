@@ -1,0 +1,18 @@
+%div
+  = image_tag("https://graph.facebook.com/#{Authentication.find(current_user.id).uid}/picture?type=normal")
+  = current_user.email
+%div
+  - last_song = History.who(current_user).original.order("created_at DESC").first
+  - last_song_id = (last_song) ? last_song.song_id.to_i : 0
+  - days_left = ( (100-last_song_id)/3 ).ceil
+  %p
+    100首まで 残り#{days_left}日
+    (#{last_song_id}/100終了済み)
+
+  - score = History.who(current_user).where(:exam_flg => 1).where(:result => 1).count
+  %p
+    前回のスコア：#{score}/100
+%div.amazon
+  = link_to(image_tag("amazon_chihaya.jpg"), "http://www.amazon.co.jp/%E3%81%A1%E3%81%AF%E3%82%84%E3%81%B5%E3%82%8B-1-Be%E3%83%BBLove%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF%E3%82%B9-%E6%9C%AB%E6%AC%A1-%E7%94%B1%E7%B4%80/dp/4063192393")
+  = link_to(image_tag("amazon_karuta.jpg"), "http://www.amazon.co.jp/%E3%81%A1%E3%81%AF%E3%82%84%E3%81%B5%E3%82%8B-1-Be%E3%83%BBLove%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF%E3%82%B9-%E6%9C%AB%E6%AC%A1-%E7%94%B1%E7%B4%80/dp/4063192393")
+

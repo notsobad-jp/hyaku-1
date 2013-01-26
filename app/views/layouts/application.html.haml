@@ -1,19 +1,19 @@
 !!!
 %html
   %head
-    %title Tutorial
-    = stylesheet_link_tag  "application"
-    = javascript_include_tag "application"
-    = csrf_meta_tags
+    = render "layouts/head"
   %body
-    #nav
-      - if current_user
-        = link_to 'Logout', logout_path
-      - else
-        = link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook)
-    %div
-      %p#notice
-        = notice
-      %p#alert
-        = alert
-    = yield
+    %header
+      = render "layouts/header"
+    #container
+      #main
+        %p#notice
+          = notice
+        %p#alert
+          = alert
+        = yield
+      #sub
+        = render "layouts/sub"
+      %div.clear
+    %footer
+      = render "layouts/footer"

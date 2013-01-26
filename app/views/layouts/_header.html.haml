@@ -1,0 +1,8 @@
+= image_tag("logo_w.png")
+%p
+  = link_to 'このサイトについて', :root
+  = link_to '使い方', :root
+  - if current_user
+    = link_to 'Logout', logout_path
+  - else
+    = link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook)
