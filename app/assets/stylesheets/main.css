@@ -80,9 +80,9 @@ header a, header a:visited {
 	float: left;
 	background-size: contain;
 	border: 5px solid #000;
-	margin: 4.35%;
-	width: 23.9%;
-	-webkit-transform: rotate(44deg);
+	margin: 4.33%;
+	width: 23.5%;
+	-webkit-transform: rotate(45deg);
 	box-sizing: border-box;
 }
 
@@ -102,7 +102,6 @@ header a, header a:visited {
 }
 
 .second {
-	left: 1.1%;
 	top: 4px;
 }
 
@@ -112,13 +111,13 @@ header a, header a:visited {
 
 .upper {
 	position: absolute;
-	left: 0.7%;
+	left: 2.0%;
 	top: -40.8%;
 }
 
 .lower {
 	position: absolute;
-	left: 4.2%;
+	left: 2.0%;
 	bottom: -41.5%;
 }
 
@@ -132,7 +131,7 @@ header a, header a:visited {
 }
 
 .right {
-	right: -30.2%;
+	right: -29%;
 }
 
 
@@ -143,14 +142,28 @@ header a, header a:visited {
 	float: left;
 	width: 25%;
 	background-image: url("/assets/sub_bg.jpg");
-	height: 300px;
 	z-index: -1;
+  padding: 2.5%;
+  box-sizing: border-box;
+}
+
+#sub div {
+  margin: 15px 0;
 }
 
 .amazon img {
   width: 120px;
 }
 
+#profile_image {
+  border: 6px solid #000;
+}
+
+#sub em {
+  font-size: larger;
+  font-weight: bold;
+	color: #B54434;
+}
 
 /*****************************************************************
 * FOOTER

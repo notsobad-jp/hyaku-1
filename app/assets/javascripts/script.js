@@ -15,10 +15,10 @@ $(function(){
 		$(".wrapper").height(root);
 	});
 
-	$("#sub").height($("#container").height());
+	$("#sub").height($("#main").height());
 
 	$(window).resize(function(){
-		$("#sub").height($("#container").height());
+		$("#sub").height($("#main").height());
 	});
 });
 
