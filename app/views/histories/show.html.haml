@@ -1,0 +1,14 @@
+- @songs.each_with_index do |song, i|
+  %h2
+    第#{song.id}歌
+  %div(id="song_#{song.id}" class="songs")
+    = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", song.id)}.jpg", :class => "cards")
+    %p #{song.poem}
+    %p #{song.poet}
+
+    = form_for(@history, :url => :learn_save, :remote => true) do |f|
+      = f.hidden_field :user_id, :value => 1
+      = f.hidden_field :song_id, :value => song.id
+      = submit_tag("Next")
+
+= link_to 'Back to Top', :root

@@ -13,7 +13,6 @@
   - score = History.who(current_user).where(:exam_flg => 1).where(:result => 1).count
   %p
     ■前回のスコア： <em>#{score}</em>/100
-%div.amazon
-  = link_to(image_tag("amazon_chihaya.jpg"), "http://www.amazon.co.jp/gp/product/4063192393/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=4063192393&linkCode=as2&tag=bookmentoring-22")
-  = link_to(image_tag("amazon_karuta.jpg"), "http://www.amazon.co.jp/gp/product/4578100820/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=4578100820&linkCode=as2&tag=bookmentoring-22")
+%div
+  <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab" id="Player_ed38d86d-850c-4a3d-81f0-667d354f15df"  WIDTH="250px" HEIGHT="250px"> <PARAM NAME="movie" VALUE="http://ws.amazon.co.jp/widgets/q?rt=tf_ssw&ServiceVersion=20070822&MarketPlace=JP&ID=V20070822%2FJP%2Fbookmentoring-22%2F8003%2Fed38d86d-850c-4a3d-81f0-667d354f15df&Operation=GetDisplayTemplate"><PARAM NAME="quality" VALUE="high"><PARAM NAME="bgcolor" VALUE="#FFFFFF"><PARAM NAME="allowscriptaccess" VALUE="always"><embed src="http://ws.amazon.co.jp/widgets/q?rt=tf_ssw&ServiceVersion=20070822&MarketPlace=JP&ID=V20070822%2FJP%2Fbookmentoring-22%2F8003%2Fed38d86d-850c-4a3d-81f0-667d354f15df&Operation=GetDisplayTemplate" id="Player_ed38d86d-850c-4a3d-81f0-667d354f15df" quality="high" bgcolor="#ffffff" name="Player_ed38d86d-850c-4a3d-81f0-667d354f15df" allowscriptaccess="always"  type="application/x-shockwave-flash" align="middle" height="250px" width="250px"></embed></OBJECT> <NOSCRIPT><A HREF="http://ws.amazon.co.jp/widgets/q?rt=tf_ssw&ServiceVersion=20070822&MarketPlace=JP&ID=V20070822%2FJP%2Fbookmentoring-22%2F8003%2Fed38d86d-850c-4a3d-81f0-667d354f15df&Operation=NoScript">Amazon.co.jp ウィジェット</A></NOSCRIPT>
 

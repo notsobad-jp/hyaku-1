@@ -97,7 +97,7 @@ header a, header a:visited {
 }
 
 .menu:hover {
-	border: 5px solid #B54434;
+	/* border: 5px solid #B54434; */
 	cursor: pointer;
 }
 
@@ -197,8 +197,8 @@ header a, header a:visited {
   margin: 15px 0;
 }
 
-.amazon img {
-  width: 120px;
+#sub div:last-child {
+  margin-top: 50px;
 }
 
 #profile_image {
@@ -240,4 +240,15 @@ footer p {
 }
 footer a, footer a:visited {
 	color: #EEE;
+}
+
+
+/*****************************************************************
+* LEARN
+*****************************************************************/
+.cards {
+  float: left;
+  width: 23%;
+  border: 7px solid #333;
+  box-sizing: border-box;
 }
