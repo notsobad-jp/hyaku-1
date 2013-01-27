@@ -247,7 +247,7 @@ footer a, footer a:visited {
 * LEARN
 *****************************************************************/
 .cards {
-  float: left;
+  /* float: left; */
   width: 23%;
   border: 7px solid #333;
   box-sizing: border-box;

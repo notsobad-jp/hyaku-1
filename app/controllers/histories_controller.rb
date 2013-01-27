@@ -18,7 +18,7 @@ class HistoriesController < ApplicationController
 
     respond_to do |format|
       if @history.save
-        #次にやる問題を取得。三問終わってたらホームにリダイレクト。
+        #次にやる問題を取得。
         @next_song = History.next_song(current_user)
 
         format.html { redirect_to @history, notice: 'History was successfully created.' }

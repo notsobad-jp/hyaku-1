@@ -35,4 +35,23 @@ class History < ActiveRecord::Base
     end
     return review_num
   end
+
+  #復習対象の問題をランダムで１つ返す。
+  def self.review_song(user)
+    #今日すでにやった問題のID一覧を取得
+    finished_ids = Array.new
+    finished_songs = self.select(:song_id).who(user).which_day(Date.today).where("result IS NOT ?", nil)
+    finished_songs.each do |f|
+      finished_ids << f.song_id if f.present?
+    end
+
+    #やってない復習対象のレコードを全取得
+    targets = Array.new
+    [1,3,7].each do |d|
+      target = self.original.which_day(d.day.ago).who(user)
+      target = target.where(["song_id NOT IN (?)", finished_ids]) if finished_ids.present?
+      targets = targets + target.includes(:song) if target.present?
+    end
+    return targets.sort_by{rand}.first.presence || nil
+  end
 end

@@ -1,11 +1,6 @@
-//回答した問題の出題番号を取得
-var prev_id = $(".songs:visible").attr("id");
-var next_id = Number(prev_id.slice(-1))+1;
-if($("#target_"+next_id).length){
-  $(".songs").hide();
-  $("#target_"+next_id).show();
-//なければ終了ページにリダイレクト
-}else{
+<% if @review_song %>
+  $("#next_song").html("<%= j(render 'song', :review_song => @review_song, :review_targets => @review_targets) %>");
+<% else %>
   location.href = "<%=url_for(:root)%>";
-}
+<% end %>
 

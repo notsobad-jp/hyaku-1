@@ -2,14 +2,12 @@ class ReviewController < ApplicationController
   def show
     @history = History.new
 
-    # 復習対象の問題を取得（1,3,7日前）
-    [1,3,7].each do |d|
-      instance_variable_set("@review_targets_#{d}", History.original.which_day(d.day.ago).who(current_user).includes(:song) )
-    end
-    @review_targets = @review_targets_1 + @review_targets_3 + @review_targets_7
+    #復習対象の歌を１つ取得。全部おわってればリダイレクト。
+    @review_song = History.review_song(current_user)
+    redirect_to :root and return if @review_song.nil?
 
-    #復習対象がなかったらホーム画面にリダイレクト
-    redirect_to :root and return if @review_targets.blank?
+    #ダミーの歌と混ぜた状態で取得。
+    @review_targets = Song.set_question(@review_song)
 
     respond_to do |format|
       format.html
@@ -22,6 +20,12 @@ class ReviewController < ApplicationController
 
     respond_to do |format|
       if @history.save
+        #復習対象の歌を１つ取得。全部おわってればリダイレクト。
+        @review_song = History.review_song(current_user)
+        @review_targets = Song.set_question(@review_song) if @review_song.present?
+        p "real review song:"
+        p @review_song
+
         format.html { redirect_to @history, notice: 'History was successfully created.' }
         format.js
         format.json { render json: @history, status: :created, location: @history }
