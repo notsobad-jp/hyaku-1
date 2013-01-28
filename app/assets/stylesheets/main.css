@@ -194,6 +194,10 @@ header a:hover {
   left: 80.7%;
 }
 
+section.main {
+  margin: auto 2%;
+}
+
 /*****************************************************************
 * SUB
 *****************************************************************/
@@ -311,11 +315,42 @@ p#top_msg {
 /*****************************************************************
 * LEARN
 *****************************************************************/
+#learn_title {
+  border-left: 7px solid #AA9999;
+  padding-left: 10px;
+  line-height: 30px;
+  font-size: 22px;
+  font-family: serif;
+  margin-bottom: 15px;
+}
+
+#learn_subtitle {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.poem {
+  font-family: serif;
+  font-size: 14px;
+  margin: 15px 0 5px 0;
+}
+
+.poet {
+  margin-bottom: 15px;
+}
+
 .cards {
-  /* float: left; */
+  float: left;
   width: 23%;
   border: 7px solid #333;
   box-sizing: border-box;
 }
 
-
+#poet {
+  float: left;
+  width: 23%;
+  background: #EEE;
+  border: 7px solid #333;
+  box-sizing: border-box;
+  margin-right: 3%;
+}

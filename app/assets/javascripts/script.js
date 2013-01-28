@@ -47,5 +47,9 @@ $(function(){
 	},function(){
 		$(this).attr("src","/assets/fb_login.jpg");
 	});
+
+	$("#question").load(function(){
+	  $("#poet").height($("#question").height());
+	});
 });
 
