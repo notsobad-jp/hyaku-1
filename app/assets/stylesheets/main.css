@@ -31,15 +31,21 @@ header:after{
 	box-shadow: 0 1px 3px gray;
 }
 
-header img{
+#logo_img img {
 	width: 7%;
   max-height: 65px;
 	margin: 10px 0 0 2%;
 }
 
+#fb_login_top {
+  width: 12%;
+  border-radius: 3px;
+  float: right;
+  margin: 17px 2%;
+}
+
 header p {
 	float: right;
-	margin: auto 2%;
 	line-height: 65px;
 }
 
@@ -47,6 +53,10 @@ header a, header a:visited {
 	color: #EEE;
 	text-decoration: none;
 	margin: 0 5px;
+}
+
+header a:hover {
+  color: #B54434
 }
 
 
