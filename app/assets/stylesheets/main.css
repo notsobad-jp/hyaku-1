@@ -47,6 +47,7 @@ header:after{
 header p {
 	float: right;
 	line-height: 65px;
+  margin: auto 2%;
 }
 
 header a, header a:visited {
@@ -109,8 +110,8 @@ header a:hover {
 }
 
 .menu:hover {
-	/* border: 5px solid #B54434; */
 	cursor: pointer;
+  opacity: 0.9;
 }
 
 .second {
@@ -167,14 +168,14 @@ header a:hover {
 }
 
 #menu_info_3 div {
-  left: 2%;
+  left: 1.5%;
   top: 40%;
 }
 
 .menu_info p {
   color: #DDD;
-  font-size: 1.2em;
-  line-height: 1.5em;
+  font-size: 1.0em;
+  line-height: 1.3em;
 }
 
 .menu_info em {
@@ -190,7 +191,7 @@ header a:hover {
   left: 48%;
 }
 #menu_info_3 {
-  left: 81%;
+  left: 80.7%;
 }
 
 /*****************************************************************
@@ -230,7 +231,6 @@ footer {
 	position: relative;
 	top: 65px;
 	width: 100%;
-	height: 80px;
 	background-image: url("/assets/menu_bg.png");
 }
 footer:before{
@@ -248,10 +248,16 @@ footer:before{
 footer p {
 	line-height: 80px;
 	color: #DDD;
-	text-align: center;
+  float: left;
+  margin: auto 2%;
 }
 footer a, footer a:visited {
 	color: #EEE;
+}
+
+footer img {
+  float: right;
+  margin: 15px 2%;
 }
 
 
@@ -285,10 +291,13 @@ p#top_msg {
   margin: 10% 0 5% 0;
 }
 
-img#fb_login {
+.fb_login {
+  border-radius: 3px;
+}
+
+#top_login img {
   width: 50%;
   margin: 30px 0 5px 0;
-  border-radius: 3px;
 }
 
 #top_info small {

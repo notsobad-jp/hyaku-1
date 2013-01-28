@@ -41,5 +41,11 @@ $(function(){
 		},function(){
 			$("#menu_info_3").hide();
 	});
+
+	$(".fb_login").hover(function(){
+		$(this).attr("src","/assets/fb_login_on.jpg");
+	},function(){
+		$(this).attr("src","/assets/fb_login.jpg");
+	});
 });
 
