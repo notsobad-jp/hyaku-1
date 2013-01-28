@@ -329,14 +329,10 @@ p#top_msg {
   margin-bottom: 8px;
 }
 
-.poem {
+.poem_info {
   font-family: serif;
   font-size: 14px;
-  margin: 15px 0 5px 0;
-}
-
-.poet {
-  margin-bottom: 15px;
+  margin: 15px 0;
 }
 
 .cards {

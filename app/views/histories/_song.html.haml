@@ -9,8 +9,8 @@
   = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @next_song.id)}.jpg", :class => "cards", :id => "question")
   %div.clear
 
-  %p.poem 『#{@next_song.poem}』
-  %p.poet (#{@next_song.poet})
+  %p.poem_info
+    『#{@next_song.poem}』(#{@next_song.poet})
 
   = form_for(@history, :url => :learn_save, :remote => true) do |f|
     = f.hidden_field :user_id, :value => current_user.id
