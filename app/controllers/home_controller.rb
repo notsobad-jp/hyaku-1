@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   skip_before_filter :require_login
+  layout 'top', :only => [:top]
 
   def index
     if current_user
@@ -7,9 +8,10 @@ class HomeController < ApplicationController
       @review_num = History.review_num(current_user)           #Review: 今日の復習対象を取得
       @score = History.who(current_user).where(:exam_id => 1).where(:result => 1).count  #Exam: 前回のスコア取得
     else
-      @learn_num_left = 0
-      @review_num = 0
-      @score = 0
+      redirect_to :top
     end
+  end
+
+  def top
   end
 end

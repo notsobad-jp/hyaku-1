@@ -1,23 +1,21 @@
 Hyaku1::Application.routes.draw do
 
-  root :to => "home#index"
+  root :to => 'home#index'
 
-  match "learn" => "histories#show", :as => :learn
-  match "learn/save" => "histories#save", :as => :learn_save
-  match "review" => "review#show", :as => :review
-  match "review/answer" => "review#answer", :as => :review_answer
-  match "exam" => "exam#show", :as => :exam
-  match "exam/answer" => "exam#answer", :as => :exam_answer
-  match "exam/score" => "exam#score", :as => :exam_score
-
+  match 'learn' => 'histories#show', :as => :learn
+  match 'learn/save' => 'histories#save', :as => :learn_save
+  match 'review' => 'review#show', :as => :review
+  match 'review/answer' => 'review#answer', :as => :review_answer
+  match 'exam' => 'exam#show', :as => :exam
+  match 'exam/answer' => 'exam#answer', :as => :exam_answer
+  match 'exam/score' => 'exam#score', :as => :exam_score
   resources :users
   resources :user_sessions
-
-  match "oauth/callback" => "oauths#callback"
-  match "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
-
+  match 'oauth/callback' => 'oauths#callback'
+  match 'oauth/:provider' => 'oauths#oauth', :as => :auth_at_provider
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
+  match 'top' => 'home#top', :as => 'top'
 
 
   # The priority is based upon order of creation:

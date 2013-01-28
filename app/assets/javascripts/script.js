@@ -19,6 +19,8 @@ $(function(){
 		$("#sub").height($("#main").height());
 	});
 
+	$("#top_bg").height($("#top_bg").width()/940*528);
+
   $("#menu_1").hover(
 		function(){
 			$("#menu_info_1").show();
