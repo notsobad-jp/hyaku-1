@@ -7,7 +7,7 @@ class ReviewController < ApplicationController
     redirect_to :root and return if @review_song.nil?
 
     #ダミーの歌と混ぜた状態で取得。
-    @review_targets = Song.set_question(@review_song)
+    @review_targets = Song.set_question(@review_song.song_id)
 
     respond_to do |format|
       format.html
@@ -22,7 +22,7 @@ class ReviewController < ApplicationController
       if @history.save
         #復習対象の歌を１つ取得。全部おわってればリダイレクト。
         @review_song = History.review_song(current_user)
-        @review_targets = Song.set_question(@review_song) if @review_song.present?
+        @review_targets = Song.set_question(@review_song.song_id) if @review_song.present?
         p "real review song:"
         p @review_song
 

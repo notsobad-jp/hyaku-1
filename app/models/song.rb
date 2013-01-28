@@ -6,9 +6,9 @@ class Song < ActiveRecord::Base
   scope :random, lambda { |limit| find(:all, :order => random, :limit => limit) }
 
   #テスト用にダミーの歌と混ぜた状態で返す
-  def self.set_question(target_song)
-    dummys = self.where("id <> ?", target_song.song_id).random(4)
-    genuine = self.where("id = ?", target_song.song_id)
+  def self.set_question(song_id)
+    dummys = self.where("id <> ?", song_id).random(4)
+    genuine = self.where("id = ?", song_id)
     question = (genuine + dummys).sort_by{rand}
     return question
   end

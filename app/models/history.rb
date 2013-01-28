@@ -1,5 +1,5 @@
 class History < ActiveRecord::Base
-  attr_accessible :result, :song_id, :exam_flg, :user_id
+  attr_accessible :result, :song_id, :exam_id, :user_id
   belongs_to :user
   belongs_to :song
 
@@ -53,5 +53,19 @@ class History < ActiveRecord::Base
       targets = targets + target.includes(:song) if target.present?
     end
     return targets.sort_by{rand}.first.presence || nil
+  end
+
+  #テストの問題をランダムで１つ返す。
+  def self.exam_song(user, exam_id)
+    #すでにやった問題のID一覧を取得
+    finished_ids = Array.new
+    finished_songs = self.select(:song_id).who(user).where(:exam_id => exam_id)
+    finished_songs.each do |f|
+      finished_ids << f.song_id if f.present?
+    end
+
+    #やってない問題からランダムで１つ選択
+    target = Song.where(["id NOT IN (?)", finished_ids]).sort_by{rand}.first if finished_ids.present?
+    return target.presence || nil
   end
 end

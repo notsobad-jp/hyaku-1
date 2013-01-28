@@ -1,0 +1,12 @@
+- @exam_targets.each do |target|
+  = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", target.id)}.jpg", :class => "cards")
+  %p #{target.poem}
+  %p #{target.poet}
+
+  = form_for(@history, :url => :exam_answer, :remote => true) do |f|
+    = f.hidden_field :user_id, :value => current_user.id
+    = f.hidden_field :song_id, :value => @exam_song.id
+    - result = (target.id == @exam_song.id) ? 1 : 0
+    = f.hidden_field :result, :value => result
+    = f.hidden_field :exam_id, :value => @exam_id
+    = submit_tag("Next")
