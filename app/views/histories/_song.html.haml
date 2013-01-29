@@ -7,17 +7,14 @@
   %div#poem
     %p
       - poem = @next_song.poem.split(" ")
-      #{poem[0]}<br>&emsp;#{poem[1]} #{poem[2]}<br><br>
+      #{poem[0]}<br>&emsp;#{poem[1]}<br>&emsp;&emsp;&emsp;&emsp;&emsp;#{poem[2]}<br>
       #{poem[3]}<br>&emsp;&emsp;#{poem[4]}
-      -# = raw @next_song.poem.gsub(" ","<br>")
   = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @next_song.id)}.jpg", :class => "cards", :id => "question")
   %div.clear
 
   %p.poem_info
     『#{@next_song.poem}』(#{@next_song.poet})
 
-  = form_for(@history, :url => :learn_save, :remote => true) do |f|
-    = f.hidden_field :user_id, :value => current_user.id
-    = f.hidden_field :song_id, :value => @next_song.id
-    = image_submit_tag("fb_login.jpg", :class => "btn")
+  - history = { :user_id => current_user.id, :song_id => @next_song.id }
+  = link_to( "次の歌へ", {:controller => :histories, :action => :save, :remote => true, :history => history}, :class => "btn" )
   = link_to 'ホームに戻る', :root

@@ -359,6 +359,7 @@ p#top_msg {
   border: 7px solid #333;
   box-sizing: border-box;
   margin-right: 3%;
+  overflow: hidden;
 }
 
 #poem p {
@@ -369,5 +370,18 @@ p#top_msg {
 }
 
 .btn {
+  width: 100px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  background-image: url("/assets/btn.jpg");
   border-radius: 5px;
+  font-family: serif;
+  color: #FFF;
+  text-decoration: none;
+  box-shadow: 1px 1px gray;
+}
+.btn:hover {
+  opacity: 0.9;
 }
