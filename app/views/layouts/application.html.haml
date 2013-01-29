@@ -14,13 +14,9 @@
     %header
       = render "layouts/header"
     #container
-      #main
-        -# %p#notice
-        -#   = notice
-        -# %p#alert
-        -#   = alert
+      %article#main
         = yield
-      #sub
+      %section#sub
         = render "layouts/sub"
       %div.clear
     %footer

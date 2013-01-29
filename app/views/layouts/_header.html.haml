@@ -1,8 +1,10 @@
-= link_to image_tag("logo_w.png"), :root, { :id => "logo_img" }
-%p
-  = link_to 'このサイトについて', :root
-  = link_to '使い方', :root
+%h1
+  = link_to image_tag("logo_w.png"), :root, { :id => "logo_img" }
+%ul
+  %li
+    = link_to 'このサイトについて', :root
+  %li
+    = link_to '使い方', :root
   - if current_user
-    = link_to 'Logout', logout_path
-  -# - else
-    -# = link_to image_tag("fb_login.jpg", :class => "fb_login"), auth_at_provider_path(:provider => :facebook)
+    %li
+      = link_to 'Logout', logout_path
