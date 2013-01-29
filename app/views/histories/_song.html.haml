@@ -18,5 +18,5 @@
   = form_for(@history, :url => :learn_save, :remote => true) do |f|
     = f.hidden_field :user_id, :value => current_user.id
     = f.hidden_field :song_id, :value => @next_song.id
-    = submit_tag("Next")
+    = image_submit_tag("fb_login.jpg", :class => "btn")
   = link_to 'ホームに戻る', :root

@@ -365,3 +365,6 @@ p#top_msg {
   margin: 7%;
 }
 
+.btn {
+  border-radius: 5px;
+}
