@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
   skip_before_filter :require_login
-  layout 'top', :only => [:top]
 
   def index
     if current_user

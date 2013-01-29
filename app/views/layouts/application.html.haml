@@ -14,10 +14,13 @@
     %header
       = render "layouts/header"
     #container
-      %article#main
+      - if current_page?(:top)
         = yield
-      %section#sub
-        = render "layouts/sub"
-      %div.clear
+      - else
+        %article#main
+          = yield
+        %section#sub
+          = render "layouts/sub"
+        %div.clear
     %footer
       = render "layouts/footer"
