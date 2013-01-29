@@ -1,10 +1,25 @@
-#footer_info
-  .fb-like(data-href="http://booklovesmusic.com" data-send="false" data-width="450" data-show-faces="true" data-font="lucida grande" data-colorscheme="dark")
-  %p Copyright 2013 All Rights Reserved.
-  %p
-    Produced by
-    %a(href="https://twitter.com/#!/kame_f_no7" target="_blank")
-      @kame_f_no7
-#fakebox
-  = image_tag("fakebox.png")
-%div.clear
+%section#footer
+  #site_map
+    %h2 Site Map
+    %ul
+      %li
+        = link_to 'ホーム', :root
+      %li
+        = link_to '守: あたらしい歌をおぼえる', :learn
+      %li
+        = link_to '破: おぼえた歌を復習する', :review
+      %li
+        = link_to '離: 100首まとめてテストする', :exam
+  #footer_info
+    %h2 Creator
+    %p
+      Produced by
+      %a(href="https://twitter.com/#!/kame_f_no7" target="_blank")
+        @kame_f_no7
+    .fb-like(data-href="http://booklovesmusic.com" data-send="false" data-width="450" data-show-faces="true" data-font="lucida grande" data-colorscheme="dark")
+    %p#copyright Copyright 2013 All Rights Reserved.
+  #fakebox
+    %h2 Supported by
+    = image_tag("fakebox.png")
+  %p.clear
+

@@ -50,8 +50,14 @@ $(function(){
 
 	$("#question_img").load(function(){
 	  $("#question_char").height($("#question_img").height());
+	  // $("#answer").height($("#question_img").height());
 	});
 
 	(new Taketori()).set({lang:'ja-jp',fontFamily:'serif'}).element('#question_char').toVertical(false);
+	(new Taketori()).set({lang:'ja-jp',fontFamily:'serif'}).element('#ans_1').toVertical(false);
+	(new Taketori()).set({lang:'ja-jp',fontFamily:'serif'}).element('#ans_2').toVertical(false);
+	(new Taketori()).set({lang:'ja-jp',fontFamily:'serif'}).element('#ans_3').toVertical(false);
+	(new Taketori()).set({lang:'ja-jp',fontFamily:'serif'}).element('#ans_4').toVertical(false);
+	(new Taketori()).set({lang:'ja-jp',fontFamily:'serif'}).element('#ans_5').toVertical(false);
 });
 

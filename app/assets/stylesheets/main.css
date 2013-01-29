@@ -60,7 +60,7 @@ header a, header a:visited {
 }
 
 header a:hover {
-  color: #B54434
+  color: #B54434;
 }
 
 
@@ -239,6 +239,7 @@ footer {
 	top: 65px;
 	width: 100%;
 	background-image: url("/assets/menu_bg.png");
+	color: #AAA;
 }
 footer:before{
   content:"";
@@ -252,24 +253,33 @@ footer:before{
 	box-shadow: 0 1px 3px gray;
 }
 
+#footer {
+  padding: 20px 2%;
+}
+
 footer div {
-  margin: 15px 2%;
+  width: 30%;
+  margin: 20px 1%;
+  float: left;
 }
 
 .fb-like {
   color: #DDD;
+  width: 100%;
 }
-#footer_info  {
-  float: left;
-	line-height: 80px;
-	color: #DDD;
-}
-#fakebox {
-  float: right;
+
+#fakebox img {
+  width: 100%;
 }
 
 footer a, footer a:visited {
 	color: #EEE;
+}
+
+footer h2 {
+  color: #FFF;
+  border-bottom: 1px solid #CCC;
+  margin-bottom: 10px;
 }
 
 
@@ -353,6 +363,7 @@ p#top_msg {
 .char_card {
   float: left;
   width: 23%;
+  height: 230px;
   background: #EEE;
   border: 7px solid #333;
   box-sizing: border-box;
@@ -384,3 +395,29 @@ p#top_msg {
 .btn:hover {
   opacity: 0.9;
 }
+
+/*****************************************************************
+* REVIEW
+*****************************************************************/
+#answer {
+  margin-top: 40px;
+  background-image: url("/assets/tatami.jpg");
+  background-size: contain;
+}
+#answer a {
+  color: #333;
+}
+
+#answer .char_card {
+  width: 15%;
+  margin: 30px 2.5%;
+}
+#answer .char_card:hover {
+  border: 7px solid #B54434;
+	cursor: pointer;
+}
+
+#second-half {
+  display: none;
+}
+

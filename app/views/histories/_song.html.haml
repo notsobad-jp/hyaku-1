@@ -4,18 +4,18 @@
       <em>[守]</em> あたらしい歌をおぼえる
     %h2#learn_subtitle
       第#{@next_song.id}歌
-  %div#question_char.char_card
-    %p
-      - poem = @next_song.poem.split(" ")
-      #{poem[0]}<br>&emsp;#{poem[1]}<br>&emsp;&emsp;&emsp;&emsp;&emsp;#{poem[2]}<br>
-      #{poem[3]}<br>&emsp;&emsp;#{poem[4]}
-  = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @next_song.id)}.jpg", :class => "cards", :id => "question_img")
-  %div.clear
-
-  %p.poem_info
-    『#{@next_song.poem}』(#{@next_song.poet})
-
-  - history = { :user_id => current_user.id, :song_id => @next_song.id }
-  = link_to( "次の歌へ", {:controller => :histories, :action => :save, :remote => true, :history => history}, :class => "btn" )
+  %section#question
+    %div#question_char.char_card
+      %p
+        - poem = @next_song.poem.split(" ")
+        #{poem[0]}<br>&emsp;#{poem[1]}<br>&emsp;&emsp;&emsp;&emsp;&emsp;#{poem[2]}<br>
+        #{poem[3]}<br>&emsp;&emsp;#{poem[4]}
+    = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @next_song.id)}.jpg", :class => "cards", :id => "question_img")
+    %div.clear
+  %section
+    %p.poem_info
+      『#{@next_song.poem}』(#{@next_song.poet})
+    - history = { :user_id => current_user.id, :song_id => @next_song.id }
+    = link_to( "次の歌へ", {:controller => :histories, :action => :save, :remote => true, :history => history}, :class => "btn" )
   %div
     = link_to 'ホームに戻る', :root
