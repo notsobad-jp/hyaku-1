@@ -342,7 +342,7 @@ p#top_msg {
   box-sizing: border-box;
 }
 
-#poet {
+#poem {
   float: left;
   width: 23%;
   background: #EEE;
@@ -350,3 +350,11 @@ p#top_msg {
   box-sizing: border-box;
   margin-right: 3%;
 }
+
+#poem p {
+  font-size: 20px;
+  font-family: serif;
+  line-height: 1.5em;
+  margin: 7%;
+}
+

@@ -49,7 +49,9 @@ $(function(){
 	});
 
 	$("#question").load(function(){
-	  $("#poet").height($("#question").height());
+	  $("#poem").height($("#question").height());
 	});
+
+	(new Taketori()).set({lang:'ja-jp',fontFamily:'serif'}).element('#poem').toVertical(true);
 });
 

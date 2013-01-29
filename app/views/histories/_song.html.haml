@@ -3,9 +3,12 @@
     <em>[守]</em> あたらしい歌をおぼえる
   %h3#learn_subtitle
     第#{@next_song.id}歌
-  %div#poet
+  %div#poem
     %p
-      #{@next_song.poem}
+      - poem = @next_song.poem.split(" ")
+      #{poem[0]}<br>&emsp;#{poem[1]} #{poem[2]}<br><br>
+      #{poem[3]}<br>&emsp;&emsp;#{poem[4]}
+      -# = raw @next_song.poem.gsub(" ","<br>")
   = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @next_song.id)}.jpg", :class => "cards", :id => "question")
   %div.clear
 
