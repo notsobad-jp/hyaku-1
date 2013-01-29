@@ -31,23 +31,26 @@ header:after{
 	box-shadow: 0 1px 3px gray;
 }
 
-#logo_img img {
+#head_logo {
+  margin: 5px 0 5px 2%;
+  float: left;
 	width: 7%;
-  max-height: 65px;
-	margin: 10px 0 0 2%;
 }
 
-#fb_login_top {
-  width: 12%;
-  border-radius: 3px;
+#head_logo img {
+  width: 100%;
+  max-height: 55px;
+  margin: auto 0;
+}
+
+header ul {
   float: right;
-  margin: 17px 2%;
+  margin-right: 2%;
 }
-
-header p {
-	float: right;
+header li {
+  float: left;
 	line-height: 65px;
-  margin: auto 2%;
+  margin: 0 5px;
 }
 
 header a, header a:visited {
