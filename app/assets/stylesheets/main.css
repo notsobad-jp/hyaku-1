@@ -249,19 +249,26 @@ footer:before{
 	box-shadow: 0 1px 3px gray;
 }
 
-footer p {
+footer div {
+  margin: 15px 2%;
+}
+
+.fb-like {
+  color: #DDD;
+}
+#footer_info  {
+  float: left;
 	line-height: 80px;
 	color: #DDD;
-  float: left;
-  margin: auto 2%;
+}
+#fakebox {
+  float: right;
+}
+
+footer p {
 }
 footer a, footer a:visited {
 	color: #EEE;
-}
-
-footer img {
-  float: right;
-  margin: 15px 2%;
 }
 
 
