@@ -48,10 +48,10 @@ $(function(){
 		$(this).attr("src","/assets/fb_login.jpg");
 	});
 
-	$("#question").load(function(){
-	  $("#poem").height($("#question").height());
+	$("#question_img").load(function(){
+	  $("#question_char").height($("#question_img").height());
 	});
 
-	(new Taketori()).set({lang:'ja-jp',fontFamily:'serif'}).element('#poem').toVertical(true);
+	(new Taketori()).set({lang:'ja-jp',fontFamily:'serif'}).element('#question_char').toVertical(false);
 });
 

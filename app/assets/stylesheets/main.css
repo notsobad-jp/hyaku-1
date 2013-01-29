@@ -268,8 +268,6 @@ footer div {
   float: right;
 }
 
-footer p {
-}
 footer a, footer a:visited {
 	color: #EEE;
 }
@@ -352,7 +350,7 @@ p#top_msg {
   box-sizing: border-box;
 }
 
-#poem {
+.char_card {
   float: left;
   width: 23%;
   background: #EEE;
@@ -362,7 +360,7 @@ p#top_msg {
   overflow: hidden;
 }
 
-#poem p {
+.char_card p {
   font-size: 20px;
   font-family: serif;
   line-height: 1.5em;
@@ -376,11 +374,12 @@ p#top_msg {
   text-align: center;
   line-height: 30px;
   background-image: url("/assets/btn.jpg");
-  border-radius: 5px;
+  border-radius: 3px;
   font-family: serif;
   color: #FFF;
   text-decoration: none;
   box-shadow: 1px 1px gray;
+  text-shadow: 1px 1px #AA9999;
 }
 .btn:hover {
   opacity: 0.9;

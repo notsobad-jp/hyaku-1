@@ -4,12 +4,12 @@
       <em>[守]</em> あたらしい歌をおぼえる
     %h2#learn_subtitle
       第#{@next_song.id}歌
-  %div#poem
+  %div#question_char.char_card
     %p
       - poem = @next_song.poem.split(" ")
       #{poem[0]}<br>&emsp;#{poem[1]}<br>&emsp;&emsp;&emsp;&emsp;&emsp;#{poem[2]}<br>
       #{poem[3]}<br>&emsp;&emsp;#{poem[4]}
-  = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @next_song.id)}.jpg", :class => "cards", :id => "question")
+  = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @next_song.id)}.jpg", :class => "cards", :id => "question_img")
   %div.clear
 
   %p.poem_info
@@ -17,4 +17,5 @@
 
   - history = { :user_id => current_user.id, :song_id => @next_song.id }
   = link_to( "次の歌へ", {:controller => :histories, :action => :save, :remote => true, :history => history}, :class => "btn" )
-  = link_to 'ホームに戻る', :root
+  %div
+    = link_to 'ホームに戻る', :root
