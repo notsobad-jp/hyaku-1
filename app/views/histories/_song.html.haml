@@ -1,8 +1,9 @@
 %section.main
-  %h2#learn_title
-    <em>[守]</em> あたらしい歌をおぼえる
-  %h3#learn_subtitle
-    第#{@next_song.id}歌
+  %hgroup
+    %h1.menu_title
+      <em>[守]</em> あたらしい歌をおぼえる
+    %h2#learn_subtitle
+      第#{@next_song.id}歌
   %div#poem
     %p
       - poem = @next_song.poem.split(" ")
