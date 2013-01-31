@@ -36,6 +36,13 @@ class History < ActiveRecord::Base
     return review_num
   end
 
+  #今日の復習済み問題数
+  def self.review_num_finished(user)
+    target = self.which_day(Date.today).who(user).where(:exam_id => 0).where("result IS NOT ?", nil)
+    return (target.present?) ? target.count : 0
+  end
+
+
   #復習対象の問題をランダムで１つ返す。
   def self.review_song(user)
     #今日すでにやった問題のID一覧を取得

@@ -334,17 +334,28 @@ p#top_msg {
 * LEARN
 *****************************************************************/
 .menu_title {
-  border-left: 7px solid #AA9999;
-  padding-left: 10px;
+  width: 84%;
   line-height: 30px;
   font-size: 22px;
   font-family: serif;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  border-bottom: 6px dotted #000;
+}
+
+.menu_title:before {
+  content:"";
+  display: inline-block;
+  position: relative;
+	background-image: url("/assets/manji.png");
+  height: 32px;
+  width: 32px;
+  top: 8px;
 }
 
 #learn_subtitle {
   font-size: 18px;
   margin-bottom: 8px;
+  font-family: serif;
 }
 
 .poem_info {

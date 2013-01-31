@@ -1,5 +1,9 @@
 <% if @next_song %>
   $("#next_song").html("<%= j(render 'song', :next_song => @next_song) %>");
+	(new Taketori()).set({lang:'ja-jp',fontFamily:'serif'}).element('#question_char').toVertical(false);
+	$("#question_img").load(function(){
+	  $("#question_char").height($("#question_img").height());
+	});
 <% else %>
   location.href = "<%=url_for(:root)%>";
 <% end %>

@@ -9,6 +9,10 @@ class ReviewController < ApplicationController
     #ダミーの歌と混ぜた状態で取得。
     @review_targets = Song.set_question(@review_song.song_id)
 
+    #今日やる問題数・終了した問題数を取得
+    @review_num = History.review_num(current_user)
+    @review_num_finished = History.review_num_finished(current_user)
+
     respond_to do |format|
       format.html
       format.json { render json: @history }
