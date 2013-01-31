@@ -8,9 +8,9 @@
     %div#question_char.char_card
       %p
         - poem = @review_song.song.poem.split(" ")
-        %p#first-half
+        %span#first-half
           #{poem[0]}<br>&emsp;#{poem[1]}<br>&emsp;&emsp;&emsp;&emsp;&emsp;#{poem[2]}<br>
-        %p#second-half
+        %span#second-half
           #{poem[3]}<br>&emsp;&emsp;#{poem[4]}
     = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @review_song.song.id)}.jpg", :class => "cards", :id => "question_img")
     %div.clear

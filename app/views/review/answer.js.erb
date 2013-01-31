@@ -1,4 +1,5 @@
 <% if @review_song %>
+  //$("#second-half").show;
   $("#next_song").html("<%= j(render 'song', :review_song => @review_song, :review_targets => @review_targets) %>");
 <% else %>
   location.href = "<%=url_for(:root)%>";
