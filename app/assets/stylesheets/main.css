@@ -407,6 +407,10 @@ p#top_msg {
   opacity: 0.9;
 }
 
+.cards {
+  margin-right: 3%;
+}
+
 /*****************************************************************
 * REVIEW
 *****************************************************************/
@@ -429,6 +433,30 @@ p#top_msg {
 }
 
 #second-half {
+  color: #B54434;
   display: none;
 }
 
+#result {
+  float: left;
+  height: 100%;
+  width: 35%;
+  font-family: serif;
+  text-align: center;
+}
+#result p {
+  font-size: 80px;
+  line-height: 80px;
+  margin: 70px 0 30px 0;
+  display: none;
+}
+.success {
+  color: #E83015;
+}
+.failure {
+  color: #005CAF;
+}
+
+.hidden {
+  display: none;
+}

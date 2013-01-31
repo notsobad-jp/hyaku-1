@@ -27,8 +27,11 @@ class ReviewController < ApplicationController
         #復習対象の歌を１つ取得。全部おわってればリダイレクト。
         @review_song = History.review_song(current_user)
         @review_targets = Song.set_question(@review_song.song_id) if @review_song.present?
-        p "real review song:"
-        p @review_song
+        @review_num = History.review_num(current_user)
+        @review_num_finished = History.review_num_finished(current_user)
+        @result = @history.result
+        p "result id..."
+        p @history
 
         format.html { redirect_to @history, notice: 'History was successfully created.' }
         format.js
