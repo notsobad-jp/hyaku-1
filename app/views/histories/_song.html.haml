@@ -17,5 +17,3 @@
       『#{@next_song.poem}』(#{@next_song.poet})
     - history = { :user_id => current_user.id, :song_id => @next_song.id }
     = link_to( "次の歌へ", {:controller => :histories, :action => :save, :remote => true, :history => history}, :class => "btn" )
-  %div
-    = link_to 'ホームに戻る', :root
