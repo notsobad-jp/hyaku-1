@@ -9,7 +9,7 @@ class ExamController < ApplicationController
 
     #最初の問題を取得
     @exam_song = Song.random(1).first
-    @exam_targets = Song.set_question(@exam_song.poem)
+    @exam_targets = Song.set_question(@exam_song.id)
 
     respond_to do |format|
       format.html
