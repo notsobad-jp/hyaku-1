@@ -27,17 +27,3 @@
   %div
     = link_to 'ホームに戻る', :root
 
-
-
--# - @review_targets.each do |target|
--#   = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", target.id)}.jpg", :class => "cards")
--#   %p #{target.poem}
--#   %p #{target.poet}
--#
--#   = form_for(@history, :url => :review_answer, :remote => true) do |f|
--#     = f.hidden_field :user_id, :value => current_user.id
--#     = f.hidden_field :song_id, :value => @review_song.song_id
--#     - result = (target.id == @review_song.song_id) ? 1 : 0
--#     = f.hidden_field :result, :value => result
--#     = f.hidden_field :exam_id, :value => 0
--#     = submit_tag("Next")
