@@ -221,7 +221,7 @@ section.main {
   margin-top: 50px;
 }
 
-#profile_image {
+.profile_image {
   border: 6px solid #000;
 }
 

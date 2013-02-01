@@ -1,5 +1,5 @@
 %div
-  = image_tag("https://graph.facebook.com/#{Authentication.find(current_user.id).uid}/picture?type=normal", :alt => 'profile_image', :id => 'profile_image')
+  = image_tag("https://graph.facebook.com/#{Authentication.find(current_user.id).uid}/picture?type=normal", :alt => 'profile_image', :class => 'profile_image')
   %p
     = current_user.email
 %div

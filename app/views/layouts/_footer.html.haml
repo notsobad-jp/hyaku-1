@@ -1,25 +1,22 @@
 %section#footer
   #site_map
-    %h2 Site Map
-    %ul
-      %li
-        = link_to 'ホーム', :root
-      %li
-        = link_to '守: あたらしい歌をおぼえる', :learn
-      %li
-        = link_to '破: おぼえた歌を復習する', :review
-      %li
-        = link_to '離: 100首まとめてテストする', :exam
-  #footer_info
-    %h2 Creator
+    %h2 About
     %p
-      Produced by
+      百/一[ひゃくいち]は、だいたい1か月くらいで百人一首を覚えるためのサービスです。
+      百/一は「スペースド・リハーサル法」という考え方をベースにしていて、1日3歌ずつの学習に加えて
+      新しくおぼえた歌を1日後、3日後、7日後と間隔を空けて復習することで記憶の定着を容易にします。
+  #footer_info
+    %h2 Created by
+    %p
+      = image_tag("kame_f_no7.png", :alt => 'kame_f_no7', :class => 'profile_image')
       %a(href="https://twitter.com/#!/kame_f_no7" target="_blank")
         @kame_f_no7
-    .fb-like(data-href="http://booklovesmusic.com" data-send="false" data-width="450" data-show-faces="true" data-font="lucida grande" data-colorscheme="dark")
-    %p#copyright Copyright 2013 All Rights Reserved.
+    %p
+      Web制作とかしています。「百/一」ははじめてのRailsアプリとして作りました。
   #fakebox
     %h2 Supported by
     = image_tag("fakebox.png")
   %p.clear
+  .fb-like(data-href="http://booklovesmusic.com" data-send="false" data-width="450" data-show-faces="true" data-font="lucida grande" data-colorscheme="dark")
+  %p#copyright Copyright 2013 All Rights Reserved.
 
