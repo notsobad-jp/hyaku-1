@@ -122,13 +122,19 @@ header a:hover {
 }
 
 #pic_1 {
-  background-image: url("/assets/pic_1.jpg")
+  background-image: url("/assets/pic_1.png")
 }
 #pic_2 {
-  background-image: url("/assets/pic_2.jpg")
+  background-image: url("/assets/pic_2.png")
 }
 #pic_3 {
-  background-image: url("/assets/pic_3.jpg")
+  background-image: url("/assets/pic_3.png")
+}
+#pic_0 {
+  background-image: url("/assets/pic_0.png")
+}
+#pic_4 {
+  background-image: url("/assets/pic_4.png")
 }
 
 .upper {
