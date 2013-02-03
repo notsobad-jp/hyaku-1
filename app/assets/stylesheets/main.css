@@ -316,6 +316,9 @@ p#top_msg {
 .fb_login {
   border-radius: 3px;
 }
+.fb_login:hover {
+  opacity: 0.9;
+}
 
 #top_login img {
   width: 50%;

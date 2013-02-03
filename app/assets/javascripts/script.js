@@ -42,12 +42,6 @@ $(function(){
 			$("#menu_info_3").hide();
 	});
 
-	$(".fb_login").hover(function(){
-		$(this).attr("src","/assets/fb_login_on.jpg");
-	},function(){
-		$(this).attr("src","/assets/fb_login.jpg");
-	});
-
 	$("#question_img").load(function(){
 	  $("#question_char").height($("#question_img").height());
 	  // $("#answer").height($("#question_img").height());
