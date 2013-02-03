@@ -1,15 +1,25 @@
 class ExamController < ApplicationController
 
+  def index
+    #examID(何回目のテストか)を取得
+    last_exam = History.who(current_user).order("exam_id DESC").first
+    @exam_id = (last_exam) ? last_exam.exam_id+1 : 1
+    @exam_song = Song.random(1).first
+    @exam_targets = Song.set_question(@exam_song.id)
+
+    render :action => "show"
+  end
+
   def show
     @history = History.new
 
     #examID(何回目のテストか)を取得
     last_exam = History.who(current_user).order("exam_id DESC").first
-    @exam_id = (last_exam) ? last_exam.exam_id + 1 : 1
+    @exam_id = (last_exam) ? last_exam.exam_id : 1
 
-    #最初の問題を取得
-    @exam_song = Song.random(1).first
-    @exam_targets = Song.set_question(@exam_song.id)
+    #まだやってない問題を取得
+    @exam_song = History.exam_song(current_user, @exam_id)
+    @exam_targets = Song.set_question(@exam_song.id) if @exam_song.present?
 
     respond_to do |format|
       format.html

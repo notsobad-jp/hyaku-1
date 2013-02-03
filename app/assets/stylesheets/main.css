@@ -412,20 +412,18 @@ p#top_msg {
 }
 
 .btn {
-  width: 100px;
-  height: 30px;
+  padding: 3px 10px;
   display: inline-block;
   text-align: center;
   line-height: 30px;
-  background-image: url("/assets/btn.jpg");
-  border-radius: 3px;
+  background: #000;
   color: #EEE;
   text-decoration: none;
   box-shadow: 1px 1px gray;
 	font-family: Helvetica, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif !important;
 }
 .btn:hover {
-  opacity: 0.9;
+  background: #555;
 }
 
 .cards {

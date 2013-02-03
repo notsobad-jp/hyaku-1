@@ -6,6 +6,7 @@ Hyaku1::Application.routes.draw do
   match 'learn/save' => 'histories#save', :as => :learn_save
   match 'review' => 'review#show', :as => :review
   match 'review/answer' => 'review#answer', :as => :review_answer
+  match 'exam/index' => 'exam#index', :as => :exam_index
   match 'exam' => 'exam#show', :as => :exam
   match 'exam/answer' => 'exam#answer', :as => :exam_answer
   match 'exam/score' => 'exam#score', :as => :exam_score

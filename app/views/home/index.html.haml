@@ -15,7 +15,7 @@
             %p 残り：<em>#{@learn_num_left}</em>/3歌
             %br
             %p
-              - if @learn_num_left
+              - if @learn_num_left > 0
                 がんばりましょう。
               - else
                 今日の学習は終了です。<br>おつかれさまでした。
@@ -28,12 +28,12 @@
             %p <em>#{@review_num}</em>歌
             %br
             %p
-              - if @review_num
-                復習は何回でもできます。<br>がんばりましょう。
+              - if @review_num > 0
+                がんばりましょう。
               - else
-                今日はないみたいですね。<br>おつかれさまです。
+                今日の復習は終了です。<br>おつかれさまでした。
       %li
-        %a{:href => :exam}
+        %a{:href => "exam/index"}
           .box.menu#menu_3
         .box.menu_info#menu_info_3
           %div
