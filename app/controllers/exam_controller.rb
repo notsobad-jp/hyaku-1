@@ -17,9 +17,10 @@ class ExamController < ApplicationController
     last_exam = History.who(current_user).order("exam_id DESC").first
     @exam_id = (last_exam) ? last_exam.exam_id : 1
 
-    #まだやってない問題を取得
+    #まだやってない問題を取得。全部おわってれば結果画面にリダイレクト。
     @exam_song = History.exam_song(current_user, @exam_id)
     @exam_targets = Song.set_question(@exam_song.id) if @exam_song.present?
+    redirect_to :exam_finish and return if @exam_song.nil?
 
     respond_to do |format|
       format.html
@@ -47,8 +48,11 @@ class ExamController < ApplicationController
     end
   end
 
-  def score
-    @score = History.where(:exam_id => 1).who(current_user).where(:result => 1).count
+  def finish
+    #examID(何回目のテストか)を取得
+    last_exam = History.who(current_user).order("exam_id DESC").first
+    @exam_id = (last_exam) ? last_exam.exam_id : 1
+    @score = History.where(:exam_id => @exam_id).who(current_user).where(:result => 1).count
 
     respond_to do |format|
       format.html

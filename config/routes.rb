@@ -11,7 +11,7 @@ Hyaku1::Application.routes.draw do
   match 'exam/index' => 'exam#index', :as => :exam_index
   match 'exam' => 'exam#show', :as => :exam
   match 'exam/answer' => 'exam#answer', :as => :exam_answer
-  match 'exam/score' => 'exam#score', :as => :exam_score
+  match 'exam/finish' => 'exam#finish', :as => :exam_finish
   resources :users
   resources :user_sessions
   match 'oauth/callback' => 'oauths#callback'

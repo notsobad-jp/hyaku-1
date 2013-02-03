@@ -44,7 +44,6 @@ $(function(){
 
 	$("#question_img").load(function(){
 	  $("#question_char").height($("#question_img").height());
-	  // $("#answer").height($("#question_img").height());
 	});
 
 	(new Taketori()).set({lang:'ja-jp',fontFamily:'serif'}).element('#question_char').toVertical(false);

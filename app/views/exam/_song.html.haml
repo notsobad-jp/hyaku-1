@@ -28,3 +28,4 @@
             - poem = target.poem.split(" ")
             #{poem[3]}<br>&emsp;&emsp;#{poem[4]}
     %div.clear
+  = link_to( "やめる", {:controller => :exam, :action => :finish}, :class => "btn")

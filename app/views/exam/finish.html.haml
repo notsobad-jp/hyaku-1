@@ -1,0 +1,13 @@
+%div(id="next_song" class="songs")
+  %section.main
+    %h1.menu_title
+      100首まとめてテストする
+    #finish
+      %p.result
+        採点結果
+      %p.score
+        <em>#{@score}</em>/100
+      %p
+        おつかれさまでした。<br>
+      = link_to( "ホームへ戻る", :root, :class => "btn" )
+
