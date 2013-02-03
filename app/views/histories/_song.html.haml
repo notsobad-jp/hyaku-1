@@ -9,12 +9,17 @@
       %div
         - poem = @next_song.poem.split(" ")
         %div
-          %p #{poem[0]}
-          %p &emsp;#{poem[1]}
-          %p &emsp;&emsp;&emsp;&emsp;&emsp;#{poem[2]}
+          %p
+            #{poem[0]}
+          %p
+            &emsp;#{poem[1]}
+          %p
+            &emsp;&emsp;&emsp;&emsp;&emsp;#{poem[2]}
         %div
-          %p #{poem[3]}
-          %p &emsp;&emsp;#{poem[4]}
+          %p
+            #{poem[3]}
+          %p
+            &emsp;&emsp;#{poem[4]}
     = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @next_song.id)}.jpg", :class => "cards", :id => "question_img")
     %div.clear
   %section
