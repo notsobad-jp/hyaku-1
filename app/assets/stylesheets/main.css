@@ -167,6 +167,7 @@ header a:hover {
   background: #000;
   top: 62%;
   display: none;
+  z-index: 5;
 }
 
 .menu_info div {
@@ -270,9 +271,7 @@ footer div {
 }
 
 .fb-like {
-  color: #DDD;
-  width: 100%;
-  margin-bottom: 20px;
+  margin: 3px 10px 0 10px;
 }
 
 #fakebox img {
