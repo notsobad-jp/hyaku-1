@@ -1,4 +1,4 @@
-/* Taketori - Make Text Vertical 
+/* Taketori - Make Text Vertical
  * Copyright 2010-2011 CMONOS. Co,Ltd (http://cmonos.jp)
  *
  * Version: 1.3.0
@@ -13,7 +13,7 @@ var TaketoriDblClickAlert = {	// should be unicode entity for Opera.
 	'zh-cn' : "Double click to make text vertical.",
 	'ko-kr' : "Double click to make text vertical."
 };
-var TaketoriDefaultLang = (document.getElementsByTagName('html')[0] && document.getElementsByTagName('html')[0].lang) ? 
+var TaketoriDefaultLang = (document.getElementsByTagName('html')[0] && document.getElementsByTagName('html')[0].lang) ?
 			(document.getElementsByTagName('html')[0].lang.search(/tw/i) != -1) ? "zh-tw"
 //		:	(document.getElementsByTagName('html')[0].lang.search(/(zh|cn)/i) != -1) ? "zh-cn"
 //		:	(document.getElementsByTagName('html')[0].lang.search(/(ko|kr)/i) != -1) ? "ko-kr"
@@ -58,7 +58,7 @@ TaketoriTool.prototype = {
 					var regexp = new RegExp("(^|\\s)"+cName+"(?![\\w\\-])");
 					for (var i=0; i<elements.length; i++) {
 						if (elements[i].className.search(regexp) != -1 && !this.isIncluded(elements[i])) this.elements[this.elements.length] = elements[i];
-					} 
+					}
 				}
 			} else {
 				element = document.getElementById(element.replace('#',''));
@@ -204,10 +204,10 @@ Taketori.prototype = {
 			link = document.createElement('link');
 			link.setAttribute('rel','stylesheet');
 			link.setAttribute('type','text/css');
-			link.setAttribute('href',this.config.cssPath + 'taketori.css');
+			// link.setAttribute('href',this.config.cssPath + 'taketori.css');
 			header.appendChild(link);
 		} else {
-			document.write('<link rel="stylesheet" type="text/css" href="' + this.config.cssPath + 'taketori.css" />');
+			// document.write('<link rel="stylesheet" type="text/css" href="' + this.config.cssPath + 'taketori.css" />');
 		}
 	},
 
@@ -457,7 +457,7 @@ Taketori.prototype = {
 		}
 		if (this.isWritingModeReady && cssTextOnly) {
 			if (style.width && style.width.search(/\d+\.?\d*(px|em)/i) != -1 && parseInt(style.width) > 0 && style.height && style.height.search(/\d+\.?\d*(px|em)/i) != -1 && parseInt(style.height) > 0) {
-				if (element.currentStyle || (style.cssFloat && style.cssFloat != 'none') || (style.display == 'inline-block')) { 
+				if (element.currentStyle || (style.cssFloat && style.cssFloat != 'none') || (style.display == 'inline-block')) {
 					swapWH = true;
 				} else {
 					temp.style.width = 'auto';
@@ -510,7 +510,7 @@ Taketori.prototype = {
 					var cw = w - mw;
 					var ch = h - mh;
 					if (swapWH) {
-						if (element.currentStyle || (style.display == 'inline-block')) { 
+						if (element.currentStyle || (style.display == 'inline-block')) {
 							temp.width = ch;
 							temp.style.width = ch + 'px';
 						} else {
@@ -638,8 +638,8 @@ Taketori.prototype = {
 				}
 				if (setOnly) {
 					var user_lang = navigator.browserLanguage || navigator.language || navigator.userLanguage;
-					user_lang = (user_lang.search(/tw/i) != -1) ? "zh-tw" : 
-								(user_lang.search(/(zh|cn)/i) != -1) ? "zh-cn" : 
+					user_lang = (user_lang.search(/tw/i) != -1) ? "zh-tw" :
+								(user_lang.search(/(zh|cn)/i) != -1) ? "zh-cn" :
 								(user_lang.search(/(ko|kr)/i) != -1) ? "ko-kr" : "ja-jp";
 					alert(TaketoriDblClickAlert[user_lang]);
 					return this;
@@ -774,7 +774,7 @@ Taketori.prototype = {
 			var bodyFontSize = (this.getStyle(document.body)).fontSize;
 			bodyFontSize = (bodyFontSize.search(/\d+\.?\d*(em|%)/) != -1) ? this.toPx(bodyFontSize,16) : parseInt(bodyFontSize);
 			fontSize = this.toPx(fontSize,bodyFontSize);
-			return (fontSize > 0) ? fontSize : 16; 
+			return (fontSize > 0) ? fontSize : 16;
 		}
 	},
 
@@ -991,11 +991,11 @@ Taketori.prototype = {
 		if (this.rubyDisabled) className += ' taketori-ruby-disabled';
 		if (!this.isTextEmphasisReady) className += ' taketori-text-emphasis-disabled';
 		className += (
-			(this.isWritingModeReady && navigator.userAgent.search(/WebKit/i) != -1 && navigator.userAgent.search(/Windows/i) != -1) ? ' taketori-atsign' : 
-			(!this.process.currentConfig.fontFamily) ? ' taketori-serif' : 
-			(this.process.currentConfig.fontFamily == 'sans-serif') ? ' taketori-sans-serif' : 
-			(this.process.currentConfig.fontFamily == 'cursive') ? ' taketori-cursive' : 
-			(this.process.currentConfig.fontFamily == 'kai') ? ' taketori-kai' : 
+			(this.isWritingModeReady && navigator.userAgent.search(/WebKit/i) != -1 && navigator.userAgent.search(/Windows/i) != -1) ? ' taketori-atsign' :
+			(!this.process.currentConfig.fontFamily) ? ' taketori-serif' :
+			(this.process.currentConfig.fontFamily == 'sans-serif') ? ' taketori-sans-serif' :
+			(this.process.currentConfig.fontFamily == 'cursive') ? ' taketori-cursive' :
+			(this.process.currentConfig.fontFamily == 'kai') ? ' taketori-kai' :
 			' taketori-serif'
 		) + '-' + this.process.currentConfig.lang;
 		className += ' taketori-lang-' + this.process.currentConfig.lang;
@@ -1217,7 +1217,7 @@ Taketori.prototype = {
 					//space
 					} else if (w.search(/^\s+$/) != -1) {
 						if (count > 0) count+=0.5;
-						
+
 					//NoCJK
 					} else {
 						if (w.search(/^[0-9a-zA-Z]$/) != -1) {
@@ -1290,14 +1290,14 @@ Taketori.prototype = {
 			list = ["\u3044","\u3044","\u308D","\u306F","\u306B","\u307B","\u3078","\u3068","\u3061","\u308A","\u306C","\u308B","\u3092","\u308F","\u304B","\u3088","\u305F","\u308C","\u305D","\u3064","\u306D","\u306A","\u3089","\u3080","\u3046","\u3090","\u306E","\u304A","\u304F","\u3084","\u307E","\u3051","\u3075","\u3053","\u3048","\u3066","\u3042","\u3055","\u304D","\u3086","\u3081","\u307F","\u3057","\u3091","\u3072","\u3082","\u305B","\u3059"];
 			return "(" + list[n] + ")";
 		} else if (listType == "I" || listType == "upper-roman") {
-			list = ["I","I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII","XIII","XIV","XV","XVI","XVII","XVIII","XIX","XX"]; 
+			list = ["I","I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII","XIII","XIV","XV","XVI","XVII","XVIII","XIX","XX"];
 			return "(" + list[n] + ")";
 		} else if (listType == "i" || listType == "lower-roman") {
-			list = ["i","i","ii","iii","iv","v","vi","vii","viii","ix","x","xi","xii","xiii","xiv","xv","xvi","xvii","xviii","xix","xx"]; 
+			list = ["i","i","ii","iii","iv","v","vi","vii","viii","ix","x","xi","xii","xiii","xiv","xv","xvi","xvii","xviii","xix","xx"];
 			return "(" + list[n] + ")";
 		} else if (listType == "1" || listType == "decimal" || listType == "\u4E00" || listType == "cjk-ideographic" || listType == "\u58F1") {
 			if (n <= 10) {
-				list = (listType == "\u58F1") ? ["\u58F1","\u58F1","\u5F10","\u53C2","\u56DB","\u4F0D","\u516D","\u4E03","\u516B","\u4E5D","\u62FE"] : ["\u4E00","\u4E00","\u4E8C","\u4E09","\u56DB","\u4E94","\u516D","\u4E03","\u516B","\u4E5D","\u5341"]; 
+				list = (listType == "\u58F1") ? ["\u58F1","\u58F1","\u5F10","\u53C2","\u56DB","\u4F0D","\u516D","\u4E03","\u516B","\u4E5D","\u62FE"] : ["\u4E00","\u4E00","\u4E8C","\u4E09","\u56DB","\u4E94","\u516D","\u4E03","\u516B","\u4E5D","\u5341"];
 				return '(' + list[n] + ')';
 			} else {
 				return '(' + n + ')';

@@ -16,6 +16,8 @@ Hyaku1::Application.routes.draw do
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
   match 'top' => 'home#top', :as => 'top'
+  match 'home/about' => 'home#about', :as => 'about'
+  match 'home/credit' => 'home#credit', :as => 'credit'
 
 
   # The priority is based upon order of creation:
