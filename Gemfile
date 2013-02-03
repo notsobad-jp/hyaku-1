@@ -8,6 +8,8 @@ gem 'rails', '3.2.9'
 gem 'execjs'
 gem 'sorcery'
 gem 'haml'
+gem 'thin'
+gem 'foreman'
 
 # Gems used only for assets and not required
 # in production environments by default.
