@@ -339,9 +339,6 @@ p#top_msg {
   margin: 10% 0 5% 0;
 }
 
-.fb_login {
-  border-radius: 3px;
-}
 .fb_login:hover {
   opacity: 0.9;
 }
