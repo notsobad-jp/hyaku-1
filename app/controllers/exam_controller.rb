@@ -3,7 +3,8 @@ class ExamController < ApplicationController
   def index
     #examID(何回目のテストか)を取得
     last_exam = History.who(current_user).order("exam_id DESC").first
-    @exam_id = (last_exam) ? last_exam.exam_id+1 : 1
+    last_exam_id = last_exam.exam_id.presence || 1
+    @exam_id = (last_exam) ? last_exam_id+1 : 1
     @exam_song = Song.random(1).first
     @exam_targets = Song.set_question(@exam_song.id)
 
