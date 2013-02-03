@@ -30,8 +30,6 @@ class ReviewController < ApplicationController
         @review_num = History.review_num(current_user)
         @review_num_finished = History.review_num_finished(current_user)
         @result = @history.result
-        p "result id..."
-        p @history
 
         format.html { redirect_to @history, notice: 'History was successfully created.' }
         format.js
