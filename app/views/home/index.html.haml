@@ -11,8 +11,8 @@
           .box.menu#menu_1
         .box.menu_info#menu_info_1
           %div
-            %p 本日の学習状況
-            %p 残り：<em>#{@learn_num_left}</em>/3歌
+            %p 今日おぼえる歌
+            %p 残り：<em>#{@learn_num_left}</em>/3首
             %br
             %p
               - if @learn_num_left > 0
@@ -24,8 +24,8 @@
           .box.menu#menu_2
         .box.menu_info#menu_info_2
           %div
-            %p 本日復習する歌
-            %p <em>#{@review_num}</em>歌
+            %p 今日復習する歌
+            %p 残り：<em>#{@review_num - @review_num_finished}</em>/#{@review_num}首
             %br
             %p
               - if @review_num > 0
