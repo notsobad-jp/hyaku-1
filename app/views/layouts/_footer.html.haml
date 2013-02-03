@@ -2,21 +2,23 @@
   #site_map
     %h2 About
     %p
-      百/一[ひゃくいち]は、だいたい1か月くらいで百人一首を覚えるためのサービスです。
-      百/一は「スペースド・リハーサル法」という考え方をベースにしていて、1日3歌ずつの学習に加えて
-      新しくおぼえた歌を1日後、3日後、7日後と間隔を空けて復習することで記憶の定着を容易にします。
+      百/一[ひゃくいち]は、だいたい1か月くらいで百人一首を覚えるためのサービスです。<br>
+      「守」で毎日3首ずつ新しい歌をおぼえて、「破」でおぼえた歌を復習します。<br>
+      復習する歌は、おぼえてから1日後・3日後・7日後のものが自動的にピックアップされます。<br>
+      徐々に間隔をあけて復習することで記憶を定着させる「スペースド・リハーサル法」という考え方をベースにしています。<br>
+      自信がついたら「離」で100首テストに挑戦してみてください。
   #footer_info
     %h2 Created by
-    %p
-      = image_tag("kame_f_no7.png", :alt => 'kame_f_no7', :class => 'profile_image')
+    = image_tag("kame_f_no7.png", :alt => 'kame_f_no7', :class => 'profile_image')
+    %p#creator
       %a(href="https://twitter.com/#!/kame_f_no7" target="_blank")
         @kame_f_no7
     %p
-      Web制作とかしています。「百/一」ははじめてのRailsアプリとして作りました。
+      Web制作とかしています。Ruby on Railsを絶賛勉強はじめました。百/一ははじめてのRailsアプリです。
   #fakebox
     %h2 Supported by
+    .fb-like(data-href="http://booklovesmusic.com" data-send="false" data-width="450" data-show-faces="true" data-font="lucida grande" data-colorscheme="dark")
     = image_tag("fakebox.png")
   %p.clear
-  .fb-like(data-href="http://booklovesmusic.com" data-send="false" data-width="450" data-show-faces="true" data-font="lucida grande" data-colorscheme="dark")
   %p#copyright Copyright 2013 All Rights Reserved.
 

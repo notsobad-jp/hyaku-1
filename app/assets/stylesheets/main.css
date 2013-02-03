@@ -272,6 +272,7 @@ footer div {
 .fb-like {
   color: #DDD;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 #fakebox img {
@@ -286,6 +287,19 @@ footer h2 {
   color: #FFF;
   border-bottom: 1px solid #CCC;
   margin-bottom: 10px;
+}
+
+#footer_info img {
+  width: 15%;
+}
+
+#creator  {
+  font-size: smaller;
+  margin-bottom: 20px;
+}
+
+#copyright {
+  text-align: center;
 }
 
 
