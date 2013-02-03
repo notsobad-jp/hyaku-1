@@ -420,11 +420,10 @@ p#top_msg {
   line-height: 30px;
   background-image: url("/assets/btn.jpg");
   border-radius: 3px;
-  font-family: serif;
-  color: #FFF;
+  color: #EEE;
   text-decoration: none;
   box-shadow: 1px 1px gray;
-  text-shadow: 1px 1px #AA9999;
+	font-family: Helvetica, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif !important;
 }
 .btn:hover {
   opacity: 0.9;
