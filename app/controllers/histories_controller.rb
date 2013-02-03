@@ -5,7 +5,7 @@ class HistoriesController < ApplicationController
 
     #次にやる問題を取得。三問終わってたらホームにリダイレクト。
     @next_song = History.next_song(current_user)
-    redirect_to :root and return if @next_song.nil?
+    redirect_to :learn_finish and return if @next_song.nil?
 
     respond_to do |format|
       format.html
@@ -28,6 +28,13 @@ class HistoriesController < ApplicationController
         format.html { render action: "new" }
         format.json { render json: @history.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def finish
+    respond_to do |format|
+      format.html
+      format.json { render json: @history }
     end
   end
 end

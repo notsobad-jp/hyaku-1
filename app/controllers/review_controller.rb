@@ -4,7 +4,7 @@ class ReviewController < ApplicationController
 
     #復習対象の歌を１つ取得。全部おわってればリダイレクト。
     @review_song = History.review_song(current_user)
-    redirect_to :root and return if @review_song.nil?
+    redirect_to :review_finish and return if @review_song.nil?
 
     #ダミーの歌と混ぜた状態で取得。
     @review_targets = Song.set_question(@review_song.song_id)
@@ -38,6 +38,13 @@ class ReviewController < ApplicationController
         format.html { render action: "show" }
         format.json { render json: @history.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def finish
+    respond_to do |format|
+      format.html
+      format.json { render json: @history }
     end
   end
 end
