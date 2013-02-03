@@ -6,10 +6,15 @@
       第#{@next_song.id}歌
   %section#question
     %div#question_char.char_card
-      %p
+      %div
         - poem = @next_song.poem.split(" ")
-        #{poem[0]}<br>&emsp;#{poem[1]}<br>&emsp;&emsp;&emsp;&emsp;&emsp;#{poem[2]}<br>
-        #{poem[3]}<br>&emsp;&emsp;#{poem[4]}
+        %div
+          %p #{poem[0]}
+          %p &emsp;#{poem[1]}
+          %p &emsp;&emsp;&emsp;&emsp;&emsp;#{poem[2]}
+        %div
+          %p #{poem[3]}
+          %p &emsp;&emsp;#{poem[4]}
     = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @next_song.id)}.jpg", :class => "cards", :id => "question_img")
     %div.clear
   %section

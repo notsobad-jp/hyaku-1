@@ -412,7 +412,14 @@ p#top_msg {
   font-size: 20px;
   font-family: serif;
   line-height: 1.5em;
-  margin: 7%;
+}
+
+.char_card div {
+  margin: 7% 0;
+}
+
+#first-half, #second-half {
+  margin: 0;
 }
 
 .btn {

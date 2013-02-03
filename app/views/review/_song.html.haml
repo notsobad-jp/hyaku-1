@@ -6,12 +6,15 @@
       第#{@review_song.song_id}歌 [#{@review_num_finished+1}/#{@review_num}歌目]
   %section#question
     %div#question_char.char_card
-      %p
+      %div
         - poem = @review_song.song.poem.split(" ")
-        %span#first-half
-          #{poem[0]}<br>&emsp;#{poem[1]}<br>&emsp;&emsp;&emsp;&emsp;&emsp;#{poem[2]}<br>
-        %span#second-half
-          #{poem[3]}<br>&emsp;&emsp;#{poem[4]}
+        %div#first-half
+          %p #{poem[0]}
+          %p &emsp;#{poem[1]}
+          %p &emsp;&emsp;&emsp;&emsp;&emsp;#{poem[2]}
+        %div#second-half
+          %p #{poem[3]}
+          %p &emsp;&emsp;#{poem[4]}
     = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @review_song.song.id)}.jpg", :class => "cards", :id => "question_img")
     %div#result
       %p.success.hidden 正解
@@ -24,8 +27,9 @@
       - history = {:song_id => @review_song.song_id, :user_id => current_user.id, :exam_id => 0, :result => result}
       = link_to(:controller => :review, :action => :answer, :remote => true, :history => history) do
         %div.char_card{:id => "ans_#{i+1}"}
-          %p
+          %div
             - poem = target.poem.split(" ")
-            #{poem[3]}<br>&emsp;&emsp;#{poem[4]}
+            %p
+              #{poem[3]}<br>&emsp;&emsp;#{poem[4]}
     %div.clear
 
