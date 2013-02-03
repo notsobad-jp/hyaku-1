@@ -482,3 +482,33 @@ p#top_msg {
 .hidden {
   display: none;
 }
+
+
+/*****************************************************************
+* Static
+*****************************************************************/
+#static {
+  width: 84%;
+}
+
+#static h1 {
+  width: 100%;
+}
+
+#static section {
+  margin-bottom: 50px;
+}
+
+#static p {
+  margin: 10px 0;
+}
+
+blockquote {
+  padding: 10px;
+  font-style: italic;
+  background: #DDD;
+}
+
+blockquote p {
+  margin: 10px;
+}

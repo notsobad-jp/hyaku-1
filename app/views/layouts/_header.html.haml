@@ -3,8 +3,8 @@
 %ul
   %li
     = link_to 'このサイトについて', :about
-  %li
-    = link_to 'クレジット', :credit
+  -# %li
+  -#   = link_to 'クレジット', :credit
   - if current_user
     %li
       = link_to 'Logout', logout_path
