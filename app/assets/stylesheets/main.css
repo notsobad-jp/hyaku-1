@@ -182,15 +182,17 @@ header a:hover {
   position: relative;
   left: 12%;
   top: 16%;
+  z-index: 7;
 }
 
 #menu_info_3 div {
   left: 1.5%;
   top: 40%;
+  font-weight: bold;
 }
 
 .menu_info p {
-  color: #DDD;
+  color: #FFF;
   font-size: 1.0em;
   line-height: 1.3em;
 }
