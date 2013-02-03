@@ -25,6 +25,7 @@ class ExamController < ApplicationController
         @exam_id = @history.exam_id
         @exam_song = History.exam_song(current_user, @exam_id)
         @exam_targets = Song.set_question(@exam_song.id) if @exam_song.present?
+        @result = @history.result
 
         format.html { redirect_to @history, notice: 'History was successfully created.' }
         format.js

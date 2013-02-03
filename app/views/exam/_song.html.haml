@@ -8,33 +8,23 @@
     %div#question_char.char_card
       %p
         - poem = @exam_song.poem.split(" ")
-        %p#first-half
+        %span#first-half
           #{poem[0]}<br>&emsp;#{poem[1]}<br>&emsp;&emsp;&emsp;&emsp;&emsp;#{poem[2]}<br>
-        %p#second-half
+        %span#second-half
           #{poem[3]}<br>&emsp;&emsp;#{poem[4]}
     = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @exam_song.id)}.jpg", :class => "cards", :id => "question_img")
+    %div#result
+      %p.success.hidden 正解
+      %p.failure.hidden 不正解
+      = link_to( "次の歌へ", {:controller => :exam, :action => :show}, :class => "btn hidden")
     %div.clear
   %section#answer
     - @exam_targets.each_with_index do |target, i|
       - result = (@exam_song.id == target.id) ? 1 : 0;
       - history = {:song_id => @exam_song.id, :user_id => current_user.id, :exam_id => @exam_id, :result => result}
-      = link_to(:controller => :review, :action => :answer, :remote => true, :history => history) do
+      = link_to(:controller => :exam, :action => :answer, :remote => true, :history => history) do
         %div.char_card{:id => "ans_#{i+1}"}
           %p
             - poem = target.poem.split(" ")
             #{poem[3]}<br>&emsp;&emsp;#{poem[4]}
     %div.clear
-
-
--# - @exam_targets.each do |target|
--#   = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", target.id)}.jpg", :class => "cards")
--#   %p #{target.poem}
--#   %p #{target.poet}
--#
--#   = form_for(@history, :url => :exam_answer, :remote => true) do |f|
--#     = f.hidden_field :user_id, :value => current_user.id
--#     = f.hidden_field :song_id, :value => @exam_song.id
--#     - result = (target.id == @exam_song.id) ? 1 : 0
--#     = f.hidden_field :result, :value => result
--#     = f.hidden_field :exam_id, :value => @exam_id
--#     = submit_tag("Next")

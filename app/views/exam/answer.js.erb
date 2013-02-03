@@ -1,5 +1,9 @@
-<% if @exam_song %>
-  $("#next_song").html("<%= j(render 'song', :exam_song => @exam_song, :exam_targets => @exam_targets) %>");
-<% else %>
-  location.href = "<%=url_for(:root)%>";
-<% end %>
+$("#second-half").fadeIn(3000);
+<% result = (@result == 1) ? 'success' : 'failure' %>
+$(".<%=result%>").fadeIn(3000);
+setTimeout(function(){
+  $("#result a.hidden").show();
+  $("#result a.hidden").css("display", "inline-block");
+}, 3000);
+$('html,body').animate({ scrollTop: 0 }, 'slow');
+
