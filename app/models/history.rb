@@ -7,6 +7,8 @@ class History < ActiveRecord::Base
   scope :which_day, lambda { |t| where(:created_at => t.beginning_of_day..t.end_of_day) }
   scope :original, where("result IS ?", nil)
 
+  validates_uniqueness_of :song_id, :scope => [:user_id, :exam_id]
+
   SONGS_PER_DAY = 3
 
   #次の問題を取得。3問おわってればnilを返す。
