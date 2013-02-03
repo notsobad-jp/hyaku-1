@@ -28,7 +28,7 @@
             %p 残り：<em>#{@review_num - @review_num_finished}</em>/#{@review_num}首
             %br
             %p
-              - if @review_num > 0
+              - if (@review_num - @review_num_finished) > 0
                 がんばりましょう。
               - else
                 今日の復習は終了です。<br>おつかれさまでした。
