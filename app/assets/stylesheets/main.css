@@ -16,6 +16,11 @@ body {
   margin-bottom: 20px;
 }
 
+.serif {
+  font-family:"ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+  text-shadow: 0 0 1px #bbb;
+}
+
 /*****************************************************************
 * HEADER
 *****************************************************************/
@@ -365,7 +370,6 @@ p#top_msg {
   width: 84%;
   line-height: 30px;
   font-size: 22px;
-  font-family: serif;
   margin-bottom: 25px;
   border-bottom: 6px dotted #000;
 }
@@ -380,17 +384,11 @@ p#top_msg {
   top: 8px;
 }
 
-#learn_subtitle {
+.subtitle {
   font-size: 18px;
   margin-bottom: 8px;
-  font-family: serif;
 }
 
-.poem_info {
-  font-family: serif;
-  font-size: 14px;
-  margin: 15px 0;
-}
 
 .cards {
   float: left;
@@ -412,7 +410,6 @@ p#top_msg {
 
 .char_card p {
   font-size: 20px;
-  font-family: serif;
   line-height: 1.5em;
 }
 
@@ -433,7 +430,6 @@ p#top_msg {
   color: #EEE;
   text-decoration: none;
   box-shadow: 1px 1px gray;
-	font-family: Helvetica, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif !important;
 }
 .btn:hover {
   background: #555;
@@ -473,7 +469,6 @@ p#top_msg {
   float: left;
   height: 100%;
   width: 35%;
-  font-family: serif;
   text-align: center;
 }
 #result p {
@@ -499,14 +494,12 @@ p#top_msg {
 *****************************************************************/
 .result {
   font-size: 20px;
-  font-family: serif;
   line-height: 20px;
 }
 
 .score {
   font-size: 100px;
   line-height: 100px;
-  font-family: serif;
 }
 
 .score em {

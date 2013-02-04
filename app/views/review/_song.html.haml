@@ -1,11 +1,11 @@
 %section.main
   %hgroup
-    %h1.menu_title
+    %h1.menu_title.serif
       おぼえた歌を復習する
-    %h2#learn_subtitle
+    %h2.subtitle.serif
       第#{@review_song.song_id}歌 [#{@review_num_finished+1}/#{@review_num}歌目]
   %section#question
-    %div#question_char.char_card
+    %div#question_char.char_card.serif
       %div
         - poem = @review_song.song.poem.split(" ")
         %div#first-half
@@ -17,8 +17,8 @@
           %p &emsp;&emsp;#{poem[4]}
     = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @review_song.song.id)}.jpg", :class => "cards", :id => "question_img")
     %div#result
-      %p.success.hidden 正解
-      %p.failure.hidden 不正解
+      %p.success.hidden.serif 正解
+      %p.failure.hidden.serif 不正解
       = link_to( "次の歌へ", {:controller => :review, :action => :show}, :class => "btn hidden")
     %div.clear
   %section#answer
