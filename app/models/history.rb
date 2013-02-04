@@ -7,9 +7,13 @@ class History < ActiveRecord::Base
   scope :which_day, lambda { |t| where(:created_at => t.beginning_of_day..t.end_of_day) }
   scope :original, where("result IS ?", nil)
 
-  validates_uniqueness_of :song_id, :scope => [:user_id, :exam_id]
-
   SONGS_PER_DAY = 3
+
+  #結果の再送信を制御。もう答え済みならfalseを返す。
+  def self.answered?(record)
+    past_answer = self.where(:user_id => record.user_id).where(:exam_id => record.exam_id).where(:song_id => record.song_id).which_day(Date.today)
+    return (past_answer.count > 0) ? true : false
+  end
 
   #次の問題を取得。3問おわってればnilを返す。
   def self.next_song(user)

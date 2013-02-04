@@ -21,6 +21,7 @@ class ReviewController < ApplicationController
 
   def answer
     @history = History.new(params[:history])
+    render :nothing => true and return if History.answered?(@history)
 
     respond_to do |format|
       if @history.save
@@ -36,6 +37,7 @@ class ReviewController < ApplicationController
         format.json { render json: @history, status: :created, location: @history }
       else
         format.html { render action: "show" }
+        format.js
         format.json { render json: @history.errors, status: :unprocessable_entity }
       end
     end
