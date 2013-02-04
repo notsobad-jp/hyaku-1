@@ -31,6 +31,7 @@ class ExamController < ApplicationController
 
   def answer
     @history = History.new(params[:history])
+    render :nothing => true and return if History.answered?(@history)
 
     respond_to do |format|
       if @history.save
