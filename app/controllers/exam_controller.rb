@@ -2,7 +2,7 @@ class ExamController < ApplicationController
 
   def index
     #examID(何回目のテストか)を取得
-    last_exam = History.who(current_user).where(:exam_id > 0).order("exam_id DESC").first
+    last_exam = History.who(current_user).where("exam_id > 0").order("exam_id DESC").first
     @exam_id = (last_exam.present?) ? last_exam.exam_id+1 : 1
     @exam_song = Song.random(1).first
     @exam_targets = Song.set_question(@exam_song.id)
@@ -14,7 +14,7 @@ class ExamController < ApplicationController
     @history = History.new
 
     #examID(何回目のテストか)を取得
-    last_exam = History.who(current_user).where(:exam_id > 0).order("exam_id DESC").first
+    last_exam = History.who(current_user).where("exam_id > 0").order("exam_id DESC").first
     @exam_id = (last_exam) ? last_exam.exam_id : 1
 
     #まだやってない問題を取得。全部おわってれば結果画面にリダイレクト。
