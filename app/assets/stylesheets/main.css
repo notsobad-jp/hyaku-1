@@ -111,6 +111,9 @@ header a:hover {
 	margin: 4.33%;
 	width: 23.5%;
 	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
 	box-sizing: border-box;
 }
 
@@ -184,6 +187,9 @@ header a:hover {
 
 .menu_info div {
 	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
   position: relative;
   left: 12%;
   top: 16%;
