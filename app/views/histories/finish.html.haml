@@ -2,6 +2,9 @@
   %section.main
     %h1.menu_title.serif
       あたらしい歌をおぼえる
+    %div.cf
+      - @finished_songs.each do |song|
+        = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", song.song_id)}.jpg", :class => "cards")
     #finish
       %p
         今日おぼえる歌はすべて終了しました。<br>

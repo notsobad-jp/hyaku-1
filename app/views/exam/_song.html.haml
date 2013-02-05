@@ -30,4 +30,4 @@
           %div
             - poem = target.poem.split(" ")
             %p #{poem[3]}<br>&emsp;&emsp;#{poem[4]}
-  = link_to( "やめる", {:controller => :exam, :action => :finish}, :class => "btn")
+  = link_to( "やめる", {:controller => :exam, :action => :finish}, :class => "btn") unless @finished_num == 0

@@ -32,6 +32,8 @@ class HistoriesController < ApplicationController
   end
 
   def finish
+    @finished_songs = History.who(current_user).original.which_day(Date.today).order("created_at DESC")
+
     respond_to do |format|
       format.html
       format.json { render json: @history }

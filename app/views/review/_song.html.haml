@@ -3,7 +3,8 @@
     %h1.menu_title.serif
       おぼえた歌を復習する
     %h2.subtitle.serif
-      第#{@review_song.song_id}歌 [#{@review_num_finished+1}/#{@review_num}歌目]
+      第#{@review_song.song_id}歌
+      %small （残り#{@review_num-@review_num_finished}歌）
   %section#question.cf
     %div#question_char.char_card.serif
       %div
