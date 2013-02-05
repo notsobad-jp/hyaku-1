@@ -528,11 +528,7 @@ p#top_msg {
 * Static
 *****************************************************************/
 #static {
-  width: 84%;
-}
-
-#static h1 {
-  width: 100%;
+  margin: 0 10% 0 5%;
 }
 
 #static section {
