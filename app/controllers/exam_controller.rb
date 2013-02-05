@@ -51,8 +51,9 @@ class ExamController < ApplicationController
 
   def finish
     #examID(何回目のテストか)を取得
-    last_exam = History.who(current_user).order("exam_id DESC").first
-    @exam_id = (last_exam) ? last_exam.exam_id : 1
+    last_exam = History.who(current_user).where("exam_id > 0").order("exam_id DESC").first
+    redirect_to :root and return if last_exam.nil?
+    @exam_id = last_exam.exam_id
     @score = History.where(:exam_id => @exam_id).who(current_user).where(:result => 1).count
 
     respond_to do |format|
