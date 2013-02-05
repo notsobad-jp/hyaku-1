@@ -3,7 +3,8 @@
     %h1.menu_title.serif
       100首まとめてテストする
     %h2.subtitle.serif
-      第#{@exam_song.id}歌
+      #{@finished_num+1}首目
+      %small （現在のスコア：#{@current_score}/#{@finished_num}）
   %section#question.cf
     %div#question_char.char_card.serif
       %div

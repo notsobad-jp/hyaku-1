@@ -406,6 +406,9 @@ p#top_msg {
   margin-bottom: 8px;
 }
 
+.subtitle small {
+  font-size: 14px;
+}
 
 .cards {
   float: left;

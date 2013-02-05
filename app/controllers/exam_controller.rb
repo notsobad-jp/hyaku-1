@@ -7,6 +7,10 @@ class ExamController < ApplicationController
     @exam_song = Song.random(1).first
     @exam_targets = Song.set_question(@exam_song.id)
 
+    #いまのステータス初期値
+    @finished_num = 0
+    @current_score = 0
+
     render :action => "show"
   end
 
@@ -21,6 +25,10 @@ class ExamController < ApplicationController
     @exam_song = History.exam_song(current_user, @exam_id)
     @exam_targets = Song.set_question(@exam_song.id) if @exam_song.present?
     redirect_to :exam_finish and return if @exam_song.nil?
+
+    #いまのステータス取得（何問中何問正解か）
+    @finished_num = History.who(current_user).where("exam_id = ?", @exam_id).count
+    @current_score = History.who(current_user).where("exam_id = ?", @exam_id).where(:result => 1).count
 
     respond_to do |format|
       format.html
@@ -38,6 +46,8 @@ class ExamController < ApplicationController
         @exam_song = History.exam_song(current_user, @exam_id)
         @exam_targets = Song.set_question(@exam_song.id) if @exam_song.present?
         @result = @history.result
+        @finished_num = History.who(current_user).where("exam_id = ?", @exam_id).count
+        @current_score = History.who(current_user).where("exam_id = ?", @exam_id).where(:result => 1).count
 
         format.html { redirect_to @history, notice: 'History was successfully created.' }
         format.js
