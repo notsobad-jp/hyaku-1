@@ -4,7 +4,7 @@
       100首まとめてテストする
     %h2.subtitle.serif
       第#{@exam_song.id}歌
-  %section#question
+  %section#question.cf
     %div#question_char.char_card.serif
       %div
         - poem = @exam_song.poem.split(" ")
@@ -20,8 +20,7 @@
       %p.success.hidden.serif 正解
       %p.failure.hidden.serif 不正解
       = link_to( "次の歌へ", {:controller => :exam, :action => :show}, :class => "btn hidden")
-    %div.clear
-  %section#answer
+  %section#answer.cf
     - @exam_targets.each_with_index do |target, i|
       - result = (@exam_song.id == target.id) ? 1 : 0;
       - history = {:song_id => @exam_song.id, :user_id => current_user.id, :exam_id => @exam_id, :result => result}
@@ -30,5 +29,4 @@
           %div
             - poem = target.poem.split(" ")
             %p #{poem[3]}<br>&emsp;&emsp;#{poem[4]}
-    %div.clear
   = link_to( "やめる", {:controller => :exam, :action => :finish}, :class => "btn")

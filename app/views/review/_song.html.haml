@@ -4,7 +4,7 @@
       おぼえた歌を復習する
     %h2.subtitle.serif
       第#{@review_song.song_id}歌 [#{@review_num_finished+1}/#{@review_num}歌目]
-  %section#question
+  %section#question.cf
     %div#question_char.char_card.serif
       %div
         - poem = @review_song.song.poem.split(" ")
@@ -20,8 +20,7 @@
       %p.success.hidden.serif 正解
       %p.failure.hidden.serif 不正解
       = link_to( "次の歌へ", {:controller => :review, :action => :show}, :class => "btn hidden")
-    %div.clear
-  %section#answer
+  %section#answer.cf
     - @review_targets.each_with_index do |target, i|
       - result = (@review_song.song_id == target.id) ? 1 : 0;
       - history = {:song_id => @review_song.song_id, :user_id => current_user.id, :exam_id => 0, :result => result}
@@ -31,5 +30,4 @@
             - poem = target.poem.split(" ")
             %p
               #{poem[3]}<br>&emsp;&emsp;#{poem[4]}
-    %div.clear
 

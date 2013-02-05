@@ -4,7 +4,7 @@
       あたらしい歌をおぼえる
     %h2.subtitle.serif
       第#{@next_song.id}歌
-  %section#question
+  %section#question.cf
     %div#question_char.char_card.serif
       %div
         - poem = @next_song.poem.split(" ")
@@ -21,7 +21,6 @@
           %p
             &emsp;&emsp;#{poem[4]}
     = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @next_song.id)}.jpg", :class => "cards", :id => "question_img")
-    %div.clear
   %section
     - history = { :user_id => current_user.id, :song_id => @next_song.id }
     = link_to( "おぼえたので次へ", {:controller => :histories, :action => :save, :remote => true, :history => history}, :class => "btn" )

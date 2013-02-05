@@ -5,8 +5,16 @@ body {
 	font: 80%/19px Helvetica, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif !important;
 	letter-spacing: 0.1em!important;
 }
-.clear {
-	clear: both;
+
+/* Clear Fix */
+.cf:before, .cf:after {
+  content:"";
+  display:block;
+  overflow:hidden;
+}
+
+.cf:after {
+  clear:both;
 }
 
 #finish {
@@ -280,12 +288,12 @@ footer:before{
 }
 
 #footer {
-  padding: 20px 2%;
+  padding: 15px 2%;
 }
 
 footer div {
   width: 28%;
-  margin: 20px 2%;
+  margin: 15px 2%;
   float: left;
 }
 
@@ -313,7 +321,7 @@ footer h2 {
 
 #creator  {
   font-size: smaller;
-  margin-bottom: 20px;
+  margin: -5px 0 15px 0;
 }
 
 #copyright {

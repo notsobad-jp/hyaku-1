@@ -13,7 +13,7 @@
     }(document, 'script', 'facebook-jssdk'));</script>
     %header
       = render "layouts/header"
-    #container
+    #container.cf
       - if current_page?(:top)
         = yield
       - else
@@ -21,7 +21,6 @@
           = yield
         %section#sub
           = render "layouts/sub"
-        %div.clear
     %footer
       = render "layouts/footer"
     %script(type="text/javascript")
