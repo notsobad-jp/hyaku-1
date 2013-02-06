@@ -119,9 +119,9 @@ header a:hover {
 	margin: 4.33%;
 	width: 23.5%;
 	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(-45deg);
-	-o-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
 	box-sizing: border-box;
 }
 
