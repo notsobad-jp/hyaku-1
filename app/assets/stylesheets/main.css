@@ -3,7 +3,7 @@
 *****************************************************************/
 body {
 	font: 80%/19px Helvetica, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif !important;
-	letter-spacing: 0.1em!important;
+	letter-spacing: 0.1em !important;
 }
 
 /* Clear Fix */
@@ -360,7 +360,7 @@ footer h2 {
 }
 
 p#top_msg {
-  margin 10px 30px;
+  margin: 10px 30px;
   font-size: 14px;
   line-height: 30px;
 }
