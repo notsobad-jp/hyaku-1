@@ -41,7 +41,7 @@
 
 .taketori-ttb { overflow: hidden;  position: relative; }
 .taketori-ttb span { cursor: vertical-text; }
-.taketori-ttb a span { cursor: pointer; !important }
+.taketori-ttb a span { cursor: pointer !important; }
 
 .taketori-ttb .taketori-col {
   -moz-transform-origin: left bottom;
@@ -331,16 +331,16 @@
   -webkit-writing-mode: vertical-rl;
   -o-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
-  /writing-mode: tb-rl;
-  _writing-mode: tb-rl;
+  /* /writing-mode: tb-rl; */
+  /* _writing-mode: tb-rl; */
 }
 .taketori-writingmode-ttb .ltr, .taketori-writingmode-ttb span.tcy {
   -moz-writing-mode: horizontal-tb;
   -webkit-writing-mode: horizontal-tb;
   -o-writing-mode: horizontal-tb;
   -ms-writing-mode: lr-tb;
-  /writing-mode: lr-tb;
-  _writing-mode: lr-tb;
+  /* /writing-mode: lr-tb; */
+  /* _writing-mode: lr-tb; */
   vertical-align: middle\9;
 }
 
@@ -388,8 +388,8 @@
   -webkit-writing-mode: horizontal-tb;
   -o-writing-mode: horizontal-tb;
   -ms-writing-mode: lr-tb;
-  /writing-mode: lr-tb;
-  _writing-mode: lr-tb;
+  /* /writing-mode: lr-tb; */
+  /* _writing-mode: lr-tb; */
   font-size: 0.8em;
   line-height: 1;
   margin: -1.2em 0 0.2em -0.2em;
