@@ -1,15 +1,15 @@
 %section#footer
-  %p.cf
-    #site_map
+  .cf
+    .footer_box
       %h2 About
       %p
         百/一[ひゃくいち]は、だいたい1か月くらいで百人一首を覚えるためのサービスです。<br>
         「守」で毎日3首ずつ新しい歌をおぼえて、「破」でおぼえた歌を復習します。<br>
         復習する歌は、おぼえてから1日後・3日後・7日後のものが自動的にピックアップされます。<br>
         自信がついたら「離」で100首テストに挑戦してみてみましょう。
-    #footer_info
+    .footer_box
       %h2 Created by
-      = image_tag("kame_f_no7.png", :alt => 'kame_f_no7', :class => 'profile_image')
+      = image_tag("kame_f_no7.png", :alt => 'kame_f_no7', :class => 'profile_image', :id => 'creator_img')
       %p#creator
         %a(href="https://twitter.com/#!/kame_f_no7" target="_blank")
           @kame_f_no7
@@ -17,8 +17,8 @@
         Web制作とかしています。<br>
         Ruby on Railsと百人一首を絶賛勉強中。<br>
         百/一がはじめてのRailsアプリです。つかれました。
-    #fakebox
+    .footer_box
       %h2 Supported by
-      = image_tag("fakebox.png")
+      = image_tag("fakebox.png", :id => "fakebox")
   %p#copyright Copyright 2013 All Rights Reserved.
 
