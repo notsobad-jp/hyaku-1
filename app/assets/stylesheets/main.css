@@ -118,11 +118,17 @@ header a:hover {
 	border: 5px solid #000;
 	margin: 4.33%;
 	width: 23.5%;
+
 	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
 	-o-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
-	box-sizing: border-box;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #menu_1 {
@@ -244,6 +250,11 @@ section.main {
 	background-image: url("/assets/sub_bg.jpg");
 	z-index: -1;
   padding: 2.5%;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -414,7 +425,13 @@ p#top_msg {
   float: left;
   width: 23%;
   border: 7px solid #333;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   box-sizing: border-box;
+
 }
 
 .char_card {
@@ -423,9 +440,14 @@ p#top_msg {
   height: 230px;
   background: #EEE;
   border: 7px solid #333;
-  box-sizing: border-box;
   margin-right: 3%;
   overflow: hidden;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .char_card p {
