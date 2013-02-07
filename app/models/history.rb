@@ -9,7 +9,7 @@ class History < ActiveRecord::Base
 
   SONGS_PER_DAY = 3
 
-  #結果の再送信を制御。もう答え済みならfalseを返す。
+  #結果の再送信を制御。もう答え済みならtrueを返す。
   def self.answered?(record)
     past_answer = self.where(:user_id => record.user_id).where(:exam_id => record.exam_id).where(:song_id => record.song_id).which_day(Date.today)
     return (past_answer.count > 0) ? true : false

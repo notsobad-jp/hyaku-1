@@ -15,6 +15,8 @@ class HistoriesController < ApplicationController
 
   def save
     @history = History.new(params[:history])
+    p @history
+    redirect_to :learn and return if History.answered?(@history)
 
     respond_to do |format|
       if @history.save
