@@ -15,8 +15,11 @@ class HistoriesController < ApplicationController
 
   def save
     @history = History.new(params[:history])
-    p @history
-    redirect_to :learn and return if History.answered?(@history)
+    if History.answered?(@history)
+      p "answered!!"
+      redirect_to :learn and return
+    end
+    #redirect_to :learn and return if History.answered?(@history)
 
     respond_to do |format|
       if @history.save
@@ -38,6 +41,7 @@ class HistoriesController < ApplicationController
 
     respond_to do |format|
       format.html
+      format.js
       format.json { render json: @history }
     end
   end
