@@ -19,7 +19,7 @@ $(function(){
 		$("#sub").height($("#main").height());
 	});
 
-	$("#top_bg").height($("#top_bg").width()/940*528);
+	$("#top_bg").height($("#top_bg").width()/940*528+1);
 
   $("#menu_1").hover(
 		function(){
