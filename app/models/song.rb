@@ -1,5 +1,5 @@
 class Song < ActiveRecord::Base
-  attr_accessible :poet, :poem, :first_half, :second_half
+  attr_accessible :poet, :poem, :kana, :comment
   has_many :histories
 
   random = (Rails.env.production?) ? 'RANDOM()' : 'RAND()'
