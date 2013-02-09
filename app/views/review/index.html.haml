@@ -2,12 +2,12 @@
   %section.main
     %h1.menu_title.serif
       おぼえた歌を復習する
-    #finish
-      %div
-        %p 今日復習する歌は、<em>#{@review_songs.count}</em>歌です。
+    .normal_container
+      %div#review_index
+        %p 今日復習する歌は、<em>#{@review_num}</em>歌です。
         = link_to( "復習をはじめる", :review, :class => "btn" )
-      %div#review_contents
-        %div
+      %div#review_contents.cf
+        %div.review_content
           %h2.serif.headline 1日前におぼえた歌
           %div.cf
             - if @review_songs[1].present?
@@ -15,8 +15,8 @@
                 = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", target.song_id)}.jpg", :class => "cards")
             - else
               %p.review_empty
-                1日前におぼえた歌はありません。
-        %div
+                1日前におぼえた歌は<br>ありません。
+        %div.review_content
           %h2.serif.headline 3日前におぼえた歌
           %div.cf
             - if @review_songs[3].present?
@@ -24,8 +24,8 @@
                 = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", target.song_id)}.jpg", :class => "cards")
             - else
               %p.review_empty
-                3日前におぼえた歌はありません。
-        %div
+                3日前におぼえた歌は<br>ありません。
+        %div.review_content
           %h2.serif.headline 7日前におぼえた歌
           %div.cf
             - if @review_songs[7].present?
@@ -33,4 +33,4 @@
                 = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", target.song_id)}.jpg", :class => "cards")
             - else
               %p.review_empty
-                7日前におぼえた歌はありません。
+                7日前におぼえた歌は<br>ありません。

@@ -52,7 +52,9 @@ class ReviewController < ApplicationController
 
   def index
     @review_songs = History.review_song_all(current_user)
-    redirect_to :review_finish and return if @review_songs.blank?
+    @review_num = History.review_num(current_user)
+    @review_num_finished = History.review_num_finished(current_user)
+    redirect_to :review_finish and return if (@review_num == @review_num_finished) && @review_num != 0
 
     respond_to do |format|
       format.html

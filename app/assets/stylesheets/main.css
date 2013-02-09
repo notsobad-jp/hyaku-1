@@ -26,7 +26,7 @@ body {
   margin-bottom: 20px;
 }
 #finish em {
-  font-size: 18px;
+  //font-size: 18px;
 }
 
 .serif {
@@ -54,6 +54,14 @@ em {
   font-size: larger;
   font-weight: bold;
 	color: #B54434;
+}
+
+.link {
+  margin-bottom: 30px;
+}
+
+.normal_container {
+  width: 84%;
 }
 
 /*****************************************************************
@@ -414,7 +422,7 @@ p#top_msg {
 
 #exp {
   width: 84%;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .exp_content {
@@ -540,12 +548,25 @@ p#top_msg {
 /*****************************************************************
 * REVIEW
 *****************************************************************/
+#review_index p {
+  margin: 10px 0;
+}
+#review_index em {
+  font-size: 20px;
+}
+
 #review_contents {
-  margin: 30px 0;
+  margin: 30px 0 100px 0;
+}
+
+.review_content {
+  float: left;
+  width: 30%;
+  margin-right: 3%;
 }
 
 #review_contents img {
-  width: 15%;
+  width: 30%;
   margin-top: 10px;
   margin-bottom: 10px;
 }
