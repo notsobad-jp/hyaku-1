@@ -68,6 +68,17 @@ class History < ActiveRecord::Base
     return targets.sort_by{rand}.first.presence || nil
   end
 
+
+  #復習対象の問題を全部取得。
+  def self.review_song_all(user)
+    targets = Array.new
+    [1,3,7].each do |d|
+      target = self.original.which_day(d.day.ago).who(user)
+      targets[d] = target.includes(:song) if target.present?
+    end
+    return targets
+  end
+
   #テストの問題をランダムで１つ返す。
   def self.exam_song(user, exam_id)
     #すでにやった問題のID一覧を取得

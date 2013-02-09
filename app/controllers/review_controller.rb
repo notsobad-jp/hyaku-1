@@ -49,4 +49,14 @@ class ReviewController < ApplicationController
       format.json { render json: @history }
     end
   end
+
+  def index
+    @review_songs = History.review_song_all(current_user)
+    redirect_to :review_finish and return if @review_songs.blank?
+
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
 end

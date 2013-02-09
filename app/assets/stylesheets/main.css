@@ -19,9 +19,13 @@ body {
 
 #finish {
   margin-bottom: 300px;
+  width: 84%;
 }
 #finish p {
   margin-bottom: 20px;
+}
+#finish em {
+  font-size: 18px;
 }
 
 .serif {
@@ -43,6 +47,12 @@ body {
   height: 32px;
   width: 32px;
   top: 8px;
+}
+
+em {
+  font-size: larger;
+  font-weight: bold;
+	color: #B54434;
 }
 
 /*****************************************************************
@@ -238,12 +248,6 @@ header a:hover {
   line-height: 1.3em;
 }
 
-.menu_info em {
-  font-size: larger;
-  font-weight: bold;
-	color: #B54434;
-}
-
 #menu_info_1 {
   left: 16%;
 }
@@ -287,11 +291,6 @@ section.main {
   border: 6px solid #000;
 }
 
-#sub em {
-  font-size: larger;
-  font-weight: bold;
-	color: #B54434;
-}
 
 /*****************************************************************
 * FOOTER
@@ -540,6 +539,22 @@ p#top_msg {
 /*****************************************************************
 * REVIEW
 *****************************************************************/
+#review_contents {
+  margin: 30px 0;
+}
+
+#review_contents img {
+  width: 15%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.review_empty {
+  margin: 20px 0;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
 #question {
   margin-bottom: 40px;
 }
@@ -604,10 +619,6 @@ p#top_msg {
   line-height: 100px;
 }
 
-.score em {
-  font-weight: bold;
-  color: #E83015;
-}
 
 /*****************************************************************
 * Static
