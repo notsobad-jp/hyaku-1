@@ -25,12 +25,16 @@
     %div.kana
       %small.serif (#{@next_song.kana})
   %section#exp
-    %div
-      %h1 意訳
-      %p #{@next_song.comment}
-    %div
-      %h1 歌人
-      %p #{@next_song.poet}
+    %div.exp_content
+      %h1.headline.serif 意訳
+      %p.exp_comment #{@next_song.comment}
+    %div.exp_content
+      %h1.headline.serif 歌人
+      %div#poet_info.cf
+        = image_tag("poet/Hyakuninisshu_#{sprintf("%03d", @next_song.id)}.jpg")
+        %div
+          %p #{@next_song.poet}
+          %p #{@next_song.poet}
   %section
     - history = { :user_id => current_user.id, :song_id => @next_song.id }
     = link_to( "おぼえたので次へ", {:controller => :histories, :action => :save, :remote => true, :history => history}, :class => "btn" )
