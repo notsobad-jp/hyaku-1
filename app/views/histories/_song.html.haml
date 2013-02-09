@@ -33,8 +33,8 @@
       %div#poet_info.cf
         = image_tag("poet/Hyakuninisshu_#{sprintf("%03d", @next_song.id)}.jpg")
         %div
-          %p #{@next_song.poet}
-          %p #{@next_song.poet}
+          %p#poet_name.serif #{@next_song.poet} (698年-770年)
+          %p ここも前もしこの失敗人というののためをありでです。もちろんその間の活動年も断然その存在ですならほどですれでみるますよりは研究いっましだろて、どうにはありましたですない。途が据えます事もすなわち生涯が必ずしもないべきです。
   %section
     - history = { :user_id => current_user.id, :song_id => @next_song.id }
     = link_to( "おぼえたので次へ", {:controller => :histories, :action => :save, :remote => true, :history => history}, :class => "btn" )

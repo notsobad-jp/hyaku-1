@@ -418,7 +418,7 @@ p#top_msg {
 }
 
 .exp_content {
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 .exp_comment, #poet_info {
@@ -430,11 +430,24 @@ p#top_msg {
 }
 
 #poet_info img {
-  border: 3px solid #333;
-  margin-right: 20px;
-  /* border-radius: 50%; */
-  /* -webkit-border-radius: 50%; */
-  /* -moz-border-radius: 50%; */
+  width: 15%;
+  border: 7px solid #333;
+  margin-right: 2%;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#poet_info div {
+  width: 83%;
+}
+
+#poet_name {
+  font-size: 16px;
+  margin: 5px;
 }
 
 .menu_title {
