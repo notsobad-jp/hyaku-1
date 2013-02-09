@@ -1,0 +1,600 @@
+-
+  id: 1
+  name: 天智天皇
+  period:
+  info:
+
+-
+  id: 2
+  name: 持統天皇
+  period:
+  info:
+
+-
+  id: 3
+  name: 柿本人麻呂
+  period:
+  info:
+
+-
+  id: 4
+  name: 山辺赤人
+  period:
+  info:
+
+-
+  id: 5
+  name: 猿丸大夫
+  period:
+  info:
+
+-
+  id: 6
+  name: 中納言家持
+  period:
+  info:
+
+-
+  id: 7
+  name: 安倍仲麿
+  period:
+  info:
+
+-
+  id: 8
+  name: 喜撰法師
+  period:
+  info:
+
+-
+  id: 9
+  name: 小野小町
+  period:
+  info:
+
+-
+  id: 10
+  name: 蝉丸
+  period:
+  info:
+
+-
+  id: 11
+  name: 参議篁
+  period:
+  info:
+
+-
+  id: 12
+  name: 僧正遍昭
+  period:
+  info:
+
+-
+  id: 13
+  name: 陽成院
+  period:
+  info:
+
+-
+  id: 14
+  name: 河原左大臣
+  period:
+  info:
+
+-
+  id: 15
+  name: 光孝天皇
+  period:
+  info:
+
+-
+  id: 16
+  name: 中納言行平
+  period:
+  info:
+
+-
+  id: 17
+  name: 在原業平朝臣
+  period:
+  info:
+
+-
+  id: 18
+  name: 藤原敏行朝臣
+  period:
+  info:
+
+-
+  id: 19
+  name: 伊勢
+  period:
+  info:
+
+-
+  id: 20
+  name: 元良親王
+  period:
+  info:
+
+-
+  id: 21
+  name: 素性法師
+  period:
+  info:
+
+-
+  id: 22
+  name: 文屋康秀
+  period:
+  info:
+
+-
+  id: 23
+  name: 大江千里
+  period:
+  info:
+
+-
+  id: 24
+  name: 菅家
+  period:
+  info:
+
+-
+  id: 25
+  name: 三条右大臣
+  period:
+  info:
+
+-
+  id: 26
+  name: 貞信公
+  period:
+  info:
+
+-
+  id: 27
+  name: 中納言兼輔
+  period:
+  info:
+
+-
+  id: 28
+  name: 源宗于朝臣
+  period:
+  info:
+
+-
+  id: 29
+  name: 凡河内躬恒
+  period:
+  info:
+
+-
+  id: 30
+  name: 壬生忠岑
+  period:
+  info:
+
+-
+  id: 31
+  name: 坂上是則
+  period:
+  info:
+
+-
+  id: 32
+  name: 春道列樹
+  period:
+  info:
+
+-
+  id: 33
+  name: 紀友則
+  period:
+  info:
+
+-
+  id: 34
+  name: 藤原興風
+  period:
+  info:
+
+-
+  id: 35
+  name: 紀貫之
+  period:
+  info:
+
+-
+  id: 36
+  name: 清原深養父
+  period:
+  info:
+
+-
+  id: 37
+  name: 文屋朝康
+  period:
+  info:
+
+-
+  id: 38
+  name: 右近
+  period:
+  info:
+
+-
+  id: 39
+  name: 参議等
+  period:
+  info:
+
+-
+  id: 40
+  name: 平兼盛
+  period:
+  info:
+
+-
+  id: 41
+  name: 壬生忠見
+  period:
+  info:
+
+-
+  id: 42
+  name: 清原元輔
+  period:
+  info:
+
+-
+  id: 43
+  name: 権中納言敦忠
+  period:
+  info:
+
+-
+  id: 44
+  name: 中納言朝忠
+  period:
+  info:
+
+-
+  id: 45
+  name: 謙徳公
+  period:
+  info:
+
+-
+  id: 46
+  name: 曾禰好忠
+  period:
+  info:
+
+-
+  id: 47
+  name: 恵慶法師
+  period:
+  info:
+
+-
+  id: 48
+  name: 源重之
+  period:
+  info:
+
+-
+  id: 49
+  name: 大中臣能宣朝臣
+  period:
+  info:
+
+-
+  id: 50
+  name: 藤原義孝
+  period:
+  info:
+
+-
+  id: 51
+  name: 藤原実方朝臣
+  period:
+  info:
+
+-
+  id: 52
+  name: 藤原道信朝臣
+  period:
+  info:
+
+-
+  id: 53
+  name: 右大将道綱母
+  period:
+  info:
+
+-
+  id: 54
+  name: 儀同三司母
+  period:
+  info:
+
+-
+  id: 55
+  name: 大納言公任
+  period:
+  info:
+
+-
+  id: 56
+  name: 和泉式部
+  period:
+  info:
+
+-
+  id: 57
+  name: 紫式部
+  period:
+  info:
+
+-
+  id: 58
+  name: 大弐三位
+  period:
+  info:
+
+-
+  id: 59
+  name: 赤染衛門
+  period:
+  info:
+
+-
+  id: 60
+  name: 小式部内侍
+  period:
+  info:
+
+-
+  id: 61
+  name: 伊勢大輔
+  period:
+  info:
+
+-
+  id: 62
+  name: 清少納言
+  period:
+  info:
+
+-
+  id: 63
+  name: 左京大夫道雅
+  period:
+  info:
+
+-
+  id: 64
+  name: 権中納言定頼
+  period:
+  info:
+
+-
+  id: 65
+  name: 相模
+  period:
+  info:
+
+-
+  id: 66
+  name: 前大僧正行尊
+  period:
+  info:
+
+-
+  id: 67
+  name: 周防内侍
+  period:
+  info:
+
+-
+  id: 68
+  name: 三条院
+  period:
+  info:
+
+-
+  id: 69
+  name: 能因法師
+  period:
+  info:
+
+-
+  id: 70
+  name: 良暹法師
+  period:
+  info:
+
+-
+  id: 71
+  name: 大納言経信
+  period:
+  info:
+
+-
+  id: 72
+  name: 祐子内親王家紀伊
+  period:
+  info:
+
+-
+  id: 73
+  name: 前権中納言匡房
+  period:
+  info:
+
+-
+  id: 74
+  name: 源俊頼朝臣
+  period:
+  info:
+
+-
+  id: 75
+  name: 藤原基俊
+  period:
+  info:
+
+-
+  id: 76
+  name: 法性寺入道前関白太政大臣
+  period:
+  info:
+
+-
+  id: 77
+  name: 崇徳院
+  period:
+  info:
+
+-
+  id: 78
+  name: 源兼昌
+  period:
+  info:
+
+-
+  id: 79
+  name: 左京大夫顕輔
+  period:
+  info:
+
+-
+  id: 80
+  name: 待賢門院堀河
+  period:
+  info:
+
+-
+  id: 81
+  name: 後徳大寺左大臣
+  period:
+  info:
+
+-
+  id: 82
+  name: 道因法師
+  period:
+  info:
+
+-
+  id: 83
+  name: 皇太后宮大夫俊成
+  period:
+  info:
+
+-
+  id: 84
+  name: 藤原清輔朝臣
+  period:
+  info:
+
+-
+  id: 85
+  name: 俊恵法師
+  period:
+  info:
+
+-
+  id: 86
+  name: 西行法師
+  period:
+  info:
+
+-
+  id: 87
+  name: 寂蓮法師
+  period:
+  info:
+
+-
+  id: 88
+  name: 皇嘉門院別当
+  period:
+  info:
+
+-
+  id: 89
+  name: 式子内親王
+  period:
+  info:
+
+-
+  id: 90
+  name: 殷富門院大輔
+  period:
+  info:
+
+-
+  id: 91
+  name: 後京極摂政前太政大臣
+  period:
+  info:
+
+-
+  id: 92
+  name: 二条院讃岐
+  period:
+  info:
+
+-
+  id: 93
+  name: 鎌倉右大臣
+  period:
+  info:
+
+-
+  id: 94
+  name: 参議雅経
+  period:
+  info:
+
+-
+  id: 95
+  name: 前大僧正慈円
+  period:
+  info:
+
+-
+  id: 96
+  name: 入道前太政大臣
+  period:
+  info:
+
+-
+  id: 97
+  name: 権中納言定家
+  period:
+  info:
+
+-
+  id: 98
+  name: 従二位家隆
+  period:
+  info:
+
+-
+  id: 99
+  name: 後鳥羽院
+  period:
+  info:
+
+-
+  id: 100
+  name: 順徳院
+  period:
+  info:
+
