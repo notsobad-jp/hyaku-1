@@ -11,7 +11,7 @@ yml = File.read("#{Rails.root}/db/seeds/songs.yml")
 songs = YAML.load(yml)
 
 songs.each do |s|
-  Song.create( :poet => s['poet'],  :poem => s['poem'], :kana => s['kana'], :comment => s['comment'])
+  Song.create( :poem => s['poem'], :kana => s['kana'], :comment => s['comment'])
 end
 
 # Authorテーブル作成
