@@ -216,6 +216,9 @@ header a:hover {
 	position: absolute;
 	top: 9%;
 }
+.ua-firefox .left, .ua-firefox .right {
+  top: 0%;
+}
 
 .left {
 	left: -32.5%;
@@ -231,6 +234,9 @@ header a:hover {
   top: 62%;
   display: none;
   z-index: 5;
+}
+.ua-firefox .menu_info {
+  top: 51.5%;
 }
 
 .menu_info div {
@@ -518,7 +524,7 @@ p#top_msg {
 }
 
 .char_card div {
-  margin: 7% 0;
+  margin: 2%;
 }
 
 #first-half, #second-half {
