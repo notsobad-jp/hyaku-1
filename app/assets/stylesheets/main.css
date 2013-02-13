@@ -216,7 +216,7 @@ header a:hover {
 	position: absolute;
 	top: 9%;
 }
-.ua-firefox .left, .ua-firefox .right {
+.ua-firefox .left, .ua-firefox .right, .ua-ie .left, .ua-ie .right {
   top: 0%;
 }
 
@@ -235,7 +235,7 @@ header a:hover {
   display: none;
   z-index: 5;
 }
-.ua-firefox .menu_info {
+.ua-firefox .menu_info, .ua-ie .menu_info {
   top: 51.5%;
 }
 
