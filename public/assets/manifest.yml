@@ -203,10 +203,10 @@ cards/Hyakuninisshu_099.jpg: cards/Hyakuninisshu_099-27f0527f121abdb0aea7ef55b1a
 cards/Hyakuninisshu_099/index.jpg: cards/Hyakuninisshu_099-27f0527f121abdb0aea7ef55b1a2925f.jpg
 cards/Hyakuninisshu_100.jpg: cards/Hyakuninisshu_100-8f2bb67705d2f9125825ec74bb6c1473.jpg
 cards/Hyakuninisshu_100/index.jpg: cards/Hyakuninisshu_100-8f2bb67705d2f9125825ec74bb6c1473.jpg
-fakebox.png: fakebox-4f4ccd430e296fa7d19aaa32e85dec61.png
-fakebox/index.png: fakebox-4f4ccd430e296fa7d19aaa32e85dec61.png
-fb_login.png: fb_login-f5383563665b910e7c2e90a68194d962.png
-fb_login/index.png: fb_login-f5383563665b910e7c2e90a68194d962.png
+fakebox.png: fakebox-63e24c9a9362aa0c1e82cb9b5715e02e.png
+fakebox/index.png: fakebox-63e24c9a9362aa0c1e82cb9b5715e02e.png
+fb_login.png: fb_login-1c087cae5b20790f7504e10474b53ff8.png
+fb_login/index.png: fb_login-1c087cae5b20790f7504e10474b53ff8.png
 kame_f_no7.png: kame_f_no7-2e6a75885b72033882f53ffdb20aecfc.png
 kame_f_no7/index.png: kame_f_no7-2e6a75885b72033882f53ffdb20aecfc.png
 kuginuki.png: kuginuki-5f73ef47bf48c19d20e72b334d059de0.png
@@ -225,6 +225,8 @@ menu_3.jpg: menu_3-d76dcdfb37aeaeb545baddd529c8ba7d.jpg
 menu_3/index.jpg: menu_3-d76dcdfb37aeaeb545baddd529c8ba7d.jpg
 menu_bg.png: menu_bg-488050db0fb8bd0ad2170e1f454e0f5f.png
 menu_bg/index.png: menu_bg-488050db0fb8bd0ad2170e1f454e0f5f.png
+og_image.jpg: og_image-56a56b2043750742cc241dafcafbb058.jpg
+og_image/index.jpg: og_image-56a56b2043750742cc241dafcafbb058.jpg
 origami.jpg: origami-5cd6f25e53ebbe7c0307c121677cf492.jpg
 origami/index.jpg: origami-5cd6f25e53ebbe7c0307c121677cf492.jpg
 pic_0.png: pic_0-db43e415bc7783d5d16a45e40ab7374d.png
@@ -279,5 +281,5 @@ top_bg.jpg: top_bg-ba16110ab7be87de262cc23185a45a56.jpg
 top_bg/index.jpg: top_bg-ba16110ab7be87de262cc23185a45a56.jpg
 application.js: application-ca61bf25280272f481a69764a0199f2c.js
 application/index.js: application-ca61bf25280272f481a69764a0199f2c.js
-application.css: application-9521585d12484b28a902d42b27aa9d27.css
-application/index.css: application-9521585d12484b28a902d42b27aa9d27.css
+application.css: application-bd7b83504cb25fb21950646fa6fd261e.css
+application/index.css: application-bd7b83504cb25fb21950646fa6fd261e.css
