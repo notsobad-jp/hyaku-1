@@ -86,16 +86,13 @@ header:after{
 }
 
 #head_logo {
-  margin: 5px 0 5px 2%;
+  margin: 5px 2%;
   float: left;
-	width: 7%;
 }
 
 #head_logo img {
-  width: 100%;
-  max-height: 50px;
-  max-width: 80px;
-  margin: auto 0;
+  height: 50px;
+  width: 80px;
 }
 
 header ul {
