@@ -62,9 +62,6 @@ em {
   width: 84%;
 }
 
-.fb_edge_widget_with_comment span.fb_edge_comment_widget {
-    display: none !important;
-}
 
 /*****************************************************************
 * HEADER
@@ -121,6 +118,15 @@ header a:hover {
   color: #B54434;
 }
 
+.fb_edge_widget_with_comment span.fb_edge_comment_widget {
+    display: none !important;
+}
+
+.fb-like {
+  margin: 3px 10px 0 10px;
+  z-index: 5;
+  position: relative;
+}
 
 /*****************************************************************
 * CONTAINER
@@ -339,10 +345,6 @@ footer:before{
   width: 28%;
   margin: 15px 2%;
   float: left;
-}
-
-.fb-like {
-  margin: 3px 10px 0 10px;
 }
 
 #fakebox {
