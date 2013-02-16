@@ -299,18 +299,72 @@ section.main {
   box-sizing: border-box;
 }
 
-#sub div {
+.sub-box {
   margin: 15px 0;
 }
 
-#sub div:last-child {
+.sub-box:last-child {
   margin-top: 50px;
 }
 
-.profile_image {
-  border: 6px solid #000;
+.profile img {
+  width: 30%;
+  border: 5px solid #000;
+  margin-right: 3%;
+  float: left;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+.profile div {
+  float: left;
+  width: 67%;
+}
+
+#name {
+  font-size: larger;
+}
+
+.degree {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  background-image: url("/assets/roll.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 70px;
+  padding-top: 30px;
+  padding-left: 5px;
+  text-align: center;
+}
+
+.status {
+  line-height: 25px;
+}
+
+.status li:before {
+  content:"";
+  display: inline-block;
+  position: relative;
+	background-image: url("/assets/kuginuki.png");
+  background-size: contain;
+  height: 15px;
+  width: 15px;
+  top: 1px;
+  margin-right: 2px;
+}
+
+.status em {
+  font-family:"ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+  text-shadow: 0 0 1px #bbb;
+  font-size: 24px;
+  font-weight: bold;
+}
 
 /*****************************************************************
 * FOOTER
@@ -411,7 +465,7 @@ p#top_msg {
   margin: 30px 0 5px 0;
 }
 
-#top_info small {
+#top_info small, #sub small {
   font-size: 10px;
 }
 
