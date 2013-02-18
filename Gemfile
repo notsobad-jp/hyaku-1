@@ -18,7 +18,8 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'haml'
-  gem 'compass-rails'
+  gem 'compass', :git => 'git://github.com/chriseppstein/compass.git'
+  gem 'compass-rails', :git => 'git://github.com/Compass/compass-rails.git'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby

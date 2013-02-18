@@ -1,3 +1,19 @@
+GIT
+  remote: git://github.com/Compass/compass-rails.git
+  revision: 47d889ad8dabdab1e9f44da4447f94846c089c50
+  specs:
+    compass-rails (1.0.0.rc.3)
+      compass (~> 0.12.rc.0)
+
+GIT
+  remote: git://github.com/chriseppstein/compass.git
+  revision: 61500af9af798759dd02f2bc4c7da88ced769e6e
+  specs:
+    compass (0.13.alpha.2.61500af)
+      chunky_png (~> 1.2)
+      listen (~> 0.5.3)
+      sass (~> 3.2.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -39,12 +55,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
-    compass (0.12.2)
-      chunky_png (~> 1.2)
-      fssm (>= 0.2.7)
-      sass (~> 3.1)
-    compass-rails (1.0.3)
-      compass (>= 0.12.2, < 0.14)
     daemons (1.1.9)
     erubis (2.7.0)
     eventmachine (1.0.0)
@@ -54,7 +64,6 @@ GEM
       multipart-post (~> 1.1)
     foreman (0.61.0)
       thor (>= 0.13.6)
-    fssm (0.2.10)
     haml (3.1.7)
     hike (1.2.1)
     httpauth (0.2.0)
@@ -67,6 +76,7 @@ GEM
     jwt (0.1.5)
       multi_json (>= 1.0)
     libv8 (3.11.8.13)
+    listen (0.5.3)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -148,7 +158,8 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  compass-rails
+  compass!
+  compass-rails!
   execjs
   foreman
   haml
