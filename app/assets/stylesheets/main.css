@@ -337,7 +337,7 @@ section.main {
   background-image: url("/assets/roll.png");
   background-size: contain;
   background-repeat: no-repeat;
-  text-align: center;
+  padding-left: 20px;
 }
 
 .status {
