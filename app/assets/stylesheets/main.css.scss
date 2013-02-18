@@ -37,7 +37,7 @@ body {
 
 .serif {
   font-family:"ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
-  text-shadow: 0 0 1px #bbb;
+  @include text-shadow(#bbb 0 0 1px);
 }
 
 .headline {
@@ -47,7 +47,7 @@ body {
   color: #333;
   &:before {
     content:"";
-    display: inline-block;
+    @include inline-block;
     position: relative;
     background-image: url("/assets/kuginuki.png");
     height: 20px;
@@ -91,7 +91,7 @@ header {
     width: 100%;
     height: 5px;
     z-index: 2;
-    box-shadow: 0 1px 3px gray;
+	  @include box-shadow(0, 1px, 3px, gray);
   }
 }
 
@@ -153,7 +153,7 @@ header {
 	position: relative;
 	padding: 2.5% 0;
 	overflow: hidden;
-	box-shadow: 1px 0 3px #7D6C46;
+	@include box-shadow(1px, 0, 3px, #7D6C46);
 	float: left;
 }
 
@@ -165,21 +165,12 @@ header {
 
 .box {
 	float: left;
-	background-size: contain;
+  @include background-size(contain);
 	border: 5px solid #000;
 	margin: 4.33%;
 	width: 23.5%;
-
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	-o-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
+  @include rotate(45deg);
+  @include box-sizing(border-box);
 }
 
 #menu_1 {
@@ -194,7 +185,7 @@ header {
 
 .menu:hover {
 	cursor: pointer;
-  opacity: 0.9;
+  @include opacity(0.9);
 }
 
 .second {
@@ -253,10 +244,7 @@ header {
   z-index: 5;
 
   div {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
+    @include rotate(-45deg);
     position: relative;
     left: 12%;
     top: 16%;
@@ -301,12 +289,7 @@ section.main {
 	background-image: url("/assets/sub_bg.jpg");
 	z-index: -1;
   padding: 2.5%;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
 
   small {
     font-size: 10px;
@@ -328,11 +311,7 @@ section.main {
     margin-right: 3%;
     float: left;
 
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
+    @include box-sizing(border-box);
   }
   div {
     float: left;
@@ -351,7 +330,7 @@ section.main {
   font-weight: bold;
   line-height: 60px;
   background-image: url("/assets/roll.png");
-  background-size: contain;
+  @include background-size(contain);
   background-repeat: no-repeat;
   padding-left: 20px;
 }
@@ -361,10 +340,10 @@ section.main {
 
   li:before {
     content:"";
-    display: inline-block;
+    @include inline-block;
     position: relative;
     background-image: url("/assets/kuginuki.png");
-    background-size: contain;
+    @include background-size(contain);
     height: 15px;
     width: 15px;
     top: 1px;
@@ -373,7 +352,7 @@ section.main {
 
   em {
     font-family:"ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
-    text-shadow: 0 0 1px #bbb;
+    @include text-shadow(#bbb 0 0 1px);
     font-size: 24px;
     font-weight: bold;
   }
@@ -399,7 +378,7 @@ footer {
     width: 100%;
     height: 5px;
     z-index: 2;
-    box-shadow: 0 1px 3px gray;
+	  @include box-shadow(0, 1px, 3px, gray);
   }
 }
 
@@ -448,7 +427,7 @@ footer {
 #top_bg {
   width: 100%;
   background-image: url("/assets/top_bg.jpg");
-  background-size: cover;
+  @include background-size(contain);
 }
 
 #top_info {
@@ -456,7 +435,7 @@ footer {
   float: right;
   margin: 10% 7%;
   background: rgba(0,0,0,0.8);
-  border-radius: 10px;
+  @include border-radius(10px);
   text-align: center;
   color: #DDD;
 
@@ -479,7 +458,7 @@ footer {
 }
 
 .fb_login:hover {
-  opacity: 0.9;
+  @include opacity(0.9);
 }
 
 #top_login img {
@@ -518,11 +497,7 @@ footer {
     border: 7px solid #333;
     margin-right: 2%;
 
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
+    @include box-sizing(border-box);
   }
   div {
     width: 83%;
@@ -543,7 +518,7 @@ footer {
 
   &:before {
     content:"";
-    display: inline-block;
+    @include inline-block;
     position: relative;
     background-image: url("/assets/manji.png");
     height: 32px;
@@ -566,12 +541,7 @@ footer {
   width: 23%;
   border: 7px solid #333;
   margin-right: 3%;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
 }
 
 .char_card {
@@ -582,12 +552,7 @@ footer {
   border: 7px solid #333;
   margin-right: 3%;
   overflow: hidden;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
 
   p {
     font-size: 20px;
@@ -605,13 +570,13 @@ footer {
 
 .btn {
   padding: 5px 12px;
-  display: inline-block;
+  @include inline-block;
   text-align: center;
   line-height: 30px;
   background: #333;
   color: #EEE;
   text-decoration: none;
-  box-shadow: 1px 1px gray;
+	@include box-shadow(1px, 1px, 0, gray);
 
   &:hover {
     background: #555;
@@ -659,7 +624,7 @@ footer {
 #answer {
   margin: 40px 0;
   background-image: url("/assets/tatami.jpg");
-  background-size: contain;
+  @include background-size(contain);
   a {
     color: #333;
   }
