@@ -273,8 +273,10 @@ poet/Hyakuninisshu_016.jpg: poet/Hyakuninisshu_016-83618dba83ba7f9ddc044eba40d4f
 poet/Hyakuninisshu_016/index.jpg: poet/Hyakuninisshu_016-83618dba83ba7f9ddc044eba40d4f3d6.jpg
 poet/Hyakuninisshu_017.jpg: poet/Hyakuninisshu_017-6c1d18af33517b86a1f0cdfa7572e41a.jpg
 poet/Hyakuninisshu_017/index.jpg: poet/Hyakuninisshu_017-6c1d18af33517b86a1f0cdfa7572e41a.jpg
-roll.png: roll-c9a974f56d7ff78b9d895f8abfb3f8c9.png
-roll/index.png: roll-c9a974f56d7ff78b9d895f8abfb3f8c9.png
+roll.png: roll-2fe77a9d7d6d7645a6e1fbdfe767ec16.png
+roll/index.png: roll-2fe77a9d7d6d7645a6e1fbdfe767ec16.png
+roll_1000.png: roll_1000-c9a974f56d7ff78b9d895f8abfb3f8c9.png
+roll_1000/index.png: roll_1000-c9a974f56d7ff78b9d895f8abfb3f8c9.png
 sub_bg.jpg: sub_bg-91994dce449b125b763c958365703c62.jpg
 sub_bg/index.jpg: sub_bg-91994dce449b125b763c958365703c62.jpg
 tatami.jpg: tatami-00170a4d720ad99232149fe42c592aea.jpg
@@ -283,5 +285,5 @@ top_bg.jpg: top_bg-ba16110ab7be87de262cc23185a45a56.jpg
 top_bg/index.jpg: top_bg-ba16110ab7be87de262cc23185a45a56.jpg
 application.js: application-9d82a8c2c52c05360a8a192a734e8cd2.js
 application/index.js: application-9d82a8c2c52c05360a8a192a734e8cd2.js
-application.css: application-aa4f50f6b2d0cb05a7f8b6d9548754e4.css
-application/index.css: application-aa4f50f6b2d0cb05a7f8b6d9548754e4.css
+application.css: application-49dd522c7d6c9215a7c95d511da72277.css
+application/index.css: application-49dd522c7d6c9215a7c95d511da72277.css

@@ -330,15 +330,13 @@ section.main {
 }
 
 .degree {
-  font-size: 30px;
+  width: 100%;
+  font-size: 24px;
   font-weight: bold;
-  line-height: 30px;
+  line-height: 60px;
   background-image: url("/assets/roll.png");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 70px;
-  padding-top: 30px;
   text-align: center;
 }
 
