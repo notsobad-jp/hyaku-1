@@ -1,51 +1,21 @@
-- if current_user
-  - last_song = History.who(current_user).original.order("created_at DESC").first
-  - last_song_id = (last_song) ? last_song.song_id.to_i : 0
-  - days_left = ( (100-last_song_id)/3 ).ceil
-  - score = History.who(current_user).group(:exam_id).where(:result => 1).where("exam_id > 0").count.max{|a,b| a[1] <=> b[1]}
-  - best_score = (score) ? score[1] : 0
-  - case best_score
-    - when 0
-      - degree = "初心者"
-    - when 1..9
-      - degree = "駆け出し歌人"
-    - when 10..19
-      - degree = "見習い歌人"
-    - when 20..29
-      - degree = "週末歌人"
-    - when 30..39
-      - degree = "一人前歌人"
-    - when 40..49
-      - degree = "中堅歌人"
-    - when 50..59
-      - degree = "二流歌人"
-    - when 60..69
-      - degree = "一流歌人"
-    - when 70..79
-      - degree = "天才歌人"
-    - when 80..89
-      - degree = "歌人殿堂入り"
-    - when 90..99
-      - degree = "歌仙"
-    - when 100
-      - degree = "歌聖"
-  %div.sub-box
-    %div.profile.cf
-      = image_tag("https://graph.facebook.com/#{Authentication.find(current_user.id).uid}/picture?type=normal", :alt => 'profile_image')
-      %div
-        %p#name #{current_user.email}
-        %small (開始日：<em>#{current_user.created_at.strftime("%Y.%m.%d")}</em>）
-  %div.sub-box
-    %div.degree
-      %p.serif #{degree}
-  %div.sub-box
-    %ul.status
-      %li
-        学習済み：<em>#{last_song_id}</em>/100歌
-      %li
-        100首まで：残り<em>#{days_left}</em>日
-      %li
-        ベストスコア：<em>#{best_score}</em>/100
+- user = current_user || User.find(0)
+%div.sub-box
+  %div.profile.cf
+    = profile_image
+    %div
+      %p#name #{user.email}
+      %small (開始日：<em>#{user.created_at.strftime("%Y.%m.%d")}</em>）
+%div.sub-box
+  %div.degree
+    %p.serif #{degree(best_score)}
+%div.sub-box
+  %ul.status
+    %li
+      学習済み：<em>#{last_song_id}</em>/100歌
+    %li
+      100首まで：残り<em>#{days_left(last_song_id)}</em>日
+    %li
+      ベストスコア：<em>#{best_score}</em>/100
 %div.sub-box
   %script(type="text/javascript")
     <!--

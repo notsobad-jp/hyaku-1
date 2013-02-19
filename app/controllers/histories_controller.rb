@@ -4,7 +4,13 @@ class HistoriesController < ApplicationController
     @history = History.new
 
     #次にやる問題を取得。三問終わってたらホームにリダイレクト。
-    @next_song = History.next_song(current_user)
+    @user = current_user || User.find(0)
+    if current_user
+      @next_song = History.next_song(@user)
+    else
+      session[:learn_song_id] ||= 1
+      @next_song = (session[:learn_song_id] <= 3) ? Song.find(session[:learn_song_id]) : nil
+    end
     redirect_to :learn_finish and return if @next_song.nil?
 
     respond_to do |format|
@@ -14,30 +20,31 @@ class HistoriesController < ApplicationController
   end
 
   def save
+    @user = current_user || User.find(0)
     @history = History.new(params[:history])
-    if History.answered?(@history)
-      p "answered!!"
-      redirect_to :learn and return
+    redirect_to :learn and return if History.answered?(@history)
+
+    if current_user
+      @history.save
+      @next_song = History.next_song(current_user)  #次にやる問題を取得。
+    else
+      session[:learn_song_id] += 1
+      @next_song = (session[:learn_song_id] <= 3) ? Song.find(session[:learn_song_id]) : nil
     end
-    #redirect_to :learn and return if History.answered?(@history)
 
     respond_to do |format|
-      if @history.save
-        #次にやる問題を取得。
-        @next_song = History.next_song(current_user)
-
-        format.html { redirect_to @history, notice: 'History was successfully created.' }
-        format.js
-        format.json { render json: @history, status: :created, location: @history }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @history.errors, status: :unprocessable_entity }
-      end
+      format.js
     end
   end
 
   def finish
-    @finished_songs = History.who(current_user).original.which_day(Date.today).order("created_at DESC")
+    @user = current_user || User.find(0)
+    if current_user
+      @finished_songs = History.who(current_user).original.which_day(Date.today).order("created_at DESC")
+    else
+      session[:learn_song_id] = 1
+      @finished_songs = Song.where(["id IN (?)", 1..3])
+    end
 
     respond_to do |format|
       format.html

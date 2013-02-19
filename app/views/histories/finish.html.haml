@@ -2,11 +2,24 @@
   %section.main
     %h1.menu_title.serif
       あたらしい歌をおぼえる
-    %div.cf
-      - @finished_songs.each do |song|
-        = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", song.song_id)}.jpg", :class => "cards")
-    #finish
-      %p
-        今日おぼえる歌はすべて終了しました。<br>
-        「破」で復習する歌がないか確認してみましょう。
-      = link_to( "ホームへ戻る", :root, :class => "btn" )
+    - if current_user
+      %div.finished_songs.cf
+        - @finished_songs.each do |song|
+          = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", song.song_id)}.jpg", :class => "cards")
+      #finish
+        %p
+          今日おぼえる歌はすべて終了しました。<br>
+          「破」で復習する歌がないか確認してみましょう。
+        = link_to( "ホームへ戻る", :root, :class => "btn" )
+    - else
+      %div.finished_songs.cf
+        - @finished_songs.each do |song|
+          = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", song.id)}.jpg", :class => "cards")
+      #finish
+        %p
+          これで「守」の暗記1日3首分が終了です。<br>
+          毎日ちょっとずつやるのがいいらしいので今日はここまで。
+        %p
+          次の日になればまた続きの3首を覚えられます。<br>
+          続きをやってみたくなったらぜひログインしてサービスをつかってみてください。
+        = link_to( "ホームへ戻る", :root, :class => "btn" )

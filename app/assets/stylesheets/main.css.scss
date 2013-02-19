@@ -135,6 +135,12 @@ header {
   position: relative;
 }
 
+#head_login {
+  width: 162px;
+  height: 30px;
+  margin-top: 18px;
+}
+
 /*****************************************************************
 * CONTAINER
 *****************************************************************/
@@ -153,7 +159,6 @@ header {
 	position: relative;
 	padding: 2.5% 0;
 	overflow: hidden;
-	// @include box-shadow(rgba(gray, 0.7) 1px 0 3px);
 	float: left;
 }
 
@@ -288,7 +293,7 @@ section.main {
 	width: 25%;
 	background-image: url("/assets/sub_bg.jpg");
   position: relative;
-	z-index: 2;
+	z-index: 0;
   padding: 2.5%;
   @include box-sizing(border-box);
 	@include box-shadow(rgba(gray, 0.7) -1px 0 3px);
@@ -348,7 +353,7 @@ section.main {
     @include background-size(contain);
     height: 15px;
     width: 15px;
-    top: 1px;
+    top: -1px;
     margin-right: 2px;
   }
 
@@ -460,8 +465,11 @@ footer {
   line-height: 30px;
 }
 
-.fb_login:hover {
-  @include opacity(0.9);
+.fb_login {
+  @include box-shadow(rgba(0,0,0,0.3) 1px 1px 2px);
+  &:hover {
+    @include opacity(0.9);
+  }
 }
 
 #top_login img {
@@ -584,6 +592,10 @@ footer {
   &:hover {
     background: #555;
   }
+}
+
+.finished_songs {
+  margin-bottom: 20px;
 }
 
 

@@ -36,5 +36,5 @@
           %p#poet_name.serif #{@next_song.author.name} (#{@next_song.author.period}年)
           %p #{@next_song.author.info}
   %section.link
-    - history = { :user_id => current_user.id, :song_id => @next_song.id }
+    - history = { :user_id => @user.id, :song_id => @next_song.id }
     = link_to( "おぼえたので次へ", {:controller => :histories, :action => :save, :remote => true, :history => history}, :class => "btn" )

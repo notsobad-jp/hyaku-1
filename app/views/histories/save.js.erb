@@ -1,4 +1,5 @@
 <% if @next_song %>
+  $('html,body').scrollTop(0);
   $("#next_song").html("<%= j(render 'song', :next_song => @next_song) %>");
 	(new Taketori()).set({lang:'ja-jp',fontFamily:'serif'}).element('#question_char').toVertical(false);
 	$("#question_img").load(function(){
