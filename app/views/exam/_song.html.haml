@@ -24,8 +24,8 @@
   %section#answer.cf
     - @exam_targets.each_with_index do |target, i|
       - result = (@exam_song.id == target.id) ? 1 : 0;
-      - history = {:song_id => @exam_song.id, :user_id => current_user.id, :exam_id => @exam_id, :result => result}
-      = link_to(:controller => :exam, :action => :answer, :remote => true, :history => history) do
+      - history = {:song_id => @exam_song.id, :user_id => @user.id, :exam_id => @exam_id, :result => result}
+      = link_to({:controller => :exam, :action => :answer, :remote => true, :history => history}, {:class => "answer_link"}) do
         %div.char_card{:id => "ans_#{i+1}"}
           %div
             - poem = target.poem.split(" ")

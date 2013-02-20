@@ -7,6 +7,7 @@ class ReviewController < ApplicationController
       @review_num_finished = History.review_num_finished(current_user)
       redirect_to :review_finish and return if (@review_num == @review_num_finished) && @review_num != 0
     end
+    session[:review_song_id] = 1 unless current_user
 
     respond_to do |format|
       format.html
@@ -49,20 +50,13 @@ class ReviewController < ApplicationController
     @user = current_user || User.find(0)
     @history = History.new(params[:history])
     @result = @history.result
+    render :nothing => true and return if History.answered?(@history)
 
     if current_user
-      render :nothing => true and return if History.answered?(@history)
       @history.save
-      @review_song = History.review_song(current_user)
-      @review_num = History.review_num(current_user)
-      @review_num_finished = History.review_num_finished(current_user)
     else
       session[:review_song_id] += 1
-      @review_song = (session[:review_song_id] <= 3) ? Song.find(session[:review_song_id]) : nil
-      @review_num = 3
-      @review_num_finished = session[:review_song_id]-1
     end
-    @review_targets = Song.set_question(@review_song.id) if @review_song.present?
 
     respond_to do |format|
       format.html { redirect_to @history, notice: 'History was successfully created.' }
@@ -71,8 +65,6 @@ class ReviewController < ApplicationController
   end
 
   def finish
-    session[:review_song_id] = 1 unless current_user
-
     respond_to do |format|
       format.html
       format.json { render json: @history }

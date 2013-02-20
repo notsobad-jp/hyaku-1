@@ -8,6 +8,7 @@
       - if current_user
         %small
           = link_to '(ログアウト)', logout_path
+      - else
 - if current_user
   %div.sub-box
     %div.degree
@@ -21,8 +22,14 @@
       %li
         ベストスコア：<em>#{best_score}</em>/100
 - else
+  %div
+    %small
+      ログインしていない状態だと学習の記録が残りません。
+      本気で100首おぼえたくなったらぜひ下の「facebookログイン」ボタンからログインしてください。
   %div.sub-box
     = link_to image_tag("fb_login.png", :class => "fb_login", :id => "head_login"), auth_at_provider_path(:provider => :facebook)
+    %p
+      %small (登録時に勝手につぶやいたりしません)
 %div.sub-box
   %script(type="text/javascript")
     <!--
