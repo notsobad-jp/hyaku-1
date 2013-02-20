@@ -135,11 +135,6 @@ header {
   position: relative;
 }
 
-#head_login {
-  width: 162px;
-  height: 30px;
-  margin-top: 18px;
-}
 
 /*****************************************************************
 * CONTAINER
@@ -466,7 +461,7 @@ footer {
 }
 
 .fb_login {
-  @include box-shadow(rgba(0,0,0,0.3) 1px 1px 2px);
+  @include box-shadow(rgba(0,0,0,0.1) 1px 1px 2px);
   &:hover {
     @include opacity(0.9);
   }

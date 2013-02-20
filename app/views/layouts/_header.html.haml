@@ -5,11 +5,5 @@
     = link_to 'このサイトについて', :about
   -# %li
   -#   = link_to 'クレジット', :credit
-  - if current_user
-    %li
-      = link_to 'Logout', logout_path
-  - else
-    %li
-      = link_to image_tag("fb_login.png", :class => "fb_login", :id => "head_login"), auth_at_provider_path(:provider => :facebook)
   %li
     .fb-like(data-href="http://hyaku-1.eure-ka.me/" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="lucida grande")

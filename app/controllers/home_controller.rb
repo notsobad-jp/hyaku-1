@@ -8,6 +8,7 @@ class HomeController < ApplicationController
   end
 
   def top
+    redirect_to :root if current_user
   end
 
   def about

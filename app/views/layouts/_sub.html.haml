@@ -4,18 +4,25 @@
     = profile_image
     %div
       %p#name #{user.email}
-      %small (開始日：<em>#{user.created_at.strftime("%Y.%m.%d")}</em>）
-%div.sub-box
-  %div.degree
-    %p.serif #{degree(best_score)}
-%div.sub-box
-  %ul.status
-    %li
-      学習済み：<em>#{last_song_id}</em>/100歌
-    %li
-      100首まで：残り<em>#{days_left(last_song_id)}</em>日
-    %li
-      ベストスコア：<em>#{best_score}</em>/100
+      -# %small 開始日：<em>#{user.created_at.strftime("%Y.%m.%d")}</em>
+      - if current_user
+        %small
+          = link_to '(ログアウト)', logout_path
+- if current_user
+  %div.sub-box
+    %div.degree
+      %p.serif #{degree(best_score)}
+  %div.sub-box
+    %ul.status
+      %li
+        学習済み：<em>#{last_song_id}</em>/100歌
+      %li
+        100首まで：残り<em>#{days_left(last_song_id)}</em>日
+      %li
+        ベストスコア：<em>#{best_score}</em>/100
+- else
+  %div.sub-box
+    = link_to image_tag("fb_login.png", :class => "fb_login", :id => "head_login"), auth_at_provider_path(:provider => :facebook)
 %div.sub-box
   %script(type="text/javascript")
     <!--

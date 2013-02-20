@@ -6,7 +6,5 @@ setTimeout(function(){
   $("#result a.hidden").css("display", "inline-block");
 }, 3000);
 $('html,body').animate({ scrollTop: 0 });
-$(".answer_link").bind("click", function(){
-  return false;
-});
+$(".answer_link").on("click", function(){ return false; });
 

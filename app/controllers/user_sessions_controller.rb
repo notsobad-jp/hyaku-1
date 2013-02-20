@@ -17,6 +17,6 @@ class UserSessionsController < ApplicationController
 
   def destroy
     logout
-    redirect_to(:root)
+    redirect_to(:top)
   end
 end
