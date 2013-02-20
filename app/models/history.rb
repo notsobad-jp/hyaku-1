@@ -18,18 +18,13 @@ class History < ActiveRecord::Base
 
   #次の問題を取得。3問おわってればnilを返す。
   def self.next_song(user)
-    if user.id > 0
-      last_song = self.who(user).original.order("created_at DESC").first
-      next_song_id = (last_song) ? last_song.song_id + 1 : 1
-      next_song = Song.find(next_song_id)
+    last_song = self.who(user).original.order("created_at DESC").first
+    next_song_id = (last_song) ? last_song.song_id + 1 : 1
+    next_song = Song.find(next_song_id)
 
-      done_today = self.who(user).which_day(Date.today).original.count
-      songs_left = [(SONGS_PER_DAY - done_today), 0].max
-      return (songs_left > 0) ? next_song : nil
-    else
-      next_song = Song.order("id ASC").offset(session[:learn_song_id]).first
-      return (session[:learn_song_id] <= 3) ? next_song : nil
-    end
+    done_today = self.who(user).which_day(Date.today).original.count
+    songs_left = [(SONGS_PER_DAY - done_today), 0].max
+    return (songs_left > 0) ? next_song : nil
   end
 
   #今日の残り問題数
@@ -71,7 +66,9 @@ class History < ActiveRecord::Base
       target = target.where(["song_id NOT IN (?)", finished_ids]) if finished_ids.present?
       targets = targets + target.includes(:song) if target.present?
     end
-    return targets.sort_by{rand}.first.presence || nil
+    target_record = targets.sort_by{rand}.first
+    target_song = Song.find(target_record.song_id) if target_record.present?
+    return target_song || nil
   end
 
 

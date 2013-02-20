@@ -3,12 +3,12 @@
     %h1.menu_title.serif
       おぼえた歌を復習する
     %h2.subtitle
-      第#{@review_song.song_id}歌
+      第#{@review_song.id}歌
       %small （残り#{@review_num-@review_num_finished}歌）
   %section#question.cf
     %div#question_char.char_card.serif
       %div
-        - poem = @review_song.song.poem.split(" ")
+        - poem = @review_song.poem.split(" ")
         %div#first-half
           %p #{poem[0]}
           %p &emsp;#{poem[1]}
@@ -16,16 +16,16 @@
         %div#second-half
           %p #{poem[3]}
           %p &emsp;&emsp;#{poem[4]}
-    = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @review_song.song.id)}.jpg", :class => "cards", :id => "question_img")
+    = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @review_song.id)}.jpg", :class => "cards", :id => "question_img")
     %div#result
       %p.success.hidden.serif 正解
       %p.failure.hidden.serif 不正解
       = link_to( "次の歌へ", {:controller => :review, :action => :show}, :class => "btn hidden")
   %section#answer.cf
     - @review_targets.each_with_index do |target, i|
-      - result = (@review_song.song_id == target.id) ? 1 : 0;
-      - history = {:song_id => @review_song.song_id, :user_id => current_user.id, :exam_id => 0, :result => result}
-      = link_to(:controller => :review, :action => :answer, :remote => true, :history => history) do
+      - result = (@review_song.id == target.id) ? 1 : 0;
+      - history = {:song_id => @review_song.id, :user_id => @user.id, :exam_id => 0, :result => result}
+      = link_to({:controller => :review, :action => :answer, :remote => true, :history => history}, {:class => "answer_link"}) do
         %div.char_card{:id => "ans_#{i+1}"}
           %div
             - poem = target.poem.split(" ")

@@ -3,34 +3,56 @@
     %h1.menu_title.serif
       おぼえた歌を復習する
     .normal_container
-      %div#review_index
-        %p 今日復習する歌は、<em>#{@review_num}</em>歌です。
-        = link_to( "復習をはじめる", :review, :class => "btn" )
-      %div#review_contents.cf
-        %div.review_content
-          %h2.serif.headline 1日前におぼえた歌
-          %div.cf
-            - if @review_songs[1].present?
-              - @review_songs[1].each do |target|
-                = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", target.song_id)}.jpg", :class => "cards")
-            - else
+      - if current_user
+        %div#review_index
+          %p 今日復習する歌は、<em>#{@review_num}</em>歌です。
+          = link_to( "復習をはじめる", :review, :class => "btn" )
+        %div#review_contents.cf
+          %div.review_content
+            %h2.serif.headline 1日前におぼえた歌
+            %div.cf
+              - if @review_songs[1].present?
+                - @review_songs[1].each do |target|
+                  = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", target.song_id)}.jpg", :class => "cards")
+              - else
+                %p.review_empty
+                  1日前におぼえた歌は<br>ありません。
+          %div.review_content
+            %h2.serif.headline 3日前におぼえた歌
+            %div.cf
+              - if @review_songs[3].present?
+                - @review_songs[3].each do |target|
+                  = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", target.song_id)}.jpg", :class => "cards")
+              - else
+                %p.review_empty
+                  3日前におぼえた歌は<br>ありません。
+          %div.review_content
+            %h2.serif.headline 7日前におぼえた歌
+            %div.cf
+              - if @review_songs[7].present?
+                - @review_songs[7].each do |target|
+                  = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", target.song_id)}.jpg", :class => "cards")
+              - else
+                %p.review_empty
+                  7日前におぼえた歌は<br>ありません。
+      - else
+        %div#review_index
+          %p ここでは1日前・3日前・7日前におぼえた歌を復習します。
+          %p お試し期間中なので今日は復習する歌がありませんが、<br>よかったら試しに最初の3歌を復習してみますか。
+          = link_to( "おためし復習してみる", :review, :class => "btn" )
+        %div#review_contents.cf
+          %div.review_content
+            %h2.serif.headline 1日前におぼえた歌
+            %div.cf
               %p.review_empty
                 1日前におぼえた歌は<br>ありません。
-        %div.review_content
-          %h2.serif.headline 3日前におぼえた歌
-          %div.cf
-            - if @review_songs[3].present?
-              - @review_songs[3].each do |target|
-                = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", target.song_id)}.jpg", :class => "cards")
-            - else
+          %div.review_content
+            %h2.serif.headline 3日前におぼえた歌
+            %div.cf
               %p.review_empty
                 3日前におぼえた歌は<br>ありません。
-        %div.review_content
-          %h2.serif.headline 7日前におぼえた歌
-          %div.cf
-            - if @review_songs[7].present?
-              - @review_songs[7].each do |target|
-                = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", target.song_id)}.jpg", :class => "cards")
-            - else
+          %div.review_content
+            %h2.serif.headline 7日前におぼえた歌
+            %div.cf
               %p.review_empty
                 7日前におぼえた歌は<br>ありません。
