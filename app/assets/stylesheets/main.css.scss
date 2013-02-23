@@ -324,6 +324,7 @@ section.main {
 
 #name {
   font-size: larger;
+  margin-bottom: 5px;
 }
 
 .degree {
@@ -436,22 +437,23 @@ footer {
 #top_info {
   width: 32%;
   float: right;
-  margin: 10% 7%;
+  margin: 7%;
   background: rgba(0,0,0,0.8);
   @include border-radius(10px);
   text-align: center;
   color: #DDD;
 
-  img {
-    width: 70%;
-    margin: 10% 0 5% 0;
-  }
   div {
     margin-bottom: 30px;
   }
   small {
     font-size: 10px;
   }
+}
+
+#top_logo {
+  width: 70%;
+  margin: 10% 0 5% 0;
 }
 
 #top_msg {
@@ -467,9 +469,12 @@ footer {
   }
 }
 
-#top_login img {
-  width: 50%;
-  margin: 30px 0 5px 0;
+.top_login {
+  margin: 30px 0 50px 0;
+  img {
+    width: 50%;
+    margin: 10px 0;
+  }
 }
 
 
