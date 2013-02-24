@@ -806,23 +806,30 @@ blockquote {
     color: #333;
   }
 
-  tr:nth-child(even) {
-    td {
-      background: #EEE;
+  tr {
+    &:nth-child(even) {
+      td {
+        background: #EEE;
+      }
     }
-  }
-  tr:hover {
-    td {
-      background: $color-red;
-      color: #EEE;
+    &:hover {
+      td {
+        background: $color-red;
+        color: #EEE;
+      }
     }
-  }
-  tr:last-child {
-    td {
-      border-bottom: none;
+    &:last-child {
+      td {
+        border-bottom: none;
+      }
     }
-  }
-  tr.not-yet td {
-    color: #AAA;
+    &.not-yet {
+      td {
+        color: #AAA;
+      }
+      &:hover td {
+        background: #555;
+      }
+    }
   }
 }
