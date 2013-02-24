@@ -1,6 +1,7 @@
+# coding: utf-8
 class ExamController < ApplicationController
-
   def index
+    @title = "百人一首 百首まとめてテストする"
     @user = current_user || User.find(0)
     #examID(何回目のテストか)を取得
     if current_user
@@ -22,6 +23,7 @@ class ExamController < ApplicationController
   end
 
   def show
+    @title = "百人一首 百首まとめてテストする"
     @user = current_user || User.find(0)
     @history = History.new
 
@@ -67,6 +69,7 @@ class ExamController < ApplicationController
   end
 
   def finish
+    @title = "百人一首 百首テスト結果"
     if current_user
       #examID(何回目のテストか)を取得
       last_exam = History.who(current_user).where("exam_id > 0").order("exam_id DESC").first

@@ -1,6 +1,7 @@
+# coding: utf-8
 class ReviewController < ApplicationController
-
   def index
+    @title = "百人一首 きょう復習する歌の一覧"
     if current_user
       @review_songs = History.review_song_all(current_user)
       @review_num = History.review_num(current_user)
@@ -16,6 +17,7 @@ class ReviewController < ApplicationController
   end
 
   def show
+    @title = "百人一首 おぼえた歌を復習する"
     @history = History.new
 
     #復習対象の歌を１つ取得。全部おわってればリダイレクト。
@@ -65,6 +67,7 @@ class ReviewController < ApplicationController
   end
 
   def finish
+    @title = "百人一首 おぼえた歌を復習する"
     respond_to do |format|
       format.html
       format.json { render json: @history }

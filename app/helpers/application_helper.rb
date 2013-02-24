@@ -1,5 +1,14 @@
 # coding: utf-8
 module ApplicationHelper
+  def title
+    base_title = "百/一[ひゃくいち]"
+    if @title.nil?
+      base_title
+    else
+      "#{base_title} | #{@title}"
+    end
+  end
+
   def last_song_id
     if current_user
       last_song = History.who(current_user).original.order("created_at DESC").first
