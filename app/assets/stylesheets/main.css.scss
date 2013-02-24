@@ -750,3 +750,24 @@ blockquote {
   }
 }
 
+/*****************************************************************
+* About
+*****************************************************************/
+#qa {
+  img {
+    width: 6%;
+    border: 4px solid #000;
+    margin-right: 2%;
+    float: left;
+
+    @include box-sizing(border-box);
+  }
+
+  .headline {
+    margin: 20px 0;
+  }
+}
+
+.qa_box {
+  margin-bottom: 40px;
+}
