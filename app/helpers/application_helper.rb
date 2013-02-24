@@ -28,7 +28,7 @@ module ApplicationHelper
     if current_user
       profile_image = image_tag("https://graph.facebook.com/#{Authentication.find(current_user.id).uid}/picture?type=normal", :alt => 'profile_image')
     else
-      profile_image = image_tag("poet/Hyakuninisshu_001.jpg", :alt => 'profile_image')
+      profile_image = image_tag("poet/guest.jpg", :alt => 'profile_image')
     end
     return profile_image
   end

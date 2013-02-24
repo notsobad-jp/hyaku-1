@@ -8,8 +8,8 @@
         %small
           = link_to '(ログアウト)', logout_path
       - else
-        %small
-          ログインしていない状態だと学習の記録が残りません。
+        %small.warning
+          ※ログインしていない状態だと学習の記録が残りません。
 - if current_user
   %div.sub-box
     %div.degree

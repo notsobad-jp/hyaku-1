@@ -2,6 +2,8 @@
 * SETTING
 *****************************************************************/
 @import "compass";
+@import "like/like*.png";
+@include all-like-sprites;
 
 $color-red : #B54434;
 $color-blue : #005CAF;
@@ -71,6 +73,10 @@ em {
   width: 84%;
 }
 
+.warning {
+  color: $color-red;
+}
+
 
 /*****************************************************************
 * HEADER
@@ -102,6 +108,10 @@ header {
     height: 50px;
     width: 80px;
   }
+}
+
+#head_login {
+  width: 80%;
 }
 
 header {
@@ -422,6 +432,26 @@ footer {
 
 #copyright {
   text-align: center;
+}
+
+#like_button {
+  width: 25%;
+  position: absolute;
+  cursor: pointer;
+  left: 15%;
+  top: 22%;
+}
+
+#supported_by {
+  position: relative;
+}
+
+.like-like {
+  width: 92px;
+  height: 24px;
+  position: absolute;
+  left: 15%;
+  top: 22%;
 }
 
 
