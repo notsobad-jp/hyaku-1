@@ -1,8 +1,8 @@
 $ ->
   #SideBar for AllPages
-	$("#sub").height($("#main").height())
-	$(window).resize ->
+	$(window).on("load resize", ->
 		$("#sub").height($("#main").height())
+	)
 
   #Set CardHeight for Review/Exam Pages
 	$("#question_img").load ->

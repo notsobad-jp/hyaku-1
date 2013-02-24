@@ -7,19 +7,15 @@ $ ->
 	$("#top_bg").height($("#top_bg").width()/940*528+3)
 
 	#BoxSizing for Home#Index
-	$(".box").height($(".box").width())
-	$(window).resize ->
-		$(".box").height($(".box").width())
+	$(window).on("load resize", ->
+	  $(".box").height($(".box").width())
+	)
 
-	a = $(".box").width()
-	root = Math.sqrt(Math.pow(a,2) * 2)
-	$(".wrapper").height(root)
-
-	$(window).resize ->
+	$(window).on("load resize", ->
 		a = $(".box").width()
 		root = Math.sqrt(Math.pow(a,2) * 2)
 		$(".wrapper").height(root)
-
+	)
 
   #MenuInfoBox for Home#Index
 	$("#menu_1").hover ->
