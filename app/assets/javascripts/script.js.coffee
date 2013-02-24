@@ -16,3 +16,8 @@ $ ->
 	(new Taketori()).set({lang:'ja-jp'}).element('#ans_4').toVertical(false)
 	(new Taketori()).set({lang:'ja-jp'}).element('#ans_5').toVertical(false)
 
+	$('tbody tr[data-href]').addClass('clickable').delegate('*', 'click', ->
+		if ( this.tagName != 'A' )
+		  window.location = $(this).parents('tr').data('href')
+	  return false
+	)

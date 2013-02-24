@@ -95,4 +95,14 @@ class History < ActiveRecord::Base
     target = Song.where(["id NOT IN (?)", finished_ids]).sort_by{rand}.first if finished_ids.present?
     return target.presence || nil
   end
+
+  #学習すみの歌id一覧を取得
+  def self.finished_songs(user)
+    finished_ids = Array.new
+    finished_songs = self.select(:song_id).who(user).where("exam_id IS ?", nil)
+    finished_songs.each do |f|
+      finished_ids << f.song_id if f.present?
+    end
+    return finished_ids
+  end
 end

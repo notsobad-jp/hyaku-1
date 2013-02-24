@@ -77,6 +77,9 @@ em {
   color: $color-red;
 }
 
+.clickable {
+  cursor: pointer;
+}
 
 /*****************************************************************
 * HEADER
@@ -772,7 +775,11 @@ blockquote {
 }
 
 .qa_box {
-  margin-bottom: 40px;
+  margin-bottom: 45px;
+
+  div:first-child {
+    height: 100%;
+  }
 }
 
 
@@ -814,5 +821,8 @@ blockquote {
     td {
       border-bottom: none;
     }
+  }
+  tr.not-yet td {
+    color: #AAA;
   }
 }
