@@ -122,7 +122,7 @@ header {
   li {
     float: left;
     line-height: 65px;
-    margin: 0 5px;
+    margin: 0 7px;
   }
 
   a, a:visited {
@@ -551,7 +551,6 @@ footer {
 }
 
 .menu_title {
-  width: 84%;
   line-height: 30px;
   font-size: 22px;
   margin-bottom: 25px;
@@ -566,6 +565,10 @@ footer {
     width: 30px;
     top: -2px;
   }
+}
+
+.w_84 {
+  width: 84%;
 }
 
 .subtitle {
@@ -770,4 +773,46 @@ blockquote {
 
 .qa_box {
   margin-bottom: 40px;
+}
+
+
+/*****************************************************************
+* Songs
+*****************************************************************/
+#songs	{
+	border-collapse: collapse;	border-spacing: 0;
+	width: 100%;
+	margin-bottom: 30px;
+  th, td	{
+    padding: 10px 20px;
+    vertical-align: middle;
+    border-bottom: 1px solid #FFF;
+  }
+  th	{
+    background: #555;
+    color: #EEE;
+    border-top: 2px solid #333;
+    text-align: left;
+  }
+  td	{
+    background: #DDD;
+    color: #333;
+  }
+
+  tr:nth-child(even) {
+    td {
+      background: #EEE;
+    }
+  }
+  tr:hover {
+    td {
+      background: $color-red;
+      color: #EEE;
+    }
+  }
+  tr:last-child {
+    td {
+      border-bottom: none;
+    }
+  }
 }

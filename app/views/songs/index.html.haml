@@ -1,0 +1,17 @@
+%section.main#static
+  %h1.menu_title.serif 百人一首の一覧
+  %table#songs
+    %tr
+      %th #
+      %th 歌人
+      %th 歌
+    - @songs.each do |song|
+      %tr
+        %td
+          -# = link_to(song.id , {:controller => :songs, :action => :show, :id => song.id})
+          = song.id
+        %td
+          = song.author.name
+        %td
+          = song.poem
+

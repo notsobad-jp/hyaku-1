@@ -1,0 +1,40 @@
+%div(id="next_song" class="songs")
+  %section.main
+    %hgroup
+      %h1.menu_title.serif.w_84
+        百人一首の一覧
+      %h2.subtitle
+        第#{@song.id}歌
+    %section
+      %div.cf
+        %div#question_char.char_card.serif
+          %div
+            - poem = @song.poem.split(" ")
+            %div
+              %p
+                #{poem[0]}
+              %p
+                &emsp;#{poem[1]}
+              %p
+                &emsp;&emsp;&emsp;&emsp;&emsp;#{poem[2]}
+            %div
+              %p
+                #{poem[3]}
+              %p
+                &emsp;&emsp;#{poem[4]}
+        = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @song.id)}.jpg", :class => "cards", :id => "question_img")
+      %div.kana
+        %small.serif (#{@song.kana})
+    %section#exp
+      %div.exp_content
+        %h1.headline.serif 意訳
+        %p.exp_comment #{@song.comment}
+      %div.exp_content
+        %h1.headline.serif 歌人
+        %div#poet_info.cf
+          = image_tag("poet/Hyakuninisshu_#{sprintf("%03d", @song.id)}.jpg")
+          %div
+            %p#poet_name.serif #{@song.author.name} (#{@song.author.period}年)
+            %p #{@song.author.info}
+    %section.link
+      = link_to( "一覧へもどる", {:controller => :songs, :action => :index}, :class => "btn" )

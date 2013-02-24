@@ -15,6 +15,7 @@ Hyaku1::Application.routes.draw do
   match 'exam/finish' => 'exam#finish', :as => :exam_finish
   resources :users
   resources :user_sessions
+  resources :songs
   match 'oauth/callback' => 'oauths#callback'
   match 'oauth/:provider' => 'oauths#oauth', :as => :auth_at_provider
   match 'login' => 'user_sessions#new', :as => :login
