@@ -235,7 +235,7 @@ header {
 
 .left, .right {
 	position: absolute;
-	top: 9%;
+	top: 1.5%;
 }
 .ua-firefox .left, .ua-firefox .right, .ua-ie .left, .ua-ie .right {
   top: 0%;
@@ -252,7 +252,7 @@ header {
 .menu_info {
   position: absolute;
   background: #000;
-  top: 62%;
+  top: 51.5%;
   display: none;
   z-index: 3;
 
@@ -269,9 +269,6 @@ header {
     font-size: 1.0em;
     line-height: 1.3em;
   }
-}
-.ua-firefox .menu_info, .ua-ie .menu_info {
-  top: 51.5%;
 }
 
 
