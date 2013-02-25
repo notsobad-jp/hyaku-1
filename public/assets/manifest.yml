@@ -1,8 +1,6 @@
 ---
-body_bg.jpg: body_bg-09d13349787f770376df0d6c76bd86cd.jpg
-body_bg/index.jpg: body_bg-09d13349787f770376df0d6c76bd86cd.jpg
-btn.jpg: btn-52db562c7266d57295e30b5030fcd92c.jpg
-btn/index.jpg: btn-52db562c7266d57295e30b5030fcd92c.jpg
+body_bg.png: body_bg-a8a330f4c0a157319f38716ef7b4af02.png
+body_bg/index.png: body_bg-a8a330f4c0a157319f38716ef7b4af02.png
 cards/Hyakuninisshu_001.jpg: cards/Hyakuninisshu_001-ec03455dc0e1dc10f7438d072bd5443c.jpg
 cards/Hyakuninisshu_001/index.jpg: cards/Hyakuninisshu_001-ec03455dc0e1dc10f7438d072bd5443c.jpg
 cards/Hyakuninisshu_002.jpg: cards/Hyakuninisshu_002-8b08cb6fbcacb88e536d86b3a6f0f344.jpg
@@ -291,8 +289,8 @@ poet/guest.jpg: poet/guest-1863df2e8d127bd292ff81000012d939.jpg
 poet/guest/index.jpg: poet/guest-1863df2e8d127bd292ff81000012d939.jpg
 roll.png: roll-2fe77a9d7d6d7645a6e1fbdfe767ec16.png
 roll/index.png: roll-2fe77a9d7d6d7645a6e1fbdfe767ec16.png
-sub_bg.jpg: sub_bg-91994dce449b125b763c958365703c62.jpg
-sub_bg/index.jpg: sub_bg-91994dce449b125b763c958365703c62.jpg
+sub_bg.png: sub_bg-e9ce942fc71031ef1e97367925f9ff86.png
+sub_bg/index.png: sub_bg-e9ce942fc71031ef1e97367925f9ff86.png
 tatami.jpg: tatami-00170a4d720ad99232149fe42c592aea.jpg
 tatami/index.jpg: tatami-00170a4d720ad99232149fe42c592aea.jpg
 top_bg.jpg: top_bg-ba16110ab7be87de262cc23185a45a56.jpg
@@ -301,5 +299,5 @@ without_login.png: without_login-39d5953908f2637ab1882159e7b1a261.png
 without_login/index.png: without_login-39d5953908f2637ab1882159e7b1a261.png
 application.js: application-270d495679b09b21c306be43225ed050.js
 application/index.js: application-270d495679b09b21c306be43225ed050.js
-application.css: application-b94730ad8e4b3a3d6a9e6f136b94db6f.css
-application/index.css: application-b94730ad8e4b3a3d6a9e6f136b94db6f.css
+application.css: application-d122a635b2eda32a04f0404735507039.css
+application/index.css: application-d122a635b2eda32a04f0404735507039.css
