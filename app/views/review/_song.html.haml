@@ -1,8 +1,9 @@
+= render "menu_bar"
 %section.main
   %hgroup
-    %h1.menu_title.serif.w_84
-      おぼえた歌を復習する
-    %h2.subtitle
+    %h1.menu_title
+      上の句
+    %h2.headline
       第#{@review_song.id}歌
       %small （残り#{@review_num-@review_num_finished}歌）
   %section#question.cf
@@ -21,6 +22,9 @@
       %p.success.hidden.serif 正解
       %p.failure.hidden.serif 不正解
       = link_to( "次の歌へ", {:controller => :review, :action => :show}, :class => "btn hidden")
+
+  %h1.menu_title
+    回答をえらぶ
   %section#answer.cf
     - @review_targets.each_with_index do |target, i|
       - result = (@review_song.id == target.id) ? 1 : 0;

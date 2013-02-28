@@ -4,6 +4,12 @@
 @import "compass";
 @import "like/like*.png";
 @include all-like-sprites;
+@import "menu_bar_1/menu_bar*.png";
+@include all-menu_bar_1-sprites;
+@import "menu_bar_2/menu_bar*.png";
+@include all-menu_bar_2-sprites;
+@import "menu_bar_3/menu_bar*.png";
+@include all-menu_bar_3-sprites;
 
 $color-red : #B54434;
 $color-blue : #005CAF;
@@ -43,10 +49,11 @@ body {
 }
 
 .headline {
-  background: url("/assets/line.gif") repeat-x bottom left;
   padding-bottom: 12px;
-  font-size: 18px;
+  font-size: 16px;
   color: #333;
+  @include text-shadow(#bbb 0 0 1px);
+
   &:before {
     content:"";
     @include inline-block;
@@ -87,7 +94,8 @@ em {
 header {
 	width: 100%;
   height: 65px;
-	background-image: url("/assets/menu_bg.png");
+	background: url("/assets/menu_bg.png");
+	background: #333;
 	position: fixed;
 	z-index: 5;
 
@@ -95,7 +103,7 @@ header {
     content:"";
     display: block;
     position: absolute;
-    background-image: url("/assets/origami.jpg");
+    background: url("/assets/sakura/sakura_red.jpg");
     top: 65px;
     width: 100%;
     height: 5px;
@@ -287,7 +295,8 @@ header {
 }
 
 section.main {
-  margin: auto 2%;
+  margin-left: 5%;
+  margin-right: 10%;
 }
 
 /*****************************************************************
@@ -386,7 +395,7 @@ footer {
     content:"";
     display: block;
     position: absolute;
-    background-image: url("/assets/origami.jpg");
+    background-image: url("/assets/sakura/sakura_red.jpg");
     top: -5px;
     width: 100%;
     height: 5px;
@@ -517,16 +526,21 @@ footer {
 }
 
 #exp {
-  width: 84%;
+  // width: 84%;
   margin-bottom: 30px;
 }
 
 .exp_content {
+  width: 48%;
   margin: 15px 0;
+  float: left;
+  &:first-child {
+    margin-right: 4%;
+  }
 }
 
 .exp_comment, #poet_info {
-  padding:15px;
+  // padding:15px;
 }
 
 #poet_info {
@@ -534,14 +548,14 @@ footer {
     float: left;
   }
   img {
-    width: 15%;
+    width: 20%;
     border: 7px solid #333;
-    margin-right: 2%;
+    margin-right: 3%;
 
     @include box-sizing(border-box);
   }
   div {
-    width: 83%;
+    width: 77%;
   }
 }
 
@@ -554,7 +568,9 @@ footer {
   line-height: 30px;
   font-size: 22px;
   margin-bottom: 25px;
-  border-bottom: 6px dotted #000;
+  background: url("/assets/line.gif") repeat-x bottom left;
+  color: #333;
+  @include text-shadow(#bbb 0 0 1px);
 
   &:before {
     content:"";
@@ -671,15 +687,15 @@ footer {
 }
 
 #answer {
-  margin: 40px 0;
+  margin: 0 0 40px 0;
   background-image: url("/assets/tatami.jpg");
   @include background-size(contain);
   a {
     color: #333;
   }
   .char_card {
-    width: 15%;
-    margin: 30px 2.5%;
+    width: 17%;
+    margin: 30px 1.5%;
   }
   .char_card:hover {
     border: 7px solid $color-red;
@@ -695,12 +711,12 @@ footer {
 #result {
   float: left;
   height: 100%;
-  width: 35%;
+  width: 48%;
   text-align: center;
   p {
     font-size: 80px;
     line-height: 80px;
-    margin: 70px 0 30px 0;
+    margin: 50px 0 30px 0;
     display: none;
   }
 }
@@ -829,4 +845,92 @@ blockquote {
       }
     }
   }
+}
+
+
+/*****************************************************************
+* Menu Bar
+*****************************************************************/
+.menu_bar_bak {
+  background-repeat: repeat-x;
+  height: 80px;
+  width: 100%;
+  position: relative;
+  margin: 10px 0 50px 0;
+}
+#menu_bar_bak_1 {
+  background: url("/assets/sakura/sakura_blue.jpg");
+}
+#menu_bar_bak_2 {
+  background: url("/assets/sakura/sakura_red.jpg");
+}
+#menu_bar_bak_3 {
+  background: url("/assets/sakura/sakura_green.jpg");
+}
+#menu_bar_bak_other {
+  background: url("/assets/sakura/sakura_black.jpg");
+}
+
+.menu_bar {
+  div {
+    top: -5px;
+    position: absolute;
+    z-index: 1;
+    width: 74px;
+    height: 90px;
+  }
+  #menu_bar_1 {
+    background: url("/assets/menu_bar_1/menu_bar_1_hover.png");
+  }
+  #menu_bar_2 {
+    background: url("/assets/menu_bar_2/menu_bar_2_hover.png");
+  }
+  #menu_bar_3 {
+    background: url("/assets/menu_bar_3/menu_bar_3_hover.png");
+  }
+  #menu_bar_4 {
+    background: url("/assets/menu_bar_4/menu_bar_4.png");
+    left: 50px;
+  }
+  #menu_bar_5 {
+    background: url("/assets/menu_bar_5/menu_bar_5.png");
+    left: 50px;
+  }
+}
+
+
+.menu_bar_1-menu_bar_1 {
+  left: 50px;
+}
+.menu_bar_2-menu_bar_2 {
+  left: 125px;
+}
+.menu_bar_3-menu_bar_3 {
+  left: 200px;
+}
+
+.menu_bar_text div {
+  top: -5px;
+  position: absolute;
+  z-index: 0;
+  height: 90px;
+  width: 380px;
+  left: 50px;
+}
+#menu_bar_text_1 {
+  background: url("/assets/menu_bar_text/menu_bar_text_1.png");
+}
+#menu_bar_text_2 {
+  background: url("/assets/menu_bar_text/menu_bar_text_2.png");
+}
+#menu_bar_text_3 {
+  background: url("/assets/menu_bar_text/menu_bar_text_3.png");
+}
+#menu_bar_text_4 {
+  background: url("/assets/menu_bar_text/menu_bar_text_4.png");
+  width: 230px;
+}
+#menu_bar_text_5 {
+  background: url("/assets/menu_bar_text/menu_bar_text_5.png");
+  width: 230px;
 }

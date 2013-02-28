@@ -1,8 +1,9 @@
+= render "menu_bar"
 %section.main
   %hgroup
-    %h1.menu_title.serif.w_84
-      100首まとめてテストする
-    %h2.subtitle
+    %h1.menu_title
+      上の句
+    %h2.headline
       #{@finished_num+1}首目
       %small （現在のスコア：#{@current_score}/#{@finished_num}）
   %section#question.cf
@@ -21,6 +22,9 @@
       %p.success.hidden.serif 正解
       %p.failure.hidden.serif 不正解
       = link_to( "次の歌へ", {:controller => :exam, :action => :show}, :class => "btn hidden")
+
+  %h1.menu_title
+    回答をえらぶ
   %section#answer.cf
     - @exam_targets.each_with_index do |target, i|
       - result = (@exam_song.id == target.id) ? 1 : 0;

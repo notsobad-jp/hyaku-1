@@ -1,10 +1,9 @@
 %div(id="next_song" class="songs")
+  = render "menu_bar"
   %section.main
-    %h1.menu_title.serif.w_84
-      100首まとめてテストする
+    %h1.menu_title
+      採点結果
     #finish
-      %p.result.serif
-        採点結果
       %p.score.serif
         <em>#{@score}</em>/100
       %p

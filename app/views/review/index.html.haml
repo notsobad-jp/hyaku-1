@@ -1,8 +1,9 @@
 %div
+  = render "menu_bar"
   %section.main
-    %h1.menu_title.serif.w_84
-      おぼえた歌を復習する
-    .normal_container
+    %h1.menu_title
+      今日復習する歌
+    %div
       - if current_user
         %div#review_index
           %p 今日復習する歌は、<em>#{@review_num}</em>歌です。

@@ -1,9 +1,10 @@
 %div(id="next_song" class="songs")
+  = render("menu_bar")
   %section.main
     %hgroup
-      %h1.menu_title.serif.w_84
-        百人一首の一覧
-      %h2.subtitle
+      %h1.menu_title
+        歌の情報
+      %h2.headline
         第#{@song.id}歌
     %section
       %div.cf

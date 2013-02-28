@@ -1,8 +1,9 @@
+= render "menu_bar"
 %section.main
   %hgroup
-    %h1.menu_title.serif.w_84
-      あたらしい歌をおぼえる
-    %h2.subtitle
+    %h1.menu_title
+      歌の情報
+    %h2.headline
       第#{@next_song.id}歌
   %section
     %div.cf
@@ -23,17 +24,17 @@
               &emsp;&emsp;#{poem[4]}
       = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @next_song.id)}.jpg", :class => "cards", :id => "question_img")
     %div.kana
-      %small.serif (#{@next_song.kana})
-  %section#exp
+      %small (#{@next_song.kana})
+  %section#exp.cf
     %div.exp_content
-      %h1.headline.serif 意訳
+      %h1.headline 意訳
       %p.exp_comment #{@next_song.comment}
     %div.exp_content
-      %h1.headline.serif 歌人
+      %h1.headline 歌人
       %div#poet_info.cf
         = image_tag("poet/Hyakuninisshu_#{sprintf("%03d", @next_song.id)}.jpg")
         %div
-          %p#poet_name.serif #{@next_song.author.name} (#{@next_song.author.period}年)
+          %p#poet_name #{@next_song.author.name} (#{@next_song.author.period}年)
           %p #{@next_song.author.info}
   %section.link
     - history = { :user_id => @user.id, :song_id => @next_song.id }

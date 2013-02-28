@@ -20,4 +20,5 @@ $ ->
 		if ( this.tagName != 'A' )
 		  window.location = $(this).parents('tr').data('href')
 	  return false
-	)
+  )
+
