@@ -1,9 +1,4 @@
 $ ->
-  #SideBar for AllPages
-	$(window).on("load resize", ->
-		$("#sub").height($("#main").height())
-	)
-
   #Set CardHeight for Review/Exam Pages
 	$("#question_img").load ->
 		$("#question_char").height($("#question_img").height())
@@ -21,4 +16,17 @@ $ ->
 		  window.location = $(this).parents('tr').data('href')
 	  return false
   )
+
+
+	$(window).on("load resize", ->
+		$(".index_box").height($(".index_box").width())
+	)
+	$(window).on("load resize", ->
+	  $("#index_container").height($(".index_box").width() * 3)
+	)
+
+  #SideBar for AllPages
+	$(window).on("load resize", ->
+		$("#sub").height($("#main").height())
+	)
 

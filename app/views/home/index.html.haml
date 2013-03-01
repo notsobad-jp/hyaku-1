@@ -1,51 +1,31 @@
-.wrapper.upper
-  .box
-  .box
-  .box
-.wrapper.cf
-  .box.left
-  %nav
-    %ul
-      %li
-        %a{:href => :learn}
-          .box.menu#menu_1
-        .box.menu_info#menu_info_1
-          %div
-            %p 今日おぼえる歌
-            %p 残り：<em>#{@learn_num_left}</em>/3首
-            %br
-            %p
-              - if @learn_num_left > 0
-                がんばりましょう。
-              - else
-                今日の学習は終了です。<br>おつかれさまでした。
-      %li
-        %a{:href => "review/index"}
-          .box.menu#menu_2
-        .box.menu_info#menu_info_2
-          %div
-            %p 今日復習する歌
-            %p 残り：<em>#{@review_num - @review_num_finished}</em>/#{@review_num}首
-            %br
-            %p
-              - if (@review_num - @review_num_finished) > 0
-                がんばりましょう。
-              - else
-                今日の復習は終了です。<br>おつかれさまでした。
-      %li
-        %a{:href => "exam/index"}
-          .box.menu#menu_3
-        .box.menu_info#menu_info_3
-          %div
-            %p がんばりましょう。
-  .box.right
-.wrapper.second.cf
-  .box.left#pic_0
-  .box#pic_1
-  .box#pic_2
-  .box#pic_3
-  .box.right#pic_4
-.wrapper.lower
-  .box
-  .box
-  .box
+%div#index_container
+  %div.index_column.cf
+    %div.index_box
+    %div.index_box
+    %div.index_box
+    %div.index_box
+    %div.index_box
+  %div.index_column.cf
+    %div.index_box
+    = link_to(:learn) do
+      %div.index_box#menu_1
+        = image_tag("main_menu/menu_1.png")
+    %div.index_box
+    = link_to(:exam_index) do
+      %div.index_box#menu_3
+        = image_tag("main_menu/menu_3.png")
+    %div.index_box
+  %div.index_column.cf
+    %div.index_box
+    %div.index_box
+    = link_to(:review_index) do
+      %div.index_box#menu_2
+        = image_tag("main_menu/menu_2.png")
+    %div.index_box
+    %div.index_box
+  %div.index_column.cf
+    %div.index_box
+    %div.index_box
+    %div.index_box
+    %div.index_box
+    %div.index_box
