@@ -8,7 +8,7 @@ class SongsController < ApplicationController
   end
 
   def show
-    @title = "百人一首 歌の詳細"
+    @title = "百人一首の意訳・意味"
     @song = Song.find(params[:id])
   end
 end

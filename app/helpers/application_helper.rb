@@ -1,7 +1,7 @@
 # coding: utf-8
 module ApplicationHelper
   def title
-    base_title = "百/一[ひゃくいち]"
+    base_title = "百/一"
     if @title.nil?
       base_title
     else
