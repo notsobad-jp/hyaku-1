@@ -1,7 +1,7 @@
 # coding: utf-8
 class HistoriesController < ApplicationController
   def show
-    @title = "[守]あたらしい歌を覚える"
+    @title = "あたらしい歌を覚える"
     @history = History.new
 
     #次にやる問題を取得。三問終わってたらホームにリダイレクト。
@@ -39,7 +39,7 @@ class HistoriesController < ApplicationController
   end
 
   def finish
-    @title = "[守]あたらしい歌を覚える"
+    @title = "あたらしい歌を覚える"
     @user = current_user || User.find(0)
     if current_user
       @finished_songs = History.who(current_user).original.which_day(Date.today).order("created_at DESC")
