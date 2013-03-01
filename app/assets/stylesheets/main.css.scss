@@ -413,11 +413,11 @@ footer {
 }
 
 .exp_content {
-  width: 48%;
+  width: 47%;
   margin: 15px 0;
   float: left;
   &:first-child {
-    margin-right: 4%;
+    margin-right: 6%;
   }
 }
 
@@ -622,6 +622,10 @@ footer {
 .score {
   font-size: 100px;
   line-height: 100px;
+}
+
+#quit_btn {
+  margin-bottom: 50px;
 }
 
 
@@ -851,6 +855,8 @@ blockquote {
 #menu_1, #menu_2, #menu_3 {
   position: relative;
   overflow: hidden;
+  width: 19.9%;
+
   &:hover {
     & img {
       bottom: 0;
@@ -860,6 +866,7 @@ blockquote {
     width: 100%;
     position: absolute;
     bottom: -60%;
+    @include transition(bottom 0.3s ease-out 0);
   }
 }
 

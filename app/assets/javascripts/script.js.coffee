@@ -1,7 +1,8 @@
 $ ->
   #Set CardHeight for Review/Exam Pages
-	$("#question_img").load ->
+	$("#question_img").on("load resize", ->
 		$("#question_char").height($("#question_img").height())
+	)
 
   #Apply Taketori for Review/Exam Pages
 	(new Taketori()).set({lang:'ja-jp'}).element('#question_char').toVertical(false)

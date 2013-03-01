@@ -25,13 +25,13 @@
                 &emsp;&emsp;#{poem[4]}
         = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @song.id)}.jpg", :class => "cards", :id => "question_img")
       %div.kana
-        %small.serif (#{@song.kana})
+        %small (#{@song.kana})
     %section#exp
       %div.exp_content
-        %h1.headline.serif 意訳
+        %h1.headline 意訳
         %p.exp_comment #{@song.comment}
       %div.exp_content
-        %h1.headline.serif 歌人
+        %h1.headline 歌人
         %div#poet_info.cf
           = image_tag("poet/Hyakuninisshu_#{sprintf("%03d", @song.id)}.jpg")
           %div
