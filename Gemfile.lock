@@ -126,6 +126,8 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+    sitemap_generator (3.4)
+      builder
     sorcery (0.8.0)
       bcrypt-ruby (~> 3.0.0)
       oauth (~> 0.4.4)
@@ -170,6 +172,7 @@ DEPENDENCIES
   pg
   rails (= 3.2.9)
   sass-rails (~> 3.2.3)
+  sitemap_generator
   sorcery
   therubyracer
   therubyracer-heroku
