@@ -312,15 +312,21 @@ footer {
   }
 }
 
-#creator_img{
-  width: 15%;
-  border: 5px solid #000;
+#creator {
+  float: left;
+  width: 22%;
+  margin: 0 5% 5% 0;
+  img{
+    width: 100%;
+    border: 5px solid #000;
+    @include box-sizing(border-box);
+  }
+  p  {
+    font-size: smaller;
+    margin: -5px 0 15px 0;
+  }
 }
 
-#creator  {
-  font-size: smaller;
-  margin: -5px 0 15px 0;
-}
 
 #copyright {
   text-align: center;

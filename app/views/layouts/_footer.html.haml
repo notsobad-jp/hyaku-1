@@ -12,17 +12,20 @@
         百人一首の一覧・訳や解説は「#{link_to("百人一首の一覧", :songs)}」で見ることができます(いまのところ学習した歌しか見ることができませんが。。)
     .footer_box
       %h2 Created by
-      = image_tag("kame_f_no7.png", :alt => 'kame_f_no7', :class => 'profile_image', :id => 'creator_img')
-      %p#creator
-        %a(href="https://twitter.com/#!/kame_f_no7" target="_blank")
-          @kame_f_no7
+      %div#creator
+        = image_tag("kame_f_no7.png", :alt => 'kame_f_no7', :class => 'profile_image', :id => 'creator_img')
+        %p
+          %a(href="https://twitter.com/#!/kame_f_no7" target="_blank")
+            @kame_f_no7
       %p
-        Web制作とかしています。<br>
-        Ruby on Railsと百人一首を絶賛勉強中。<br>
+        Web制作とかしています。
+        Ruby on Railsと百人一首を絶賛勉強中。
         百/一がはじめてのRailsアプリです。つかれました。
       %p
         これまでにつくったサービスは、読書にぴったりの音楽おすすめサービス「booklovesmusic」、
         文豪体感アプリ「ブンゴウフリック」など。
+      %p
+        サービスの感想とかもらえると大変よろこびます。twitterでもfacebookでも気軽に連絡してください。
     .footer_box#supported_by
       %h2 Supported by
       = image_tag("fakebox.png", :id => "fakebox")

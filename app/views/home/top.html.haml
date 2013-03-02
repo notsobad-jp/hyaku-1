@@ -3,8 +3,10 @@
     %h1
       = image_tag('logo_w.png', :id => "top_logo")
     %p#top_msg
-      「百/一」は、だいたい一ヶ月くらいで<br>
-      百人一首をおぼえるためのサービスです。
+      「百/一」は、うまいこと設計された<br>
+      学習スケジュールによって、だいたい<br>
+      1ヶ月くらいで百人一首をおぼえることが<br>
+      できるといわれているサービスです。
     %div.top_login
       = link_to image_tag("without_login.png", :class => "fb_login"), :root
       = link_to image_tag("fb_login.png", :class => "fb_login"), auth_at_provider_path(:provider => :facebook)
