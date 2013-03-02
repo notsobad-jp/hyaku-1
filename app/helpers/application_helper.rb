@@ -9,6 +9,20 @@ module ApplicationHelper
     end
   end
 
+  def canonical_link
+    link = "http://hyaku-1.eure-ka.me"
+    if params[:controller] == "histories"
+      link = "http://hyaku-1.eure-ka.me/learn"
+    elsif params[:controller] == "review"
+      link = "http://hyaku-1.eure-ka.me/review"
+    elsif params[:controller] == "exam"
+      link = "http://hyaku-1.eure-ka.me/exam"
+    elsif params[:controller] == "songs"
+      link = "http://hyaku-1.eure-ka.me/songs"
+    end
+    return link
+  end
+
   def last_song_id
     if current_user
       last_song = History.who(current_user).original.order("created_at DESC").first
