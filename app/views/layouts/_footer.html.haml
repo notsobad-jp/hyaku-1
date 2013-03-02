@@ -3,12 +3,11 @@
     .footer_box
       %h2 About
       %p
-        百/一[ひゃくいち]は、だいたい1か月くらいで百人一首を覚えるためのサービスです。<br>
+        百/一[ひゃくいち]は、だいたい1か月くらいで百人一首を覚えるためのサービスです。
+        「#{link_to("守", :learn)}・#{link_to("破", :review_index)}・#{link_to("離", :exam_index)}」の3つのメニューで効率よく百人一首を覚えることができる仕組みになっていると思います。くわしくは「#{link_to("このサイトについて", :about)}」をご覧ください。<br>
+      %p
         「#{link_to("守", :learn)}」で毎日3首ずつ新しい歌をおぼえ、「#{link_to("破", :review_index)}」で定期的に間隔をあけて復習することで効率よく百首をおぼえることができます。
         また自信がついたら「#{link_to("離", :exam_index)}」で100首まとめてテストすることもできます。<br>
-        くわしくは「
-        = link_to("このサイトについて", :about)
-        」をご覧ください。<br>
         百人一首の一覧・訳や解説は「#{link_to("百人一首の一覧", :songs)}」で見ることができます(いまのところ学習した歌しか見ることができませんが。。)
     .footer_box
       %h2 Created by
@@ -20,16 +19,16 @@
       %p
         Web制作とかしています。
         Ruby on Railsと百人一首を絶賛勉強中。
-        百/一がはじめてのRailsアプリです。つかれました。
+        #{link_to("百/一", :root)}がはじめてのRailsアプリです。つかれました。
       %p
         これまでにつくったサービスは、読書にぴったりの音楽おすすめサービス「booklovesmusic」、
         文豪体感アプリ「ブンゴウフリック」など。
       %p
-        サービスの感想とかもらえると大変よろこびます。twitterでもfacebookでも気軽に連絡してください。
+        サービスについての感想とかもらえると大変よろこびます。twitterでもfacebookでも気軽に連絡してください。
     .footer_box#supported_by
       %h2 Supported by
       = image_tag("fakebox.png", :id => "fakebox")
       = link_to("http://www.facebook.com/sharer.php?u=http://hyaku-1.eure-ka.me/top/", :target => "_blank") do
         %div.like-like
-    %p#copyright Copyright  #{link_to("百/一[ひゃくいち]", :root)}  2013 All Rights Reserved.
+  %p#copyright Copyright  #{link_to("百/一[ひゃくいち]", :root)}  2013 All Rights Reserved.
 
