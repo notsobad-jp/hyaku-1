@@ -114,8 +114,10 @@ header {
 #head_logo {
   margin: 5px 2%;
   float: left;
-  height: 50px;
-  width: 80px;
+  img {
+    height: 50px;
+    width: 80px;
+  }
 }
 
 #head_login {
