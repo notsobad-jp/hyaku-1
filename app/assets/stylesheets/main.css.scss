@@ -114,10 +114,8 @@ header {
 #head_logo {
   margin: 5px 2%;
   float: left;
-  img {
-    height: 50px;
-    width: 80px;
-  }
+  height: 50px;
+  width: 80px;
 }
 
 #head_login {
@@ -876,3 +874,6 @@ blockquote {
   }
 }
 
+.menu_bar h1 {
+  display: none;
+}
