@@ -12,6 +12,7 @@ gem 'thin'
 gem 'foreman'
 gem 'json', '1.7.7'
 gem 'sitemap_generator'
+gem 'paperclip'
 
 # Gems used only for assets and not required
 # in production environments by default.

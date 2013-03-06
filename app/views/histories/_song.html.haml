@@ -1,11 +1,10 @@
 = render "menu_bar"
 %section.main
-  %hgroup
-    %h1.menu_title
-      歌の情報
+  %h1.menu_title
+    歌の情報
+  %section#song_info
     %h2.headline
       第#{@next_song.id}歌
-  %section
     %div.cf
       %div#question_char.char_card.serif
         %div
@@ -25,17 +24,85 @@
       = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @next_song.id)}.jpg", :class => "cards", :id => "question_img")
     %div.kana
       %small (#{@next_song.kana})
-  %section#exp.cf
-    %div.exp_content
+  %div#exp.cf
+    %section.exp_content
       %h1.headline 意訳
       %p.exp_comment #{@next_song.comment}
-    %div.exp_content
+    %section.exp_content
       %h1.headline 歌人
       %div#poet_info.cf
         = image_tag("poet/Hyakuninisshu_#{sprintf("%03d", @next_song.id)}.jpg")
         %div
           %p#poet_name #{@next_song.author.name} (#{@next_song.author.period}年)
           %p #{@next_song.author.info}
+
+%section.main
+  %h1.menu_title
+    おぼえるための３ステップ（ベータ版）
+  %div#step_exp
+    %p
+      じぶんで考えて手を動かしたことほど記憶に残るもの。ここでは歌をおぼえるためのステップを３つ用意しています。<br>
+    %p#step_warning
+      「おぼえるための３ステップ」はまだベータ版のため、選択した画像や入力したテキストは保存されません。<br>
+      でもこうやって調べたり表現したりする作業自体が記憶の定着を助けるのでぜひ活用してください。
+  %section.step_box
+    %h2.headline
+      Step.1 歌に合う画像をさがす
+    %p
+      歌の風景・印象にあう画像をさがしてみましょう。<br>
+      コツは、完全に歌のとおりの風景を探すのではなく、歌から受ける印象にあったものを探すことです。
+    -# %small
+    -#   ※画像の著作権はよく確認し、アップしても問題ないものを使用してください。
+    %div#picture_box.cf
+      -# %div
+      -#   = image_tag("no-photo.jpg", :id => "picture_thumb")
+      -#   = form_for @user, :url => users_path, :html => { :multipart => true } do |form|
+      -#     = form.file_field :photo
+      %div
+        %h3 【画像さがしのヒント】
+        %p
+          たとえばこんなサイトでさがすといいかもしれません。
+          %p
+            = link_to("PHOTO STOCKER | 「紅葉」の検索結果", "http://photo.v-colors.com/tag/%E7%B4%85%E8%91%89/", :target => "_blank")
+          %p
+            = link_to("写真素材 足成 | 「月」の検索結果", "http://www.ashinari.com/search/search.php?search=%E6%9C%88", :target => "_blank")
+
+  %section.step_box
+    %h2.headline
+      Step.2 歌のみどころを説明する
+    %p
+      好奇心旺盛な「天智くん」にこの歌のみどころを説明してあげてください。<br>
+      コツは歌の正確な説明をするよりも、じぶんが気に入ったところや逆に共感できないところを書くことです。
+    %div#midokoro_box
+      %div.qa_box
+        %div.cf
+          %div.qa_img
+            = image_tag("poet/guest.jpg")
+          %p
+            ねーねー、結局この歌は何が言いたいの？？
+        %div.cf
+          %div.qa_img
+            = profile_image
+          %p
+            %textarea#midokoro_content(placeholder="ふふふ、この歌はね・・・(クリックして続きを入力！)")
+
+  %section.step_box
+    %h2.headline
+      Step.3 歌をタイピングしてみる
+    %p
+      もう歌の意味もだいぶつかめたと思うので、最後の仕上げに歌をじぶんでタイピングしてみましょう。<br>
+      コツはさっきまでで覚えた歌の情景や意味を考えて思い出しながら打ち込むことです。
+    %div#typing
+      %p
+        #{poem[0]} #{poem[1]} #{poem[2]}
+        %span#typing_answer
+          #{poem[3]} #{poem[4]}
+        -# %input(type="submit" value="下の句を表示/非表示" id="typing_display")
+      %input(type="text" placeholder="ここに句をタイピング！" id="typing_text")
+    %small
+      下の句の部分にマウスオーバーすると答えがチラ見できるよ！
+
+
   %section.link
     - history = { :user_id => @user.id, :song_id => @next_song.id }
     = link_to( "おぼえたので次へ", {:controller => :histories, :action => :save, :remote => true, :history => history}, :class => "btn" )

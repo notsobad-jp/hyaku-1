@@ -408,6 +408,10 @@ footer {
 /*****************************************************************
 * LEARN
 *****************************************************************/
+#song_info {
+  margin-bottom: 20px;
+}
+
 .kana {
   font-size: 12px;
   margin: 10px 0;
@@ -674,8 +678,12 @@ blockquote {
   margin-bottom: 45px;
 
   p {
-    width: 90%;
+    @extend .arrow_box;
+    width: 86%;
     float: left;
+    min-height: 50px;
+    padding: 1%;
+    margin-bottom: 10px;
   }
 }
 
@@ -877,4 +885,104 @@ blockquote {
 
 .menu_bar h1 {
   display: none;
+}
+
+
+/*****************************************************************
+* Learn Help
+*****************************************************************/
+.step_box {
+  margin-bottom: 40px;
+  small {
+    font-size: 10px;
+  }
+}
+
+#step_exp {
+  margin-bottom: 30px;
+}
+#step_warning {
+  margin-top: 10px;
+  font-size: 12px;
+  border: 4px double $color-red;
+  padding: 1%;
+}
+
+#picture_thumb {
+  width: 90%;
+}
+#picture_box {
+  margin-top: 15px;
+  div {
+    width: 50%;
+    float: left;
+  }
+  h3 {
+    margin-top: 10px;
+  }
+}
+
+#midokoro_box {
+  margin-top: 15px;
+}
+
+#midokoro_content {
+  font-size: 14px;
+  border: none;
+  width: 100%;
+  min-height: 40px;
+  background: #EFEFEF;
+}
+
+#typing {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+#typing_text {
+  margin-top: 7px;
+  height: 20px;
+  width: 70%;
+  color: #555;
+}
+
+#typing_answer {
+  display: inline-block;
+  background: #333;
+  position: relative;
+  left: 3px;
+  &:hover {
+    background: none;
+  }
+}
+
+.arrow_box {
+	position: relative;
+	background: #EFEFEF;
+	border: 3px solid #555555;
+  border-radius: 5px;
+}
+.arrow_box:after, .arrow_box:before {
+	right: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(153, 153, 153, 0);
+	border-right-color: #EFEFEF;
+	border-width: 4px;
+	top: 30%;
+	margin-top: -4px;
+}
+.arrow_box:before {
+	border-color: rgba(85, 85, 85, 0);
+	border-right-color: #555555;
+	border-width: 8px;
+	top: 30%;
+	margin-top: -8px;
 }
