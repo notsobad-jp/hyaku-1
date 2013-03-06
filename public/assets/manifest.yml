@@ -259,6 +259,8 @@ menu_bar_text/menu_bar_text_5.png: menu_bar_text/menu_bar_text_5-fd36d4421376e13
 menu_bar_text/menu_bar_text_5/index.png: menu_bar_text/menu_bar_text_5-fd36d4421376e1382e12c1e503e308ee.png
 menu_bg.png: menu_bg-488050db0fb8bd0ad2170e1f454e0f5f.png
 menu_bg/index.png: menu_bg-488050db0fb8bd0ad2170e1f454e0f5f.png
+no-photo.jpg: no-photo-fdfedf86d7050f9ecb877dea47b6ea86.jpg
+no-photo/index.jpg: no-photo-fdfedf86d7050f9ecb877dea47b6ea86.jpg
 og_image.jpg: og_image-56a56b2043750742cc241dafcafbb058.jpg
 og_image/index.jpg: og_image-56a56b2043750742cc241dafcafbb058.jpg
 poet/Hyakuninisshu_001.jpg: poet/Hyakuninisshu_001-0868cae4798d65e1d770ec0a2cfb7780.jpg
@@ -365,5 +367,5 @@ without_login.png: without_login-39d5953908f2637ab1882159e7b1a261.png
 without_login/index.png: without_login-39d5953908f2637ab1882159e7b1a261.png
 application.js: application-3cc68f3df365d58007a3a577e67771c0.js
 application/index.js: application-3cc68f3df365d58007a3a577e67771c0.js
-application.css: application-282b198849cad4b892527fa6d5c5ddeb.css
-application/index.css: application-282b198849cad4b892527fa6d5c5ddeb.css
+application.css: application-73d419dc7a102dad3bffb488b3315b56.css
+application/index.css: application-73d419dc7a102dad3bffb488b3315b56.css
