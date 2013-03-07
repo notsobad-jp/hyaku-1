@@ -52,10 +52,8 @@
     %small
       ※画像の著作権はよく確認し、アップしても問題ないものを使用してください。
     %div#picture_box.cf
-      -# %div
-      -#   = image_tag("no-photo.jpg", :id => "picture_thumb")
-      -#   = form_for @user, :url => users_path, :html => { :multipart => true } do |form|
-      -#     = form.file_field :photo
+      %div#preview_field
+        = image_tag("no-photo.jpg", :id => "picture_thumb")
       %div
         %h3 【画像さがしのヒント】
         %p
@@ -64,6 +62,9 @@
             = link_to("PHOTO STOCKER | 「紅葉」の検索結果", "http://photo.v-colors.com/tag/%E7%B4%85%E8%91%89/", :target => "_blank")
           %p
             = link_to("写真素材 足成 | 「月」の検索結果", "http://www.ashinari.com/search/search.php?search=%E6%9C%88", :target => "_blank")
+    %form
+      %input(type="file" name="file" onchange="preview(this)")
+      = javascript_include_tag "pic_upload"
 
   %section.step_box
     %h2.headline

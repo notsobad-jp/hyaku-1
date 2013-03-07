@@ -30,4 +30,3 @@ $ ->
 	$(window).on("load resize", ->
 		$("#sub").height($("#main").height())
 	)
-
