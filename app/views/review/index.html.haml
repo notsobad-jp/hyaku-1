@@ -8,7 +8,7 @@
         %div#review_index
           %p ここでは1日前・3日前・7日前におぼえた歌を復習します。
           %p 今日復習する歌は、<em>#{@review_num}</em>歌です。
-          = link_to( "復習をはじめる", :review, :class => "btn" )
+          = link_to( "復習をはじめる", :review, :class => "btn", :id => "review_start_btn")
         %div#review_contents.cf
           %div.review_content
             %h2.serif.headline 1日前におぼえた歌
@@ -41,20 +41,20 @@
         %div#review_index
           %p ここでは1日前・3日前・7日前におぼえた歌を復習します。
           %p ログインしていないので復習する歌がありませんが、<br>よかったら試しに最初の3歌を復習してみますか。
-          = link_to( "おためし復習してみる", :review, :class => "btn" )
+          = link_to( "おためし復習してみる", :review, :class => "btn", :id => "review_start_btn" )
         %div#review_contents.cf
           %div.review_content
             %h2.serif.headline 1日前におぼえた歌
             %div.cf
               %p.review_empty
-                1日前におぼえた歌は<br>ありません。
+                （なし）
           %div.review_content
             %h2.serif.headline 3日前におぼえた歌
             %div.cf
               %p.review_empty
-                3日前におぼえた歌は<br>ありません。
+                （なし）
           %div.review_content
             %h2.serif.headline 7日前におぼえた歌
             %div.cf
               %p.review_empty
-                7日前におぼえた歌は<br>ありません。
+                （なし）
