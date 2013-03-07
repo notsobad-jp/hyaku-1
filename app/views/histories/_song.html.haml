@@ -47,15 +47,15 @@
     %h2.headline
       Step.1 歌に合う画像をさがす
     %p
-      歌の風景・印象にあう画像をさがしてみましょう。<br>
-      コツは、完全に歌のとおりの風景を探すのではなく、歌から受ける印象にあったものを探すことです。
-    -# %small
-    -#   ※画像の著作権はよく確認し、アップしても問題ないものを使用してください。
+      歌われている光景をイメージして、それにあう画像をさがしてみましょう。<br>
+      コツは完全に歌のとおりの風景を探すんじゃなくて、歌から受ける印象にあったものを探すことです。
+    %small
+      ※画像の著作権はよく確認し、アップしても問題ないものを使用してください。
     %div#picture_box.cf
-      -# %div
-      -#   = image_tag("no-photo.jpg", :id => "picture_thumb")
-      -#   = form_for @user, :url => users_path, :html => { :multipart => true } do |form|
-      -#     = form.file_field :photo
+      %div
+        = image_tag("no-photo.jpg", :id => "picture_thumb")
+        = form_for @user, :url => users_path, :html => { :multipart => true } do |form|
+          = form.file_field :photo
       %div
         %h3 【画像さがしのヒント】
         %p

@@ -730,10 +730,11 @@ blockquote {
     }
     &.not-yet {
       td {
-        color: #AAA;
+        color: #555;
       }
       &:hover td {
         background: #555;
+        color: #EEE;
       }
     }
   }
@@ -909,7 +910,9 @@ blockquote {
 }
 
 #picture_thumb {
-  width: 90%;
+  width: 95%;
+  border: 7px solid #333;
+  @include box-sizing(border-box);
 }
 #picture_box {
   margin-top: 15px;
