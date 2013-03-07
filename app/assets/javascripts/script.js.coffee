@@ -30,3 +30,18 @@ $ ->
 	$(window).on("load resize", ->
 		$("#sub").height($("#main").height())
 	)
+
+	$("#tt_key1").hover ->
+		$("#tt_text1").show()
+	, ->
+	  $("#tt_text1").hide()
+
+	$("#tt_key2").hover ->
+		$("#tt_text2").show()
+	, ->
+	  $("#tt_text2").hide()
+
+	$("#tt_key3").hover ->
+		$("#tt_text3").show()
+	, ->
+	  $("#tt_text3").hide()

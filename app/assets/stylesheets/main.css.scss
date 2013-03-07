@@ -935,6 +935,7 @@ blockquote {
 * Learn Help
 *****************************************************************/
 .step_box {
+  position: relative;
   margin-bottom: 40px;
   small {
     font-size: 10px;
@@ -957,7 +958,7 @@ blockquote {
   @include box-sizing(border-box);
 }
 #picture_box {
-  margin-top: 15px;
+  margin-top: 10px;
   div {
     width: 50%;
     float: left;
@@ -968,7 +969,7 @@ blockquote {
 }
 
 #midokoro_box {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 #midokoro_content {
@@ -980,14 +981,15 @@ blockquote {
 }
 
 #typing {
-  margin-top: 22px;
+  margin-top: 10px;
   font-size: 16px;
   color: $color-red;
 }
 
 #typing_text {
-  margin-top: 7px;
-  height: 20px;
+  font-size: 14px;
+  margin-top: 10px;
+  height: 25px;
   width: 70%;
   color: #555;
 }
@@ -1035,3 +1037,22 @@ blockquote {
 	margin-top: -8px;
 }
 
+
+.tt_key {
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+}
+
+.tooltip {
+  display: none;
+  background: rgba(0,0,0,0.8);
+  padding: 2%;
+  border-radius: 5px;
+  color: #EFEFEF;
+  position: absolute;
+  width: 50%;
+  top: 30px;
+  left: 35%;
+  z-index: 3;
+}
