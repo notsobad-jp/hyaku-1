@@ -1,12 +1,11 @@
 = render "menu_bar"
 %section.main
-  %hgroup
-    %h1.menu_title
-      上の句
-    %h2.headline
+  %h1.menu_title
+    問題
+  %section#question.cf
+    %h1.headline
       #{@finished_num+1}首目
       %small （現在のスコア：#{@current_score}/#{@finished_num}）
-  %section#question.cf
     %div#question_char.char_card.serif
       %div
         - poem = @exam_song.poem.split(" ")
@@ -24,7 +23,7 @@
       = link_to( "次の歌へ", {:controller => :exam, :action => :show}, :class => "btn hidden")
 
   %h1.menu_title
-    回答をえらぶ
+    回答
   %section#answer.cf
     - @exam_targets.each_with_index do |target, i|
       - result = (@exam_song.id == target.id) ? 1 : 0;
@@ -34,4 +33,4 @@
           %div
             - poem = target.poem.split(" ")
             %p #{poem[3]}<br>&emsp;&emsp;#{poem[4]}
-  = link_to( "やめる", {:controller => :exam, :action => :finish}, :class => "btn", :id => "quit_btn") unless @finished_num == 0
+  = link_to( "やめる", {:controller => :exam, :action => :finish}, :class => "btn-none", :id => "quit_btn") unless @finished_num == 0

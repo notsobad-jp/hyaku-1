@@ -11,7 +11,7 @@
           = link_to( "復習をはじめる", :review, :class => "btn", :id => "review_start_btn")
         %div#review_contents.cf
           %div.review_content
-            %h2.serif.headline 1日前におぼえた歌
+            %h2.headline 1日前におぼえた歌
             %div.cf
               - if @review_songs[1].present?
                 - @review_songs[1].each do |target|
@@ -20,7 +20,7 @@
                 %p.review_empty
                   （なし）
           %div.review_content
-            %h2.serif.headline 3日前におぼえた歌
+            %h2.headline 3日前におぼえた歌
             %div.cf
               - if @review_songs[3].present?
                 - @review_songs[3].each do |target|
@@ -29,7 +29,7 @@
                 %p.review_empty
                   （なし）
           %div.review_content
-            %h2.serif.headline 7日前におぼえた歌
+            %h2.headline 7日前におぼえた歌
             %div.cf
               - if @review_songs[7].present?
                 - @review_songs[7].each do |target|
@@ -44,17 +44,17 @@
           = link_to( "おためし復習してみる", :review, :class => "btn", :id => "review_start_btn" )
         %div#review_contents.cf
           %div.review_content
-            %h2.serif.headline 1日前におぼえた歌
+            %h2.headline 1日前におぼえた歌
             %div.cf
               %p.review_empty
                 （なし）
           %div.review_content
-            %h2.serif.headline 3日前におぼえた歌
+            %h2.headline 3日前におぼえた歌
             %div.cf
               %p.review_empty
                 （なし）
           %div.review_content
-            %h2.serif.headline 7日前におぼえた歌
+            %h2.headline 7日前におぼえた歌
             %div.cf
               %p.review_empty
                 （なし）

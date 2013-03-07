@@ -1,12 +1,11 @@
 = render "menu_bar"
 %section.main
-  %hgroup
-    %h1.menu_title
-      上の句
-    %h2.headline
+  %h1.menu_title
+    問題
+  %section#question.cf
+    %h1.headline
       第#{@review_song.id}歌
       %small （残り#{@review_num-@review_num_finished}歌）
-  %section#question.cf
     %div#question_char.char_card.serif
       %div
         - poem = @review_song.poem.split(" ")
@@ -24,7 +23,7 @@
       = link_to( "次の歌へ", {:controller => :review, :action => :show}, :class => "btn hidden")
 
   %h1.menu_title
-    回答をえらぶ
+    回答
   %section#answer.cf
     - @review_targets.each_with_index do |target, i|
       - result = (@review_song.id == target.id) ? 1 : 0;

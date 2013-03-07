@@ -38,4 +38,4 @@
             %p#poet_name.serif #{@song.author.name} (#{@song.author.period}年)
             %p #{@song.author.info}
     %section.link
-      = link_to( "一覧へもどる", {:controller => :songs, :action => :index}, :class => "btn" )
+      = link_to( "一覧へもどる", {:controller => :songs, :action => :index}, :class => "btn-prev" )

@@ -11,7 +11,7 @@
         %p
           今日おぼえる歌はすべて終了しました。<br>
           「破」で復習する歌がないか確認してみましょう。
-        = link_to( "ホームへ戻る", :root, :class => "btn" )
+        = link_to( "ホームへ戻る", :root, :class => "btn-none" )
     - else
       %div.finished_songs.cf
         - @finished_songs.each do |song|
@@ -23,4 +23,4 @@
         %p
           次の日になればまた続きの3首を覚えられます。<br>
           続きをやってみたくなったらぜひログインしてサービスをつかってみてください。
-        = link_to( "ホームへ戻る", :root, :class => "btn" )
+        = link_to( "ホームへ戻る", :root, :class => "btn-none" )
