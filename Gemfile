@@ -13,6 +13,7 @@ gem 'foreman'
 gem 'json', '1.7.7'
 gem 'sitemap_generator'
 gem 'paperclip'
+gem 'heroku_backup_task'
 
 # Gems used only for assets and not required
 # in production environments by default.
