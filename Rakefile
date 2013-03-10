@@ -4,4 +4,10 @@
 
 require File.expand_path('../config/application', __FILE__)
 
+require "heroku_backup_task"
+task :cron do
+  # other code here
+  HerokuBackupTask.execute
+end
+
 Hyaku1::Application.load_tasks
