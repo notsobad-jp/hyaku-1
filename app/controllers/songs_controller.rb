@@ -4,7 +4,6 @@ class SongsController < ApplicationController
     @title = "百人一首の一覧"
     @user = current_user || User.find(0)
     @songs = Song.includes(:author).order("id ASC").all
-    @finished_songs = History.finished_songs(@user)
   end
 
   def show
