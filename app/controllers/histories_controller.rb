@@ -10,7 +10,7 @@ class HistoriesController < ApplicationController
       #100問おわってたらコンプページにリダイレクト
       last_song = History.who(current_user).original.order("created_at DESC").first
       next_song_id = (last_song) ? last_song.song_id + 1 : 1
-      redirect_to :learn_complete if next_song_id > 100
+      redirect_to :learn_complete and return if next_song_id > 100
 
       @next_song = History.next_song(@user)
     else
