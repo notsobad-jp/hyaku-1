@@ -20,7 +20,6 @@ class History < ActiveRecord::Base
   def self.next_song(user)
     last_song = self.who(user).original.order("created_at DESC").first
     next_song_id = (last_song) ? last_song.song_id + 1 : 1
-    redirect_to :learn_complete if next_song_id > 100
     next_song = Song.find(next_song_id)
 
     done_today = self.who(user).which_day(Date.today).original.count
