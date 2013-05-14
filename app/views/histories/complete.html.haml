@@ -1,0 +1,11 @@
+%div(id="next_song" class="songs")
+  = render "menu_bar"
+  %section.main
+    %h1.menu_title
+      100首 完全制覇
+    #finish
+      %p
+        ついに100首すべての学習が終了しました。おつかれさまでした！<br>
+        でも百人一首は全部おぼえてからが本当の戦いです。<br>
+        これからのあなたの百人一首ライフに幸多からんことを！ご利用ありがとうございました！！
+      = link_to( "ホームへ戻る", :root, :class => "btn-none" )
