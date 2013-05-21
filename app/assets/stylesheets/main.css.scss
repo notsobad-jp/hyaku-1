@@ -786,91 +786,9 @@ blockquote {
 /*****************************************************************
 * Menu Bar
 *****************************************************************/
-.menu_bar_bak {
-  background-repeat: repeat-x;
-  height: 80px;
-  width: 100%;
-  position: relative;
-  margin: 40px 0 50px 0;
+#menu_img {
+  margin: 50px 0 20px 0;
 }
-#menu_bar_bak_1 {
-  background: url("/assets/sakura/sakura_blue.jpg");
-}
-#menu_bar_bak_2 {
-  background: url("/assets/sakura/sakura_red.jpg");
-}
-#menu_bar_bak_3 {
-  background: url("/assets/sakura/sakura_green.jpg");
-}
-#menu_bar_bak_other {
-  background: url("/assets/sakura/sakura_black.jpg");
-}
-
-.menu_bar {
-  div {
-    top: -5px;
-    position: absolute;
-    z-index: 1;
-    width: 74px;
-    height: 90px;
-  }
-  #menu_bar_1 {
-    background: url("/assets/menu_bar_1/menu_bar_1_hover.png");
-  }
-  #menu_bar_2 {
-    background: url("/assets/menu_bar_2/menu_bar_2_hover.png");
-  }
-  #menu_bar_3 {
-    background: url("/assets/menu_bar_3/menu_bar_3_hover.png");
-  }
-  #menu_bar_4 {
-    background: url("/assets/menu_bar_4.png");
-    left: 50px;
-  }
-  #menu_bar_5 {
-    background: url("/assets/menu_bar_5.png");
-    left: 50px;
-  }
-}
-
-
-.menu_bar_1-menu_bar_1 {
-  left: 50px;
-}
-.menu_bar_2-menu_bar_2 {
-  left: 125px;
-}
-.menu_bar_3-menu_bar_3 {
-  left: 200px;
-}
-
-.menu_bar_text div {
-  top: -5px;
-  position: absolute;
-  z-index: 0;
-  height: 90px;
-  width: 380px;
-  left: 50px;
-}
-#menu_bar_text_1 {
-  background: url("/assets/menu_bar_text/menu_bar_text_1.png");
-}
-#menu_bar_text_2 {
-  background: url("/assets/menu_bar_text/menu_bar_text_2.png");
-}
-#menu_bar_text_3 {
-  background: url("/assets/menu_bar_text/menu_bar_text_3.png");
-}
-#menu_bar_text_4 {
-  background: url("/assets/menu_bar_text/menu_bar_text_4.png");
-  width: 230px;
-}
-#menu_bar_text_5 {
-  background: url("/assets/menu_bar_text/menu_bar_text_5.png");
-  width: 230px;
-}
-
-
 
 /*****************************************************************
 * Index(Homepage)
@@ -894,13 +812,16 @@ blockquote {
 }
 
 #menu_1 {
-  background: url("/assets/sakura/sakura_blue.jpg");
+  background: url("/assets/main_menu/menu_1.png");
+  background: #112343;
 }
 #menu_2 {
-  background: url("/assets/sakura/sakura_red.jpg");
+  // background: url("/assets/sakura/sakura_red.jpg");
+  background: #461105;
 }
 #menu_3 {
-  background: url("/assets/sakura/sakura_green.jpg");
+  // background: url("/assets/sakura/sakura_green.jpg");
+  background: #263307;
 }
 
 #index_container {
