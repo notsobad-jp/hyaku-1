@@ -3,13 +3,6 @@
 *****************************************************************/
 @import "compass";
 @import "like/like*.png";
-@include all-like-sprites;
-@import "menu_bar_1/menu_bar*.png";
-@include all-menu_bar_1-sprites;
-@import "menu_bar_2/menu_bar*.png";
-@include all-menu_bar_2-sprites;
-@import "menu_bar_3/menu_bar*.png";
-@include all-menu_bar_3-sprites;
 
 $color-red : #B54434;
 $color-blue : #005CAF;
