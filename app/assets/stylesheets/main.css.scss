@@ -3,13 +3,6 @@
 *****************************************************************/
 @import "compass";
 @import "like/like*.png";
-@include all-like-sprites;
-@import "menu_bar_1/menu_bar*.png";
-@include all-menu_bar_1-sprites;
-@import "menu_bar_2/menu_bar*.png";
-@include all-menu_bar_2-sprites;
-@import "menu_bar_3/menu_bar*.png";
-@include all-menu_bar_3-sprites;
 
 $color-red : #B54434;
 $color-blue : #005CAF;
@@ -790,6 +783,7 @@ blockquote {
   margin: 50px 0 20px 0;
 }
 
+
 /*****************************************************************
 * Index(Homepage)
 *****************************************************************/
@@ -821,26 +815,18 @@ blockquote {
   background: url("/assets/sakura/sakura_green.jpg");
 }
 
+
 #index_container {
   overflow:hidden;
   position: relative;
 }
 
 #menu_1, #menu_2, #menu_3 {
-  position: relative;
-  overflow: hidden;
-  width: 19.9%;
-
   &:hover {
-    & img {
-      bottom: 0;
-    }
+    opacity: 0.9;
   }
   img {
     width: 100%;
-    position: absolute;
-    bottom: -60%;
-    @include transition(bottom 0.3s ease-out 0);
   }
 }
 
