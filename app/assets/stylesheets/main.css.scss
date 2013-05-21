@@ -815,6 +815,7 @@ blockquote {
   background: #263307;
 }
 
+
 #index_container {
   overflow:hidden;
   position: relative;
@@ -822,7 +823,7 @@ blockquote {
 
 #menu_1, #menu_2, #menu_3 {
   &:hover {
-    opacity: 0.8;
+    opacity: 0.9;
   }
   img {
     width: 100%;
