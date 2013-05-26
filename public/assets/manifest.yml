@@ -235,6 +235,8 @@ menu_bg.png: menu_bg-488050db0fb8bd0ad2170e1f454e0f5f.png
 menu_bg/index.png: menu_bg-488050db0fb8bd0ad2170e1f454e0f5f.png
 menu_exam.jpg: menu_exam-e7d0a140a118db1c17738424a90c6787.jpg
 menu_exam/index.jpg: menu_exam-e7d0a140a118db1c17738424a90c6787.jpg
+menu_game.jpg: menu_game-8d6c8773c762f5d76cb4128c00902396.jpg
+menu_game/index.jpg: menu_game-8d6c8773c762f5d76cb4128c00902396.jpg
 menu_learn.jpg: menu_learn-3427ba1654c854fb3cb3bb740952c7b1.jpg
 menu_learn/index.jpg: menu_learn-3427ba1654c854fb3cb3bb740952c7b1.jpg
 menu_review.jpg: menu_review-fbf0158221a515a26a2accc819c5598e.jpg
@@ -471,7 +473,7 @@ without_login.png: without_login-39d5953908f2637ab1882159e7b1a261.png
 without_login/index.png: without_login-39d5953908f2637ab1882159e7b1a261.png
 application.js: application-7413b479925c8662d236b5e68fe5de48.js
 application/index.js: application-7413b479925c8662d236b5e68fe5de48.js
-application.css: application-c5985ebb1cc70f74f5313c4f9d47a4c9.css
-application/index.css: application-c5985ebb1cc70f74f5313c4f9d47a4c9.css
+application.css: application-38b6d137860bec455d257b47db39cc3d.css
+application/index.css: application-38b6d137860bec455d257b47db39cc3d.css
 jquery.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
 jquery/index.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map

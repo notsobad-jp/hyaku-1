@@ -1,14 +1,14 @@
 %div
   %section.main
-    = image_tag("menu_review.jpg", :id => "menu_img")
+    = image_tag("menu_game.jpg", :id => "menu_img")
     %h1.menu_title
-      ５分で簡単！ミニテスト
+      ５分で簡単！実力テスト
     %div
       %div#review_index
-        %p 5分程度のテストでお手軽に百人一首の実力を測定できます。スタートボタンを押してテストを開始してください。
+        %p 5分程度のテストでお手軽に百人一首の実力を測定できます。スタートボタンを押してテストを開始してください。<br><br>
         %section
           %h2.headline  遊び方
           %ol
             %li  上の句だけ表示された札が表示されます。下の札一覧の中から、正しい下の句が表示された札を選択してください。
             %li  問題は全部で10首出題されます。すべて終了すると成績発表です。
-      = link_to( "テスト開始", :review, :class => "btn", :id => "review_start_btn")
+      = link_to( "スタート", :games, :class => "btn")

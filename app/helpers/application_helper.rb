@@ -66,7 +66,7 @@ module ApplicationHelper
       when 10..19
         degree = "そこそこ歌人"
       when 20..29
-        degree = "伸びざかり歌人"
+        degree = "伸び盛り歌人"
       when 30..39
         degree = "一人前歌人"
       when 40..49

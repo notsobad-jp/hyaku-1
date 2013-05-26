@@ -26,9 +26,10 @@ Hyaku1::Application.routes.draw do
   match 'home/about' => 'home#about', :as => 'about'
   match 'home/credit' => 'home#credit', :as => 'credit'
 
-  get "games/index"
-  get "games/answer"
-  get "games/finish"
+  match 'games/index' => 'games#index', :as => :games_index
+  match 'games' => 'games#show', :as => :games
+  match 'games/answer' => 'games#answer', :as => :games_answer
+  match 'games/finish' => 'games#finish', :as => :games_finish
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

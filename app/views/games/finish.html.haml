@@ -1,2 +1,34 @@
-<h1>Games#finish</h1>
-<p>Find me in app/views/games/finish.html.erb</p>
+%div(id="next_song" class="songs")
+  %section.main
+    = image_tag("menu_game.jpg", :id => "menu_img")
+    %h1.menu_title
+      結果発表
+    - @score = 9
+    #finish
+      %div
+        %p.score.serif
+          <em>#{@score}</em>/10
+        %p
+          おつかれさまでした。<br>
+          - case @score
+          - when 0..4
+            百人一首、あんまりおぼえてないみたいですね。<br>
+            そんなあなたは「
+            = link_to("守", :learn)
+            」でしっかり基礎からおぼえなおしましょう。<br>
+            １日３首ずつ勉強するのでだいたい１ヶ月くらいでおぼえられますよ。
+          - when 5..8
+            けっこうおぼえてるじゃないですか。でもまだまだ完璧とは言えませんね。<br>
+            そんなあなたは「
+            = link_to("破", :review)
+            」でしっかり復習することをおすすめします。<br>
+            「守」でおぼえた歌が間隔を空けて復習対象に出るので効率よく記憶に定着させられますよ。
+          - when 9..10
+            やりますね。あなたはほぼ百人一首をおぼえているようです。<br>
+            でもこれは小テストなのでほんとに百首全部おぼえてるかはわからないですよ。<br>
+            ぜひ「
+            = link_to("離", :exam_index)
+            」で百首まとめてテストしてみましょう。時間かかるのでおひまなときにでも。。<br>
+            それでも満点とれるならもう競技かるたとかやるといいと思いますよ、ほんと。
+      = link_to( "ホームへ戻る", :root, :class => "btn-none" )
+

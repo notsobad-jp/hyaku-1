@@ -1,0 +1,35 @@
+%section.main
+  = image_tag("menu_game.jpg", :id => "menu_img")
+  %h1.menu_title
+    問題
+  %section#question.cf
+    %h1.headline
+      #{(@finished_num/10).floor+1}首目
+      %small （現在のスコア：#{@current_score}/10）
+    %div#question_char.char_card.serif
+      %div
+        - poem = @exam_song.poem.split(" ")
+        %div#first-half
+          %p #{poem[0]}
+          %p &emsp;#{poem[1]}
+          %p &emsp;&emsp;&emsp;&emsp;&emsp;#{poem[2]}
+        %div#second-half
+          %p #{poem[3]}
+          %p &emsp;&emsp;#{poem[4]}
+    = image_tag("cards/Hyakuninisshu_#{sprintf("%03d", @exam_song.id)}.jpg", :class => "cards", :id => "question_img")
+    %div#result
+      %p.success.hidden.serif 正解
+      %p.failure.hidden.serif 不正解
+      = link_to( "次の歌へ", {:controller => :games, :action => :show}, :class => "btn hidden")
+
+  %h1.menu_title
+    回答
+  %section#answer.cf
+    - @exam_targets.each_with_index do |target, i|
+      - result = (@exam_song.id == target.id) ? 1 : 0;
+      - history = {:song_id => @exam_song.id, :user_id => @user.id, :exam_id => @exam_id, :result => result}
+      = link_to({:controller => :games, :action => :answer, :remote => true, :history => history}, {:class => "answer_link"}) do
+        %div.char_card{:id => "ans_#{i+1}"}
+          %div
+            - poem = target.poem.split(" ")
+            %p #{poem[3]}<br>&emsp;&emsp;#{poem[4]}
