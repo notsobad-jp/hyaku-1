@@ -1,0 +1,19 @@
+# TXT for Human Beings
+
+## SITE
+
+- Name : 百/一
+- Pronounciation : ひゃくいち
+- URL : http://hyaku-1.com/
+- Markup : HTML5+CSS3
+- Technology : Ruby on Rails
+- Contents : Help you remember "Hyakunin-Issyu", the 100 Poems by 100 Poets in about one month.
+- Release Date : 2013/02/11
+
+## PERSONAL
+
+- Name : Tomomichi Onishi
+- Job : Web Developer, CEO of NEHAN,LLC.
+- Twitter : @kame_f_no7
+- Mail : tomomichi.onishi@gmail.com
+- Favorite : Books, Web, Zen Buddhism
